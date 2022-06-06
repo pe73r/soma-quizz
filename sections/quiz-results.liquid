@@ -3,6 +3,7 @@
      <div class="quiz-results__wrapper">
         <div class="quiz-results__content">
           <div class="quiz-results__header">
+            <p class="">{{ section.settings.result_subtitle }}</p>
             <h4 class="heading h5">{{ section.settings.title }}</h4>
           </div>
 
@@ -51,7 +52,12 @@
 {
   "name": "Quiz Results",
   "settings": [
-
+        {
+          "type": "text",
+          "id": "result_subtitle",
+          "label": "Subtitle",
+          "default": "VOTRE ROUTINE SOMATOLINE EST ..."
+        },
        {
          "type": "text",
          "id": "title",

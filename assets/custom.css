@@ -2909,6 +2909,14 @@ input:focus ~ .input__label {
 
 /* QUIZ RESULTS */
 
+.quiz-results__header .heading{
+  margin-top: 20px;
+}
+
+.quiz-results__header p{
+  margin-bottom:0;
+}
+
 .quiz-results__wrapper {
   display: flex;
   margin-left: -20px;
@@ -2967,6 +2975,10 @@ input:focus ~ .input__label {
 .product-item-routine-result .product-item__cta {
   background-color: #cc043b;
   border-color: #cc043b;
+  color: white;
+}
+
+.product-item-routine-result .price {
   color: white;
 }
 
