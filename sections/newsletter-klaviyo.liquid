@@ -1,0 +1,273 @@
+<section class="section section--flush section-newsletter">
+  <image-with-text-block {% if section.settings.reveal_on_scroll %}reveal-on-scroll{% endif %} class="image-with-text-block image-with-text-block--small image-with-text-block--cover">
+    <div class="image-with-text-block__image-wrapper">
+      {%- if section.settings.image != blank -%}
+        <img class="image-with-text-block__image" {% if section.settings.reveal_on_scroll %}reveal{% endif %} loading="lazy" sizes="100vw" {% render 'image-attributes', image: section.settings.image, sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' %}>
+      {%- else -%}
+        {%- capture image_classes -%}image-with-text-block__image image-with-text-block__image--placeholder placeholder-background{%- endcapture -%}
+
+        {%- if section.settings.reveal_on_scroll -%}
+          {{- 'lifestyle-1' | placeholder_svg_tag: image_classes | replace: '<svg', '<svg reveal' -}}
+        {%- else -%}
+          {{- 'lifestyle-1' | placeholder_svg_tag: image_classes -}}
+        {%- endif -%}
+      {%- endif -%}
+    </div>
+
+    <div class="container container--flush">
+      {%- assign text_position = section.settings.text_position | split: '_' | last -%}
+
+      <div {% if section.settings.reveal_on_scroll %}reveal{% endif %} class="image-with-text-block__content image-with-text-block__content--tight content-box newsletter--content-box content-box--text-{{ section.settings.text_alignment}} content-box--{{ text_position }} text-container">
+        {%- if section.settings.subheading != blank -%}
+          <h2 class="newsletter__title heading h2">{{ section.settings.subheading | escape }}</h2>
+        {%- endif -%}
+
+        {%- if section.settings.content != blank -%}
+          {{- section.settings.content -}}
+        {%- endif -%}
+
+        <form id="email_signup" class="klaviyo__wrapper klaviyo_gdpr_embed_R4GxnF" action="//manage.kmail-lists.com/subscriptions/subscribe" data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe" method="GET" target="_blank" novalidate="novalidate">
+            <input type="hidden" name="g" value="R4GxnF">
+            <input type="hidden" name="$fields" value="$consent">
+            <input type="hidden" name="$list_fields" value="$consent">
+            <div class="klaviyo_field_group">
+              <!-- <label for="k_id_email">Newsletter Sign Up</label> -->
+              <input class="" type="email" value="" name="email" id="k_id_email" placeholder="{{ 'general.newsletter.email' | t }}" />
+              <div class="klaviyo_form_actions">
+                <button type="submit" class="button button--primary">{{ 'general.newsletter.subscribe' | t }}</button>
+              </div>
+            </div>
+            <div class="klaviyo_messages">
+                 <div class="success_message"style="display:none;">
+                    <p class="thank_you" >{{ section.settings.success_message }}</p>
+                 </div>
+              <div class="error_message" style="display:none;">{{ section.settings.error_message }}</div>
+            </div>
+       </form>
+     </div>
+    </div>
+  </image-with-text-block>
+</section>
+<style type="text/css">
+
+  .klaviyo__wrapper{
+    margin: auto;
+    width: 70%;
+   }
+
+  .klaviyo_field_group{
+    display:flex;
+    justify-content: center;
+   }
+
+  .klaviyo_field_group input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #000;
+    margin-right: 10px;
+    padding: 0;
+    text-align: left;
+    width: 50%;
+  }
+
+  .klaviyo_messages{
+     position: relative;
+     top: 0;
+   }
+
+
+   @media screen and (max-width: 999px) {
+     .klaviyo_field_group{
+       flex-direction: column;
+      }
+
+      .klaviyo__wrapper{
+        margin: auto;
+        width: 100%;
+       }
+
+       .klaviyo_field_group input{
+         width: 100%;
+         margin-bottom: 20px;
+         padding-bottom: 10px;
+       }
+
+       .klaviyo_field_group .button{
+         width: 100%;
+       }
+   }
+</style>
+
+  <script type="text/javascript" src="//www.klaviyo.com/media/js/public/klaviyo_subscribe.js"></script>
+  <script type="text/javascript">
+    KlaviyoSubscribe.attachToForms('#email_signup', {
+      hide_form_on_success: true,
+      custom_success_message: true,
+      extra_properties: {
+        $source: '$embed',
+        $method_type: "Klaviyo Form",
+        $method_id: 'embed',
+        $consent_version: 'Embed default text',
+      }
+    });
+  </script>
+
+<style>
+  #shopify-section-{{ section.id }} {
+    {%- if section.settings.text_background == 'rgba(0,0,0,0)' -%}
+      {%- assign section_block_background = settings.background -%}
+    {%- else -%}
+      {%- assign section_block_background = section.settings.text_background -%}
+    {%- endif -%}
+
+    {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
+      {%- assign heading_color = settings.heading_color -%}
+      {%- assign text_color = settings.text_color -%}
+    {%- else -%}
+      {%- assign heading_color = section.settings.text_color -%}
+      {%- assign text_color = section.settings.text_color -%}
+    {%- endif -%}
+
+    {%- if section.settings.button_background == 'rgba(0,0,0,0)' -%}
+      {%- assign button_background = settings.primary_button_background -%}
+    {%- else -%}
+      {%- assign button_background = section.settings.button_background -%}
+    {%- endif -%}
+
+    {%- if section.settings.button_text_color == 'rgba(0,0,0,0)' -%}
+      {%- assign button_text_color = settings.primary_button_text_color -%}
+    {%- else -%}
+      {%- assign button_text_color = section.settings.button_text_color -%}
+    {%- endif -%}
+
+    --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
+    --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
+    --primary-button-background: {{ button_background.red }}, {{ button_background.green }}, {{ button_background.blue }};
+    --primary-button-text-color: {{ button_text_color.red }}, {{ button_text_color.green }}, {{ button_text_color.blue }};
+    --section-block-background: {{ section_block_background.red }}, {{ section_block_background.green }}, {{ section_block_background.blue }},.8;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Newsletter Klaviyo",
+  "class": "shopify-section--newsletter",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Customers who subscribe will have their email address added to the \"accepts marketing\" [customer list](/admin/customers?query=&accepts_marketing=1)."
+    },
+    {
+      "type": "checkbox",
+      "id": "reveal_on_scroll",
+      "label": "Reveal on scroll",
+      "info": "Show animation when section becomes visible.",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "2000 x 980px .jpg recommended"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Subscribe to our newsletter"
+    },
+    {
+      "type": "text",
+      "id": "success_message",
+      "label": "Success message",
+      "default": "Félicitations ! Vous êtes abonné(e) à notre newsletter"
+    },
+    {
+      "type": "text",
+      "id": "error_message",
+      "label": "Error message",
+      "default": "Entrer un mail valide"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>Promotions, new products and sales. Directly to your inbox.</p>"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "Desktop text position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "text_background",
+      "label": "Text background",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "rgba(0,0,0,0)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter Klaviyo",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

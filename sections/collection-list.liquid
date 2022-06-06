@@ -1,0 +1,152 @@
+<style>
+  #shopify-section-{{ section.id }} {
+
+    {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
+      {%- assign heading_color = settings.heading_color -%}
+      {%- assign text_color = settings.text_color -%}
+    {%- else -%}
+      {%- assign heading_color = section.settings.text_color -%}
+      {%- assign text_color = section.settings.text_color -%}
+    {%- endif -%}
+
+
+    --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
+    --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
+    --section-background: {{ section_background.red }}, {{ section_background.green }}, {{ section_background.blue }};
+  }
+</style>
+<a name="{{ section.settings.position }}"></a>
+<section id="section-{{ section.settings.position }}" data-spy class="section section-collection-list {% if section.settings.section_spacing == 'no_espacing' %} section--flush {% endif %}">
+  <div class="section__color-wrapper">
+    <div class="container container-mobile">
+      {%- if section.settings.title != blank or section.settings.content != blank -%}
+        <header class="collection-list__header">
+            {%- if section.settings.title != blank -%}
+              <h3 class="collection-list__title heading h3">{{ section.settings.title }}</h3>
+            {%- endif -%}
+
+            {% render 'icon' with 'divider-green' %}
+
+            {%- if section.settings.content != blank -%}
+              {{- section.settings.content -}}
+            {%- endif -%}
+        </header>
+      {%- endif -%}
+      <div class="collection-list__wrapper">
+         {%- for block in section.blocks -%}
+           {%- if block.type == 'routine' -%}
+              {% assign product = block.settings.product %}
+              {% assign button_type = block.settings.button_type %}
+              {% assign routine_big_block = forloop.index %}
+
+              {% if product.available %}
+                {%- render 'product-item-routine', product: product, show_cta: true , button_type: button_type , block: block, sizes_attribute: sizes_attribute, reveal: settings.stagger_products_apparition, show_price_under_title: true, routine_big_block: routine_big_block -%}
+              {% endif %}
+           {% else %}
+               {% assign product = block.settings.product %}
+                 {%- render 'product-item-card', product: product, show_cta: true, block: block, sizes_attribute: sizes_attribute, reveal: settings.stagger_products_apparition, show_price_under_title: true -%}
+           {%- endif -%}
+         {%- endfor -%}
+         {%- assign collection = section.settings.collection -%}
+           {%- for product in collection.products limit: section.settings.products_count -%}
+             {%- if collection.title contains 'Routine' or collection.title contains 'routine' -%}
+               {%- render 'product-item-routine', product: product, show_cta: true, block: block, sizes_attribute: sizes_attribute, reveal: settings.stagger_products_apparition -%}
+             {%- else -%}
+               {%- render 'product-item-card', product: product, show_cta: true, block: block, sizes_attribute: sizes_attribute, reveal: settings.stagger_products_apparition -%}
+             {% endif %}
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Collection list",
+  "max_blocks": 1,
+  "settings": [
+      {
+        "type": "text",
+        "id": "position",
+        "label": "secttion name",
+        "info": "This field has to be the same of the menu title"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      },
+      {
+        "type": "range",
+        "id": "products_count",
+        "label": "Products to show",
+        "min": 4,
+        "max": 50,
+        "step": 1,
+        "default": 8
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Collection"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text",
+        "default": "rgba(0,0,0,0)"
+      }
+  ],
+  "blocks": [
+    {
+      "type": "routine",
+      "name": "Routine product",
+      "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product",
+            "info": "The product must be in stock"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_price_under_title",
+            "label": "Show price under title ?",
+            "default": true
+          },
+          {
+            "type": "select",
+            "id": "button_type",
+            "label": "Button type",
+            "options": [
+              {
+                "value": "voir_plus",
+                "label": "Voir plus"
+              },
+              {
+                "value": "cta",
+                "label": "CTA"
+              }
+            ],
+            "default": "voir_plus"
+          }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection list",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

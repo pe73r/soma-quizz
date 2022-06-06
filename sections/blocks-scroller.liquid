@@ -1,0 +1,153 @@
+<section class="section">
+  <div class="container">
+    <div class="scroller__header">
+      {%- if section.settings.title != blank -%}
+        <h2 class="heading h3">{{ section.settings.title }}</h2>
+        {% render 'icon' with 'divider-green' %}
+      {%- endif -%}
+    </div>
+      <div class="scroller">
+        <div class="scroller__inner">
+          <div class="scroller__list">
+              {%- for block in section.blocks -%}
+                <div class="scroller__block">
+                  {%- if block.settings.image != blank -%}
+                    <img class="w-100 {% if block.settings.image_mobile != blank %} hidden-phone {% endif %}" loading="lazy" sizes="(max-width: 740px) 100vw, 500px" {% render 'image-attributes', image: block.settings.image, sizes: '300,400,500,600,700,800,900,1000' %}>
+                  {% else %}
+                       {{- 'image' | placeholder_svg_tag: image_classes -}}
+                  {%- endif -%}
+
+                  {%- if block.settings.title != blank -%}
+                    <h3 class="heading h6">{{ block.settings.title }}</h3>
+                  {%- endif -%}
+
+
+
+                  {%- if block.settings.content != blank -%}
+                      {% assign block_content = block.settings.content | split: "<!--split-->" %}
+                      {% assign block_index = forloop.index %}
+
+                      {{- block_content | first -}} <span class="dots-hidden" id="dots-{{ block_index }}"></span>
+
+                      {%- if block.settings.show_more -%}
+                        <button onclick="showMoreContent({{ block_index }})" id="showMoreBtn-{{ block_index }}" class="show-more">{{ 'collection.general.read_more_2' | t }}</button>
+
+                        <div class="show-content" id="show-more-{{ block_index }}">
+                          {{- block_content | last -}}
+                        </div>
+                      {%- endif -%}
+                  {%- endif -%}
+
+                  {%- if block.settings.button_text != blank -%}
+                    <a class="scroller__button" href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
+                  {%- endif -%}
+                </div>
+             {%- endfor -%}
+         </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .show-content {
+    display: none;
+  }
+
+  .dots-hidden{
+    display: none;
+  }
+</style>
+<script>
+
+  function showMoreContent(id) {
+    var moreDots = document.getElementById("dots-" + id );
+    var moreText = document.getElementById("show-more-" + id );
+    var moreBtn = document.getElementById("showMoreBtn-" + id);
+
+    if (moreDots.style.display === "none") {
+      moreDots.style.display = "inline";
+      moreBtn.innerHTML = "Read more";
+      moreText.style.display = "none";
+    } else {
+      moreDots.style.display = "none";
+      moreBtn.style.display = "none";
+      moreText.style.display = "inline";
+    }
+  }
+</script>
+{% schema %}
+{
+  "name": "Blocks scroller",
+  "class": "shopify-section--blocks-scroller",
+  "max_blocks": 4,
+  "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Heading"
+        }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Block",
+      "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            },
+            {
+              "type": "text",
+              "id": "title",
+              "label": "Heading",
+              "default": "Heading"
+            },
+            {
+              "type": "textarea",
+              "id": "content",
+              "label": "Content",
+              "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem</p>"
+            },
+            {
+              "type": "checkbox",
+              "id": "show_more",
+              "label": "Show more button ?",
+              "default": true
+            },
+            {
+              "type": "text",
+              "id": "button_text",
+              "label": "Button"
+            },
+            {
+              "type": "url",
+              "id": "button_url",
+              "label": "Button link"
+            }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blocks scroller",
+      "settings": {},
+      "blocks": [
+       {
+         "type": "block"
+       },
+       {
+         "type": "block"
+       },
+       {
+         "type": "block"
+       },
+       {
+         "type": "block"
+       }
+     ]
+    }
+  ]
+}
+{% endschema %}

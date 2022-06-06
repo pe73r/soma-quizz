@@ -1,0 +1,176 @@
+{%- if section.settings.background != settings.background and section.settings.background != 'rgba(0,0,0,0)' -%}
+  {%- assign blends_with_background = false -%}
+{%- else -%}
+  {%- assign blends_with_background = true -%}
+{%- endif -%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    {%- if section.settings.background == 'rgba(0,0,0,0)' -%}
+      {%- assign section_background = settings.background -%}
+    {%- else -%}
+      {%- assign section_background = section.settings.background -%}
+    {%- endif -%}
+
+    {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
+      {%- assign heading_color = settings.heading_color -%}
+      {%- assign text_color = settings.text_color -%}
+    {%- else -%}
+      {%- assign heading_color = section.settings.text_color -%}
+      {%- assign text_color = section.settings.text_color -%}
+    {%- endif -%}
+
+    {%- if section.settings.button_background == 'rgba(0,0,0,0)' -%}
+      {%- assign button_background = settings.primary_button_background -%}
+    {%- else -%}
+      {%- assign button_background = section.settings.button_background -%}
+    {%- endif -%}
+
+    {%- if section.settings.button_text_color == 'rgba(0,0,0,0)' -%}
+      {%- assign button_text_color = settings.primary_button_text_color -%}
+    {%- else -%}
+      {%- assign button_text_color = section.settings.button_text_color -%}
+    {%- endif -%}
+
+    --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
+    --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
+    --primary-button-background: {{ button_background.red }}, {{ button_background.green }}, {{ button_background.blue }};
+    --primary-button-text-color: {{ button_text_color.red }}, {{ button_text_color.green }}, {{ button_text_color.blue }};
+
+    --prev-next-button-background: {{ settings.background.red }}, {{ settings.background.green }}, {{ settings.background.blue }};
+    --prev-next-button-color: {{ settings.text_color.red }}, {{ settings.text_color.green }}, {{ settings.text_color.blue }};
+
+    --section-background: {{ section_background.red }}, {{ section_background.green }}, {{ section_background.blue }};
+    --section-products-per-row: 2;
+  }
+
+  @media screen and (min-width: 741px) {
+    #shopify-section-{{ section.id }} {
+      --section-products-per-row: {{ section.settings.products_per_row | at_most: 3 }};
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    #shopify-section-{{ section.id }} {
+      --section-products-per-row: {{ section.settings.products_per_row | at_most: 4 }};
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    #shopify-section-{{ section.id }} {
+      --section-products-per-row: {{ section.settings.products_per_row }};
+    }
+  }
+</style>
+
+<section class="section {% unless blends_with_background %}section--flush{% endunless %} section-routines">
+  <div class="section__color-wrapper">
+    <div class="container container--small container-carousel {% unless blends_with_background %}vertical-breather{% endunless %}">
+      {%- if section.settings.title != blank or section.settings.subheading != blank or section.settings.content != blank -%}
+        <header class="section__header {% if section.settings.content != blank %}section__header--tight{% endif %}">
+          <div class="text-container">
+            {%- if section.settings.subheading != blank -%}
+              <h2 class="heading heading--small">{{ section.settings.subheading }}</h2>
+            {%- endif -%}
+
+            {%- if section.settings.title != blank -%}
+              <h3 class="heading h4">{{ section.settings.title }}</h3>
+            {%- endif -%}
+
+            {% render 'icon' with 'divider-green' %}
+
+            {%- if section.settings.content != blank -%}
+              {{- section.settings.content -}}
+            {%- endif -%}
+          </div>
+        </header>
+      {%- endif -%}
+      {%- capture flickity_config -%}
+      {
+        "adaptiveHeight": true,
+        "dragThreshold": 10,
+        "initialIndex": ".is-initial-selected",
+        "fade": {% if section.settings.transition_effect == 'fade' %}true{% else %}false{% endif %},
+        "draggable": ">1",
+        "contain": true,
+        "wrapAround": true,
+        "freeScroll": true,
+        "groupCells": 2,
+        "cellSelector": ".product-item:not(.is-filtered)",
+        "percentPosition": false,
+        "pageDots": true,
+        "prevNextButtons": true
+      }
+      {%- endcapture -%}
+      <flickity-carousel flickity-config="{{ flickity_config | escape }}" id="product-{{ section.id }}-placeholder-media-list" class="product__media-list routines-carousel">
+        {%- assign collection = section.settings.collection -%}
+          {%- for product in collection.products limit: section.settings.products_count -%}
+              {%- render 'product-item-routine', product: product, show_cta: true, sizes_attribute: sizes_attribute -%}
+        {%- endfor -%}
+      </flickity-carousel>
+
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Routines carousel",
+  "class": "shopify-section--routines-carousel",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Collection"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "range",
+      "id": "products_count",
+      "label": "Products to show",
+      "min": 4,
+      "max": 50,
+      "step": 1,
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "rgba(0,0,0,0)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Routines carousel",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

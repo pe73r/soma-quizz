@@ -1,0 +1,71 @@
+<style>
+    cart-progress-step,
+    cart-progress-bar{
+        display: block;
+    }
+    cart-progress-bar{
+        width: 90%;
+        margin: 10px auto;
+    }
+    cart-progress-bar > div {
+        font-size: 12px;
+        text-align: center;
+    }
+    cart-progress-step{
+        overflow: hidden;
+        background: red;
+        position: relative;
+        border-radius: 2px;
+        height: 4px;
+        width: 100%;
+        background: #BDBDBD;
+    }
+    cart-progress-step > div{
+        position: absolute;
+        width: 100%;
+        border-radius: 2px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transform-origin: left;
+        transition: all 200ms ease-in;
+        background: black;
+    }
+</style>
+{% assign steps = section.blocks | map: 'settings' | sort: "limit" %}
+
+{%- assign cartTotal = cart.total_price | divided_by: 100 -%}
+
+{% assign firstStep = steps | map: 'limit' | first | floor %}
+
+{% assign lastStep = steps | map: 'limit' | last | floor %}
+
+<cart-progress-bar>
+    {% for step in steps %}
+    {% assign limit = step.limit %}
+    {% assign i = forloop.index  %}
+    {% assign pi = i | minus: 2  %}
+
+
+    {% if i == 1 %}
+        {% assign pLimit = 0  %}
+    {% else %}
+        {% assign pLimit = steps[pi].limit  %}
+    {% endif %}
+
+    {% assign percent = cartTotal | times: 100 | divided_by: limit %}
+    {% if i == 4 %}
+    {% assign percent = 100 %}
+    {% endif %}
+    {% if cartTotal >= pLimit and cartTotal < limit  %}
+
+    <div>
+        {% if i <= 3 %}Plus que <b>{{limit | minus: cartTotal}}€ </b> {% endif %}{{step.text}}
+    </div>
+    <cart-progress-step  data-progress="{{percent}}%">
+        <div style="transform: scaleX({{percent}}%);" ></div>
+    </cart-progress-step>
+    {% endif %}
+    {% endfor %}
+
+</cart-progress-bar>

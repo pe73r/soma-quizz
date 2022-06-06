@@ -1,0 +1,146 @@
+<section class="section" id="section-{{ section.id }}">
+  <div class="container">
+     <div class="quiz-results__wrapper">
+        <div class="quiz-results__content">
+          <div class="quiz-results__header">
+            <h4 class="heading h5">{{ section.settings.title }}</h4>
+          </div>
+
+          <h5 class="heading h6">{{ section.settings.subtitle }}</h5>
+          {% render 'icon' with 'divider-green' %}
+          {{ section.settings.text }}
+
+          <div class="quiz-results__list">
+            <h5 class="heading h6">{{ section.settings.list_title }}</h5>
+            {% render 'icon' with 'divider-green' %}
+            {%- if section.settings.list_text != blank-%}
+               {{ section.settings.list_text }}
+            {%- endif -%}
+
+            {%- for block in section.blocks -%}
+              <div class="quiz__result">
+                 <h4 class="heading h5">{{ forloop.index }}.&nbsp;{{ block.settings.title }}</h4>
+                 {%- if block.settings.text != blank -%}
+                   {{ block.settings.text }}
+                 {%- endif -%}
+                 {% assign product = block.settings.product %}
+                 {%- if product != blank -%}
+                    {%- render 'product-item-result', product: product, show_cta: true, sizes_attribute: sizes_attribute -%}
+                 {%- endif -%}
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+        <div class="quiz-results__cta">
+           <h4 class="heading h6 align-center">{{ section.settings.cta_title }}</h4>
+           {% assign product = section.settings.cta_product %}
+           {% assign result_image = section.settings.result_image %}
+           {%- if product != blank -%}
+              {%- render 'product-item-routine-result', product: product, show_cta: true, sizes_attribute: sizes_attribute , result_image: result_image -%}
+           {%- endif -%}
+        </div>
+     </div>
+  </div>
+</section>
+<style>
+    #section-{{ section.id }} .quiz-results__details{
+       background-color: {{ section.settings.bg_color }};
+     }
+</style>
+{% schema %}
+{
+  "name": "Quiz Results",
+  "settings": [
+
+       {
+         "type": "text",
+         "id": "title",
+         "label": "Title",
+         "default": "REMODELANTE"
+       },
+       {
+         "type": "text",
+         "id": "subtitle",
+         "label": "Subtitle",
+         "default": "Comme 24% de nos consommatrices, la routine Remodelante est le plus adaptée à vos besoins !"
+       },
+       {
+         "type": "richtext",
+         "id": "text",
+         "label": "Text",
+         "default": "<p>D’après ce que vous nous avez confié, la routine Remodelante est celui qui correspond le mieux à vos attentes et vos objectifs.Votre profil nous indique que vous souhaitez traiter efficacement votre ventre et vos fesses pour remodeler ces parties de votre corps...</p>"
+       },
+       {
+         "type": "header",
+         "content": "CTA side"
+       },
+       {
+         "type": "text",
+         "id": "cta_title",
+         "label": "Cta title",
+         "default": "Cette routine est spécifiquement conçue pour les zones que vous souhaitez traitées et vos objectifs."
+       },
+       {
+         "type": "product",
+         "id": "cta_product",
+         "label": "Product"
+       },
+       {
+         "type": "image_picker",
+         "id": "result_image",
+         "label": "Result image in the product card"
+       },
+       {
+         "type": "header",
+         "content": "Product list"
+       },
+       {
+         "type": "paragraph",
+         "content": "Include blocks to list the products"
+       },
+       {
+         "type": "text",
+         "id": "list_title",
+         "label": "Product list title",
+         "default": "Les produits de votre routine idéale"
+       },
+       {
+         "type": "richtext",
+         "id": "list_text",
+         "label": "List text",
+         "default": "<p>Découvrez les produits qui correspondent à vos besoins, avec leurs applications pour un effet maximal. </p>"
+       }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Le traitement"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>"
+          },
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quiz results",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

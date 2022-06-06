@@ -1,0 +1,175 @@
+<section class="section">
+  <div class="container">
+      {%- if section.settings.title != blank or section.settings.content != blank -%}
+       <header class="section__header {% if section.settings.content != blank %}section__header--tight{% endif %}">
+         <div class="text-container">
+            {%- if section.settings.title != blank -%}
+              <h3 class="collection-list__title heading h3">{{ section.settings.title }}</h3>
+            {%- endif -%}
+
+            {%- if section.settings.show_divider -%}
+             {% render 'icon' with 'divider-green' %}
+            {%- endif -%}
+
+            {%- if section.settings.content != blank -%}
+              {% assign section_content = section.settings.content | split: "<!--split-->" %}
+
+              {{- section_content | first -}} <span id="dots"></span>
+
+              {%- if section.settings.show_more -%}
+                <button onclick="showMore()" id="showMoreBtn" class="show-more">{{ 'collection.general.read_more_2' | t }}</button>
+
+                <div id="show-more">
+                  {{- section_content | last -}}
+                </div>
+              {%- endif -%}
+            {%- endif -%}
+          </div>
+        </header>
+      {%- endif -%}
+    <div class="routine__cards">
+       {%- for block in section.blocks -%}
+        <div class="{{ section.blocks.size }}">
+         <div class="routine__card">
+           {%- if block.settings.image != blank -%}
+             <img class="w-100" loading="lazy" sizes="{{ block.settings.image_width }}px" {% render 'image-attributes', image: block.settings.image, sizes: '100, 200, 300, 400, 500, 600' %}>
+            {%- else -%}
+              {{- 'image' | placeholder_svg_tag: image_classes -}}
+            {%- endif -%}
+            {%- if block.settings.title != blank -%}
+              <h3 class="heading heading--small">{{ block.settings.title }}</h3>
+            {%- endif -%}
+
+            {%- if block.settings.content != blank -%}
+              {{- block.settings.content -}}
+            {%- endif -%}
+
+            {%- if block.settings.button_text != blank -%}
+              <div class="section__footer">
+                <a class="button button--full button--primary" href="{{ block.settings.button_url | default: collection.url }}">{{ block.settings.button_text }}</a>
+              </div>
+            {%- endif -%}
+         </div>
+         </div>
+       {%- endfor -%}
+    </div>
+  </div>
+</section>
+<style>
+  #shopify-section-{{ section.id }} {
+
+    {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
+      {%- assign heading_color = settings.heading_color -%}
+      {%- assign text_color = settings.text_color -%}
+    {%- else -%}
+      {%- assign heading_color = section.settings.text_color -%}
+      {%- assign text_color = section.settings.text_color -%}
+    {%- endif -%}
+
+
+    --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
+    --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
+    --section-background: {{ section_background.red }}, {{ section_background.green }}, {{ section_background.blue }};
+  }
+</style>
+{% schema %}
+{
+  "name": "Routine cards",
+  "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Toutes les routines"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_divider",
+        "label": "Show green divider ?",
+        "default": false
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "<p>Afin de mieux vous accompagner et vous aider à atteindre vos objectifs, nous avons demandé à nos clients de vous partager leurs routines...</p>"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_more",
+        "label": "Show more button ?",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "section_background",
+        "label": "Background",
+        "default": "rgba(0,0,0,0)"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text",
+        "default": "rgba(0,0,0,0)"
+      }
+  ],
+  "blocks": [
+          {
+            "type": "card",
+            "name": "Card",
+            "settings": [
+             {
+               "type": "image_picker",
+               "id": "image",
+               "label": "Image"
+             },
+            {
+              "type": "text",
+              "id": "title",
+              "label": "Heading",
+              "default": "Card"
+            },
+            {
+              "type": "richtext",
+              "id": "content",
+              "label": "Content",
+              "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>"
+            },
+            {
+              "type": "text",
+              "id": "button_text",
+              "label": "Button text",
+              "default": "JE DÉCOUVRE"
+            },
+            {
+              "type": "url",
+              "id": "button_url",
+              "label": "Button link",
+              "info": "If empty, the collection URL is used."
+            }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Routine cards",
+      "settings": {},
+      "blocks": [
+       {
+         "type": "card"
+       },
+       {
+         "type": "card"
+       },
+       {
+         "type": "card"
+       }
+     ]
+    }
+  ]
+}
+{% endschema %}

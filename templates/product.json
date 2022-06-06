@@ -1,0 +1,213 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "80ebcdb0-ae70-442b-a262-4292b0169833": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "43209808-b169-44f0-8f94-7d93dc2ac311": {
+          "type": "yuka-note",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_mode": "block",
+            "color_mode": "color",
+            "size_chart_page": ""
+          }
+        },
+        "22cd4a5a-96f1-4373-b162-5788f28864d0": {
+          "type": "actifs",
+          "settings": {
+            "title": "LES PRINCIPES ACTIFS"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "atc_button_background": "rgba(0,0,0,0)",
+            "atc_button_text_color": "rgba(0,0,0,0)",
+            "buy_now_button_background": "rgba(0,0,0,0)",
+            "buy_now_button_text_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "80ebcdb0-ae70-442b-a262-4292b0169833",
+        "43209808-b169-44f0-8f94-7d93dc2ac311",
+        "variant_picker",
+        "22cd4a5a-96f1-4373-b162-5788f28864d0",
+        "quantity_selector",
+        "buy_buttons"
+      ],
+      "settings": {
+        "show_vendor": false,
+        "show_sku": false,
+        "show_price": false,
+        "show_discount": true,
+        "show_delivery_date": true,
+        "show_product_rating": false,
+        "show_sticky_add_to_cart": true,
+        "help_page": "",
+        "enable_video_autoplay": false,
+        "enable_video_looping": false,
+        "enable_image_zoom": false,
+        "show_thumbnails_on_mobile": false,
+        "desktop_thumbnails_position": "bottom",
+        "transition_effect": "slide",
+        "pack_text": "CE QUE CONTIENT CETTE ROUTINE :",
+        "show_related_products": true,
+        "related_text": "POUR ALLER PLUS LOIN",
+        "routine_related_text": "POUR ALLER PLUS LOIN"
+      }
+    },
+    "164984684516210936": {
+      "type": "product-specs",
+      "blocks": {
+        "bbf086f5-839e-4d89-b645-3f1f03e2f74c": {
+          "type": "block",
+          "settings": {
+            "image_position": "left",
+            "tab_title": "POURQUOI ÇA FONCTIONNE  ?",
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/Rectangle_495_1.png",
+            "title": "",
+            "text": "",
+            "button_text": "Tout savoir sur la microcirculation",
+            "button_url": ""
+          }
+        },
+        "d5811e03-091a-48e5-ab39-fe09584dc169": {
+          "type": "how_to_use",
+          "settings": {
+            "image_position": "right",
+            "tab_title": "COMMENT L’UTILISER ?",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "title": "Title",
+            "text": "<p>Nos produits reposent sur le principe de la microcirculation et sur la structure du terme, grâce aux effets thermiques procurés par les actifs.<\/p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "0cd20de5-7a4a-4f53-96d6-03dc0818c542": {
+          "type": "ingredients",
+          "settings": {
+            "tab_title": "INGRÉDIENTS",
+            "title": "",
+            "text": "Aqua, Maris Sal, Caprylic\/Capric Triglyceride, Cetearyl Alcohol, Dimethicone, Glycerin, Butyrospermum Parkii Butter, Kaolin, Xanthan Gum, Ethoxydiglycol, Caffeine, C12-20 Acid Peg-8 Ester, Peg-20 Stearate, Parfum, Schinus Terebinthifolus Extract, Sphacelaria Scoparia Extract, Gelidium Sesquipedale Extract, Pelvetia Canalicutica Extract, Laminaria Digitata Extract, Lecithin, Escin, Ethyl Nicotinate, Phenoxyethanol, Sodium Benzoate, Imidazolidinyl Urea, CI 19140, CI 42090, CI 15985, Benzophenone-4.",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "bbf086f5-839e-4d89-b645-3f1f03e2f74c",
+        "d5811e03-091a-48e5-ab39-fe09584dc169",
+        "0cd20de5-7a4a-4f53-96d6-03dc0818c542"
+      ],
+      "settings": {
+      }
+    },
+    "1651588645eef8d1c0": {
+      "type": "product-reviews",
+      "settings": {
+        "bg_color": "#eafff7",
+        "title": "EFFICACITÉ PROUVÉE",
+        "text": "<span>92%<\/span><strong>des femmes ont perdu 0,8 cm de tour de cuisse après une utilisation sur 7 jours*<\/strong>\n<br>\n<ul>\n<li>Agit sur les graisses localisées et les excès de liquide avec des premiers résultats minceur démontrés en 7 nuits<\/li>\n<li>En prolongeant le traitement, l'efficacité minceur augmente jusqu'à doubler en 1 mois.*<\/li>\n<\/ul>\n<small>*Test réalisé sur 370 femmes, ayant une activité sportive régulière. <\/small>"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "blocks": {
+        "aa16448b-b990-44cc-a588-c7eac5d7b549": {
+          "type": "product",
+          "settings": {
+            "product": "creme-7-nuits"
+          }
+        },
+        "341b05ed-aa2f-494e-ba1a-54e41f59aad5": {
+          "type": "product",
+          "settings": {
+            "product": "creme-thermoactive-anti-cellulite"
+          }
+        },
+        "abb8bbf9-2656-46a9-b0ef-0cc04fb8a8ff": {
+          "type": "product",
+          "settings": {
+            "product": "creme-7-nuits"
+          }
+        },
+        "af8ad347-0eca-400a-86b0-db6ee165e798": {
+          "type": "product",
+          "settings": {
+            "product": "creme-thermoactive-anti-cellulite"
+          }
+        },
+        "1a1ec3ce-7c03-469b-83da-ea84cb50e159": {
+          "type": "product",
+          "settings": {
+            "product": "creme-7-nuits"
+          }
+        },
+        "ee300717-498f-499c-9ecc-e868d3ba8a86": {
+          "type": "product",
+          "settings": {
+            "product": "creme-thermoactive-anti-cellulite"
+          }
+        }
+      },
+      "block_order": [
+        "aa16448b-b990-44cc-a588-c7eac5d7b549",
+        "341b05ed-aa2f-494e-ba1a-54e41f59aad5",
+        "abb8bbf9-2656-46a9-b0ef-0cc04fb8a8ff",
+        "af8ad347-0eca-400a-86b0-db6ee165e798",
+        "1a1ec3ce-7c03-469b-83da-ea84cb50e159",
+        "ee300717-498f-499c-9ecc-e868d3ba8a86"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "VOUS AIMEREZ AUSSI",
+        "recommendations_count": 4,
+        "background": "#ebf8ff",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "165219414260ffb286": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "A PROPOS DE SOMATOLINE",
+        "title": "",
+        "content": "De l'expérience de Somatoline, une efficacité cliniquement prouvée au service de la beauté, pour des résultats ressentis sur la peau grâce à un mécanisme fondamental qui optimise les processus métaboliques : la réactivation de la microcirculation cutanée.<br><br>La microcirculation cutanée joue un rôle fondamental dans le bien-être et l'entretien des tissus cutanés, car c'est le système qui oxygène, nourrit et purifie la peau.\n--split--\n<br><br>Physiologiquement, le passage du temps et une hygiène de vie inadaptée contribuent à un ralentissement des fonctions de la microcirculation, qui perd ainsi son efficacité entraînant un dysfonctionnement des processus physiologiques qui impactent les tissus cutanés dont le pannicule adipeux.",
+        "show_more": true,
+        "button_text": "",
+        "button_link": "",
+        "text_alignment": "center",
+        "background": "#f3f3f3",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "164984684516210936",
+    "1651588645eef8d1c0",
+    "product-recommendations",
+    "165219414260ffb286"
+  ]
+}

@@ -1,0 +1,341 @@
+{%- if section.settings.background != settings.background and section.settings.background != 'rgba(0,0,0,0)' -%}
+  {%- assign blends_with_background = false -%}
+{%- else -%}
+  {%- assign blends_with_background = true -%}
+{%- endif -%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    {%- if section.settings.background == 'rgba(0,0,0,0)' -%}
+      {%- assign section_background = settings.background -%}
+    {%- else -%}
+      {%- assign section_background = section.settings.background -%}
+    {%- endif -%}
+
+    {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
+      {%- assign heading_color = settings.heading_color -%}
+      {%- assign text_color = settings.text_color -%}
+    {%- else -%}
+      {%- assign heading_color = section.settings.text_color -%}
+      {%- assign text_color = section.settings.text_color -%}
+    {%- endif -%}
+
+    --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
+    --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
+    --section-background: {{ section_background.red }}, {{ section_background.green }}, {{ section_background.blue }};
+  }
+
+  @media screen and (min-width: 741px) {
+    #shopify-section-{{ section.id }} {
+      --section-products-per-row: {{ section.settings.products_per_row | at_most: 3 }};
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    #shopify-section-{{ section.id }} {
+      --section-products-per-row: {{ section.settings.products_per_row | at_most: 4 }};
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    #shopify-section-{{ section.id }} {
+      --section-products-per-row: {{ section.settings.products_per_row }};
+    }
+  }
+</style>
+
+{%- assign product = section.settings.product -%}
+<section class="section {% unless blends_with_background %}section--flush{% endunless %} section-routines">
+  <div class="section__color-wrapper">
+    <div class="container {% unless blends_with_background %}vertical-breather{% endunless %}">
+      {%- if section.settings.title != blank or section.settings.subheading != blank or section.settings.content != blank -%}
+        <header class="section__header {% if section.settings.content != blank %}section__header--tight{% endif %}">
+          <div class="text-container">
+            {%- if section.settings.subheading != blank -%}
+              <h2 class="heading heading--small">{{ section.settings.subheading }}</h2>
+            {%- endif -%}
+
+            {%- if section.settings.title != blank -%}
+              <h3 class="heading h3">{{ section.settings.title }}</h3>
+            {%- endif -%}
+
+            {% render 'icon' with 'divider-green' %}
+
+            {%- if section.settings.content != blank -%}
+              {{- section.settings.content -}}
+            {%- endif -%}
+          </div>
+        </header>
+      {%- endif -%}
+      <div class="routine-scroller">
+        <div class="routine-scroller__inner">
+          <div class="routine__steps">
+            {%- for block in section.blocks -%}
+              <div class="">
+                <div class="routine__card align-center">
+                  <h4 class="heading h4 routine__card-number">{{ forloop.index }}</h4>
+                  <h5 class="heading h5 routine__card-title">{{ block.settings.title }}</h5>
+                  <span class="routine__card-subtitle">{{ block.settings.subtitle }}</span>
+                  {{ block.settings.content }}
+                   {%- if block.settings.image != blank -%}
+                    <img class="w-100 {% if block.settings.image_mobile != blank %} hidden-phone {% endif %}" loading="lazy" sizes="(max-width: 740px) 100vw, 500px" {% render 'image-attributes', image: block.settings.image, sizes: '300,400,500,600,700,800,900,1000' %}>
+                    {% else %}
+                     {{- 'image' | placeholder_svg_tag: image_classes -}}
+                   {%- endif -%}
+                </div>
+              </div>
+            {%- endfor -%}
+        </div>
+       </div>
+     </div>
+
+
+     {%- if section.settings.show_button and product != blank -%}
+     {% assign product_1_handle = product.metafields.product.product_routine_1.value | split: "/" | last %}
+     {% assign product_1 = all_products[product_1_handle] %}
+     {% assign product_2_handle = product.metafields.product.product_routine_2.value | split: "/" | last %}
+     {% assign product_2 = all_products[product_2_handle] %}
+     {% assign product_3_handle = product.metafields.product.product_routine_3.value | split: "/" | last %}
+     {% assign product_3 = all_products[product_3_handle] %}
+     {% assign product_4_handle = product.metafields.product.product_routine_4.value | split: "/" | last %}
+     {% assign product_4 = all_products[product_4_handle] %}
+
+     {%- if product_1.available and product_2.available -%}
+       {% assign routine_products_available = true %}
+     {%- endif -%}
+
+           {%- if routine_products_available -%}
+                 <div class="product-form__buy-buttons routine-steps__product-form" {{ block.shopify_attributes }}>
+                      {%- form 'product', product, is: 'product-form', id: product_form_id -%}
+                         <input type="hidden" disabled name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+                         <product-payment-container form-id="{{ product_form_id }}" {% if update_url %}id="MainPaymentContainer"{% endif %} class="product-form__payment-container" {{ block.shopify_attributes }}>
+                           <button id="AddToCart" type="submit" is="loader-button" {% unless block.settings.show_payment_button and template.suffix != 'quick-buy-popover' %}data-use-primary{% endunless %} data-product-add-to-cart-button data-button-content="{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t | escape }}{% else %}{{ 'product.form.add_to_cart' | t | escape }} {% endif %}" class="product-form__add-button button {% unless product.selected_or_first_available_variant.available %}button--ternary{% else %}{% if block.settings.show_payment_button and template.suffix != 'quick-buy-popover' %}button--secondary{% else %}button--primary{% endif %}{% endunless %}" {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+                             {%- if product.selected_or_first_available_variant.available -%}
+                               {%- if product.template_suffix == 'pre-order' -%}
+                                 {{- 'product.form.pre_order' | t -}}
+                               {%- else -%}
+                                 {{ section.settings.button_text }} | {% render 'price', product:product %}
+                               {%- endif -%}
+                             {%- else -%}
+                               {{- 'product.form.sold_out' | t -}}
+                             {%- endif -%}
+                           </button>
+                         </product-payment-container>
+                       {%- endform -%}
+                  </div>
+
+
+                  {%- if product.available and product.price < product.compare_at_price -%}
+                    {%- if settings.discount_mode == 'percentage' -%}
+                      {%- assign savings = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round | append: '%' -%}
+                    {%- else -%}
+                      {%- capture savings -%}{{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}{%- endcapture -%}
+                    {%- endif -%}
+                    <div class="align-center">
+                      <span class="routine-steps__discount">{{ 'collection.product.discount_html' | t: savings: savings }}</span>
+                    </div>
+                  {%- endif -%}
+           {% else %}
+               <div class="product-form__buy-buttons routine-steps__product-form align-center">
+                  <button class="trigger button button--primary">{{ section.settings.button_text }} | {% render 'price', product:product %}</button>
+               </div>
+
+                 <div class="modal">
+                     <div class="modal-content">
+                         <span class="close-button">×</span>
+                         {{ section.settings.modal_text }}
+                     </div>
+                 </div>
+           {%- endif -%}
+       {%- endif -%}
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const modal = document.querySelector(".modal");
+  const trigger = document.querySelector(".trigger");
+  const closeButton = document.querySelector(".close-button");
+
+  function toggleModal() {
+      modal.classList.toggle("show-modal");
+  }
+
+  function windowOnClick(event) {
+      if (event.target === modal) {
+          toggleModal();
+      }
+  }
+
+  trigger.addEventListener("click", toggleModal);
+  closeButton.addEventListener("click", toggleModal);
+  window.addEventListener("click", windowOnClick);
+</script>
+<style>
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+
+}
+
+.close-button:hover {
+    background-color: darkgray;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Routine steps",
+  "class": "shopify-section--routine-steps",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "paragraph",
+      "content": "After one product is chosen, we check if the products of this pack added with metafields are available.If not we show the modal"
+    },
+    {
+      "type": "richtext",
+      "id": "modal_text",
+      "label": "Modal text",
+      "default": "<p>Un des produits de cette routine n’est plus en stock, si vous souhaitez le commander, vous le recevrez dès le réapprovisionnement effectué</p>"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Étape par étape"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>Les étapes et produits utilisés par Julie pour réussir à atteindre ses objectifs minceur. </p>"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "label": "Show button CTA",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button",
+      "default": "ACHETER LA ROUTINE"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#F5F5F5"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "rgba(0,0,0,0)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "ROUTINE"
+          },
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subtitle",
+            "default": "Subtitle"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content",
+            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Routine steps",
+      "settings": {},
+      "blocks": [
+       {
+         "type": "card"
+       },
+       {
+         "type": "card"
+       },
+       {
+         "type": "card"
+       },
+       {
+         "type": "card"
+       }
+     ]
+    }
+  ]
+}
+{% endschema %}

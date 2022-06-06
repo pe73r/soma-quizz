@@ -1,0 +1,20 @@
+<div class="collection-breadcrumb">
+    <div class="container container-mobile">
+      <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb text--xsmall text--subdued">
+           <ol class="breadcrumb__list" role="list">
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link" href="{{ routes.root_url }}">
+                  {% render 'icon' with 'arrow-breadcrumb' %}
+                  {{ 'general.breadcrumb.home' | t }}
+                </a>
+              </li>
+          </ol>
+      </nav>
+    </div>
+</div>
+
+{% schema %}
+{
+  "class": "section-collection-breadcrumb"
+}
+{% endschema %}

@@ -1,0 +1,84 @@
+<section>
+  <div class="container">
+    <div class="page-header">
+      <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb breadcrumb--floating text--xsmall hidden-phone">
+        <ol class="breadcrumb__list" role="list">
+          <li class="breadcrumb__item">
+             <a class="breadcrumb__link" href="{{ routes.root_url }}">{% render 'icon' with 'arrow-breadcrumb' %} {{ 'general.breadcrumb.home' | t }}</a>
+          </li>
+
+          <li class="breadcrumb__item">
+            <span class="breadcrumb__link" aria-current="page">{{ page.title }}</span>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="page-header__text-wrapper text-container">
+        {%- if section.settings.show_title -%}
+          <h1 class="heading h3">{{ page.title }}</h1>
+        {%- endif -%}
+
+        {%- if section.settings.show_divider  -%}
+          {% render 'icon' with 'divider-green' %}
+        {%- endif -%}
+
+        {%- if template.suffix contains 'contact' or template.suffix contains 'faq' -%}
+          {{- page.content -}}
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- unless template.suffix contains 'contact' or template.suffix contains 'faq' or template.suffix contains 'store-locator' -%}
+      <div class="page-content page-content--{{ section.settings.page_width }} rte">
+        {{- page.content -}}
+      </div>
+    {%- endunless -%}
+
+    {%- if template.suffix contains 'store-locator' -%}
+       <div class="page-store-locator">
+         {{- page.content -}}
+       </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Page",
+  "class": "shopify-section--main-page",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show page title",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_divider",
+      "label": "Show line divider ?",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "page_width",
+      "label": "Page width",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "medium"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,9 @@
+<script type="text/javascript" src="https://d354wf6w0s8ijx.cloudfront.net/js/config.js?s=54997221443&v=3t9jhviku76uafaavfld2917&shop=baija-shop.myshopify.com" async></script>
+<script type="text/javascript" src="https://d354wf6w0s8ijx.cloudfront.net/js/tracker.js?s=54997221443&v=3t9jhviku76uafaavfld2917&shop=baija-shop.myshopify.com" async></script>
+<script type="text/javascript" src="https://d354wf6w0s8ijx.cloudfront.net/js/init.js?s=54997221443&v=3t9jhviku76uafaavfld2917&shop=baija-shop.myshopify.com" async></script>
+
+{% comment %} include if theme-migrations assets file exists {% endcomment %}
+{% capture the_snippet_content %}{% render 'sparq-theme-migration' %}{% endcapture %}
+{% unless the_snippet_content contains "Liquid error" %}
+  {% render 'sparq-theme-migration' %}
+{% endunless %}

@@ -1,0 +1,62 @@
+<section class="section" id="section-{{ section.id }}">
+  <div class="container">
+     <div class="product-reviews__wrapper">
+        <div class="product-reviews__details">
+          <h4 class="heading h5 align-center">{{ section.settings.title }}</h4>
+          {%- if product.metafields.product.efficiency-text.value != blank -%}
+            {{ product.metafields.product.efficiency-text.value }}
+          {% else %}
+              {{ section.settings.text }}
+          {%- endif -%}
+        </div>
+        <div class="product-reviews__yotpo">
+          <!-- YOTPO REVIEWS -->
+            <div class="yotpo yotpo-main-widget"
+              data-product-id="{{ product.id }}"
+              data-name="{{ product.title | escape }}"
+              data-url="{{ shop.url }}{{ product.url }}"
+              data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}"
+              data-price="{{ variant.price | money_without_currency }}"
+              data-currency="{{ shop.currency }}"
+              data-description="{{ product.description | escape }}">
+            </div>
+        </div>
+     </div>
+  </div>
+</section>
+<style>
+    #section-{{ section.id }} .product-reviews__details{
+       background-color: {{ section.settings.bg_color }};
+     }
+</style>
+{% schema %}
+{
+  "name": "Product reviews",
+  "settings": [
+       {
+         "type": "color",
+         "id": "bg_color",
+         "label": "Box backgorund color",
+         "default": "#EAFFF7"
+       },
+       {
+         "type": "text",
+         "id": "title",
+         "label": "Title",
+         "default": "EFFICACITÉ PROUVÉE"
+       },
+       {
+         "type": "textarea",
+         "id": "text",
+         "label": "Text",
+         "default": "<p><span>92%</span><br>des femmes ont perdu 0,8 cm de tour de cuisse après une utilisation sur 7 jours*</p>"
+       }
+  ],
+  "presets": [
+    {
+      "name": "Product reviews",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

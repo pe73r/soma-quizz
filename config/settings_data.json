@@ -1,0 +1,755 @@
+{
+  "current": {
+    "button_border_radius": 4,
+    "block_border_radius": "none",
+    "vertical_spacing": "small",
+    "heading_color": "#282828",
+    "text_color": "#282828",
+    "secondary_background": "#f5f5f5",
+    "success_color": "#009760",
+    "error_color": "#009760",
+    "header_background": "#009760",
+    "footer_background": "#009760",
+    "footer_text_color": "#ffffff",
+    "primary_button_background": "#009760",
+    "secondary_button_background": "rgba(0,0,0,0)",
+    "secondary_button_text_color": "#009760",
+    "product_on_sale_accent": "#00449f",
+    "product_sold_out_accent": "#282828",
+    "product_custom_label_background": "#405de6",
+    "product_custom_label_2_background": "#f3ff34",
+    "product_in_stock_text_color": "#2e9e7b",
+    "product_low_stock_text_color": "#de2a2a",
+    "heading_font": "helvetica_n7",
+    "heading_font_size": "small",
+    "heading_text_transform": "normal",
+    "text_font": "helvetica_n4",
+    "text_font_size": 14,
+    "currency_code_enabled": false,
+    "stagger_products_apparition": false,
+    "round_color_swatches": false,
+    "show_vendor": false,
+    "show_secondary_image": true,
+    "show_product_rating": false,
+    "product_color_display": "count",
+    "product_image_size": "natural",
+    "cart_type": "drawer",
+    "cart_show_free_shipping_threshold": true,
+    "cart_free_shipping_threshold": "60",
+    "social_facebook": "https:\/\/www.facebook.com\/SomatolineCosmeticFrance\/",
+    "social_instagram": "https:\/\/www.instagram.com\/somatoline.cosmetic_fr\/",
+    "favicon": "shopify:\/\/shop_images\/favicon-fr.png",
+    "checkout_sidebar_background_color": "#f5f5f5",
+    "checkout_accent_color": "#474747",
+    "checkout_button_color": "#009760",
+    "checkout_error_color": "#de2a2a",
+    "accent_color": "#405de6",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "message-1": {
+            "type": "message",
+            "settings": {
+              "text": "<b>Livraison 📦 gratuite à partir de 60 €<\/b>",
+              "learn_more_text": "Learn more",
+              "title": "",
+              "content": "",
+              "button_text": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "message-1"
+        ],
+        "settings": {
+          "announcement_bar_position": "non_sticky",
+          "announcement_text_size": "normal",
+          "autoplay": true,
+          "cycle_speed": 5,
+          "background": "#e7a28c",
+          "text_color": "#ffffff",
+          "button_background": "#282828",
+          "button_text_color": "#ffffff"
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "497cf71e-5a21-4cea-ac18-53795e5d1057": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "Nos produits",
+              "images_position": "right",
+              "image_1": "shopify:\/\/shop_images\/Rectangle_467_5_04407c8e-740c-4f40-a4ff-ca0f9e49ce48.png",
+              "image_1_heading": "Exclusivités",
+              "image_1_text": "",
+              "image_1_link": "https:\/\/somatoline-cosmetic.myshopify.com\/collections\/toutes-les-routines#section-OFFRES%20SPECIALES",
+              "image_2": "shopify:\/\/shop_images\/Rectangle_467_6.png",
+              "image_2_heading": "TOUS NOS PRODUITS",
+              "image_2_text": "",
+              "image_2_link": "https:\/\/somatoline-cosmetic.myshopify.com\/collections\/tous-les-produits",
+              "image_3": "shopify:\/\/shop_images\/Rectangle_467_7.png",
+              "image_3_heading": "CELLULITE",
+              "image_3_text": "",
+              "image_3_link": "https:\/\/somatoline-cosmetic.myshopify.com\/collections\/toutes-les-routines#section-CELLULITE",
+              "image_4": "shopify:\/\/shop_images\/Rectangle_467_8.png",
+              "image_4_heading": "DRAINER",
+              "image_4_text": "",
+              "image_4_link": "https:\/\/somatoline-cosmetic.myshopify.com\/collections\/tous-les-produits#section-DRAINER",
+              "image_5": "shopify:\/\/shop_images\/Rectangle_467_9.png",
+              "image_5_heading": "EXFOLIER",
+              "image_5_text": "",
+              "image_5_link": "https:\/\/somatoline-cosmetic.myshopify.com\/collections\/tous-les-produits#section-EXFOLIER",
+              "image_6": "shopify:\/\/shop_images\/Rectangle_467_10.png",
+              "image_6_heading": "VERGETURES",
+              "image_6_text": "",
+              "image_6_link": "https:\/\/somatoline-cosmetic.myshopify.com\/collections\/tous-les-produits#section-VERGETURES",
+              "image_7": "shopify:\/\/shop_images\/Rectangle_467_11.png",
+              "image_7_heading": "MINCIR",
+              "image_7_text": "",
+              "image_7_link": "https:\/\/somatoline-cosmetic.myshopify.com\/collections\/tous-les-produits#section-MINCIR",
+              "image_8": "shopify:\/\/shop_images\/Rectangle_467_4_87af1d83-f5be-46c7-a4db-8fc22f281f88.png",
+              "image_8_heading": "ABDOS",
+              "image_8_text": "",
+              "image_8_link": "https:\/\/somatoline-cosmetic.myshopify.com\/collections\/tous-les-produits#section-SCULPTER"
+            }
+          },
+          "aaa215dd-1236-402b-a048-f3b79ae65322": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "Nos routines",
+              "images_position": "right",
+              "image_1": "shopify:\/\/shop_images\/Rectangle_467_6_b646c74e-59af-4552-a60f-59f7d12aa654.png",
+              "image_1_heading": "OFFRES SPECIALES",
+              "image_1_text": "",
+              "image_1_link": "https:\/\/somatoline-cosmetic.myshopify.com\/collections\/toutes-les-routines#section-OFFRES%20SPECIALES",
+              "image_2": "shopify:\/\/shop_images\/Rectangle_467_f99b2937-8e36-403c-98f4-52f582b2fa59.png",
+              "image_2_heading": "TOUTES NOS ROUTINES",
+              "image_2_text": "",
+              "image_2_link": "shopify:\/\/collections\/toutes-les-routines",
+              "image_3": "shopify:\/\/shop_images\/Rectangle_467_1_ed9b9fb3-560a-4e89-8255-cf091194a54d.png",
+              "image_3_heading": "ROUTINES ANTI-CELLULITE",
+              "image_3_text": "",
+              "image_3_link": "https:\/\/somatoline-cosmetic.myshopify.com\/collections\/toutes-les-routines#section-CELLULITE",
+              "image_4": "shopify:\/\/shop_images\/Rectangle_467_2_1b73ff4e-177e-4723-b503-84fc2e7ef128.png",
+              "image_4_heading": "ROUTINES MINCEUR",
+              "image_4_text": "",
+              "image_4_link": "https:\/\/somatoline-cosmetic.myshopify.com\/collections\/toutes-les-routines#section-MINCIR",
+              "image_5": "shopify:\/\/shop_images\/Rectangle_467_3_28177d44-6738-4fb3-ba66-a2c5f0de891e.png",
+              "image_5_heading": "ROUTINES DRAINANTES",
+              "image_5_text": "",
+              "image_5_link": "https:\/\/somatoline-cosmetic.myshopify.com\/collections\/toutes-les-routines#section-DRAINER",
+              "image_6": "shopify:\/\/shop_images\/Rectangle_467_4.png",
+              "image_6_heading": "ROUTINES HOMME",
+              "image_6_text": "",
+              "image_6_link": "https:\/\/somatoline-cosmetic.myshopify.com\/collections\/toutes-les-routines#section-ROUTINE%20HOMME",
+              "image_7": "shopify:\/\/shop_images\/Rectangle_467_10.png",
+              "image_7_heading": "ROUTINES VERGETURES",
+              "image_7_text": "",
+              "image_7_link": "https:\/\/somatoline-cosmetic.myshopify.com\/collections\/toutes-les-routines#section-VERGETURES",
+              "image_8_heading": "",
+              "image_8_text": "",
+              "image_8_link": ""
+            }
+          },
+          "e5139f20-322f-4c1d-a68c-fcd4ac068d07": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "La marque",
+              "images_position": "right",
+              "image_1": "shopify:\/\/shop_images\/Rectangle_467_13.png",
+              "image_1_heading": "NOTRE EXPERTISE",
+              "image_1_text": "",
+              "image_1_link": "shopify:\/\/pages\/la-science-au-service-de-votre-peau",
+              "image_2": "shopify:\/\/shop_images\/Rectangle_467_15.png",
+              "image_2_heading": "POURQUOI ÇA <br> FONCTIONNE ?",
+              "image_2_text": "",
+              "image_2_link": "shopify:\/\/pages\/pourquoi-nos-produits-fonctionnent",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": "",
+              "image_7_heading": "",
+              "image_7_text": "",
+              "image_7_link": "",
+              "image_8_heading": "",
+              "image_8_text": "",
+              "image_8_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "497cf71e-5a21-4cea-ac18-53795e5d1057",
+          "aaa215dd-1236-402b-a048-f3b79ae65322",
+          "e5139f20-322f-4c1d-a68c-fcd4ac068d07"
+        ],
+        "settings": {
+          "enable_sticky_header": true,
+          "logo": "shopify:\/\/shop_images\/logo-new_fb760463-3dc3-4310-89f6-0853c48dabd7.png",
+          "logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0634\/5434\/7503\/files\/logo-new.svg?v=1653333895",
+          "logo_max_width": 110,
+          "mobile_logo_max_width": 100,
+          "navigation_menu": "main-menu",
+          "sidebar_navigation_menu": "",
+          "header_layout": "logo_left_navigation_center",
+          "show_icons": true,
+          "show_search": false,
+          "show_counter": true,
+          "reduce_desktop_padding": true,
+          "show_locale_selector": true,
+          "show_currency_selector": true,
+          "enable_transparent_header": false,
+          "transparent_header_text_color": "#ffffff",
+          "search_menu": "",
+          "image_mobile": "shopify:\/\/shop_images\/Rectangle_436.png",
+          "title_mobile": "Faîtes des économies grâce à nos routines !",
+          "mobile_title_color": "#ffffff",
+          "mobile_link_title": "Pourquoi ça fonctionne ?",
+          "mobile_link": "",
+          "mobile_link_title_2": "Les routines de nos ambassadrices",
+          "mobile_link_2": ""
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "de1b1cfc-2bb6-4c99-8f07-f0f95d880e92": {
+            "type": "links",
+            "settings": {
+              "menu": "nous-d-couvrir"
+            }
+          },
+          "7ee7901e-b07a-4040-8b0e-7ce644fe4472": {
+            "type": "links",
+            "settings": {
+              "menu": "contact"
+            }
+          },
+          "2f3a5f38-c902-4126-b115-fa08f34036d6": {
+            "type": "links",
+            "settings": {
+              "menu": "aide"
+            }
+          },
+          "4a41c293-5c08-455b-8207-7f543ca7b36f": {
+            "type": "social_media",
+            "settings": {
+              "title": "Suivez-nous sur les réseaux sociaux",
+              "content": ""
+            }
+          }
+        },
+        "block_order": [
+          "de1b1cfc-2bb6-4c99-8f07-f0f95d880e92",
+          "7ee7901e-b07a-4040-8b0e-7ce644fe4472",
+          "2f3a5f38-c902-4126-b115-fa08f34036d6",
+          "4a41c293-5c08-455b-8207-7f543ca7b36f"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/logo-new_fb760463-3dc3-4310-89f6-0853c48dabd7.png",
+          "logo_svg": "",
+          "title": "N°1 des soins minceur en pharmacie*",
+          "show_payment_icons": false,
+          "show_currency_selector": false,
+          "show_locale_selector": false,
+          "menu_legal": "legal"
+        }
+      },
+      "popup": {
+        "type": "popup",
+        "settings": {
+          "enable": false,
+          "apparition_delay": 5,
+          "show_only_on_index": true,
+          "show_only_for_visitors": true,
+          "show_only_once": true,
+          "image_position": "left",
+          "title": "Get 10% off",
+          "content": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>"
+        }
+      },
+      "mini-cart": {
+        "type": "mini-cart",
+        "blocks": {
+          "675bbd99-e3df-424b-8b98-786de2278a83": {
+            "type": "free_shipping",
+            "settings": {
+              "limit": 60,
+              "text": "pour profiter de la LIVRAISON OFFERTE ! 😃"
+            }
+          },
+          "2b8d2332-69fd-4ce5-91a8-8fbbc8cb591e": {
+            "type": "gift_card",
+            "settings": {
+              "limit": 100,
+              "text": "pour gagner un CODE PROMO DE 10€ ! 😎"
+            }
+          },
+          "15d098e4-6060-4c93-9c5f-9a21dc666730": {
+            "type": "free_product",
+            "settings": {
+              "limit": 150,
+              "text": "pour gagner un GOMMAGE ! 😏"
+            }
+          },
+          "512f215b-e7b2-460a-926d-a591840c6b5b": {
+            "type": "success",
+            "settings": {
+              "limit": 1000000,
+              "text": "Félicitations, vous avez déjà minci ! 🤗"
+            }
+          }
+        },
+        "block_order": [
+          "675bbd99-e3df-424b-8b98-786de2278a83",
+          "2b8d2332-69fd-4ce5-91a8-8fbbc8cb591e",
+          "15d098e4-6060-4c93-9c5f-9a21dc666730",
+          "512f215b-e7b2-460a-926d-a591840c6b5b"
+        ],
+        "settings": {
+          "show_order_note": false,
+          "show_checkout_button": true,
+          "empty_button_link": "shopify:\/\/collections\/toutes-les-routines",
+          "show_recommendations": true,
+          "recommendations_title": "COMPLÉTEZ VOTRE COMMANDE",
+          "extra_text": "Code promo à indiquer à l’étape suivante",
+          "show_shipping_tax": true,
+          "shipping_tax": "4,90 €",
+          "show_carousel": true,
+          "truck_title": "Livraison offerte",
+          "truck_text": "à partir de 60 €",
+          "box_title": "Bon d’achat de 10 euros",
+          "box_text": "pour toute commande supérieure à 100€",
+          "worldwide_title": "Un produit gommage sucre brun offert",
+          "worldwide_text": "pour tout commande supérieure à 150€"
+        }
+      },
+      "static-pictos": {
+        "type": "static-pictos",
+        "blocks": {
+          "e30b5ebe-5a0e-483a-996c-ac939092d48e": {
+            "type": "picto",
+            "settings": {
+              "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0634\/5434\/7503\/files\/check.svg?v=1648733043",
+              "title": "EFFICACITÉ PROUVÉE",
+              "text": "<p>Tous nos produits sont testés pour des résultats cliniquement prouvés<\/p>"
+            }
+          },
+          "bb9683b7-4edd-4852-a65c-20e1ea8968ac": {
+            "type": "picto",
+            "settings": {
+              "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0634\/5434\/7503\/files\/call.svg?v=1648733044",
+              "title": "DES EXPERTS À VOTRE SERVICE",
+              "text": "<p>Notre équipe est disponible du lundi au vendredi, de 9h à 18h .<\/p>"
+            }
+          },
+          "4509a2e8-f761-42b1-ba9e-83cf58c5ba7e": {
+            "type": "picto",
+            "settings": {
+              "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0634\/5434\/7503\/files\/gift.svg?v=1648733044",
+              "title": "LIVRAISON OFFERTE",
+              "text": "<p>À partir de 60 euros, les frais de livraison sont offerts<\/p>"
+            }
+          },
+          "f01facb2-5fa2-49ec-a400-7e48e5694771": {
+            "type": "picto",
+            "settings": {
+              "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0634\/5434\/7503\/files\/cards.svg?v=1648733043",
+              "title": "PAIEMENT SECURISE",
+              "text": "<p>Visa, Mastercard, Google Pay, Amex, Paypal, Apple Pay<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "e30b5ebe-5a0e-483a-996c-ac939092d48e",
+          "bb9683b7-4edd-4852-a65c-20e1ea8968ac",
+          "4509a2e8-f761-42b1-ba9e-83cf58c5ba7e",
+          "f01facb2-5fa2-49ec-a400-7e48e5694771"
+        ],
+        "settings": {
+          "display": true
+        }
+      },
+      "static-instagram": {
+        "type": "static-instagram",
+        "settings": {
+          "display": true,
+          "title": "REJOIGNEZ-NOUS",
+          "subheading": "#SomatolineCosmetic",
+          "content": "<div class=\"yotpo yotpo-pictures-widget\" data-gallery-id=\"62418f5f32adca0b260f83fa\">\n<\/div>",
+          "background": "rgba(0,0,0,0)",
+          "text_color": "rgba(0,0,0,0)"
+        }
+      },
+      "checkout-banner": {
+        "type": "checkout-banner",
+        "settings": {
+          "logo_svg": "shopify:\/\/shop_images\/logo-new_fb760463-3dc3-4310-89f6-0853c48dabd7.png",
+          "image": "shopify:\/\/shop_images\/Rectangle_499.jpg",
+          "image_mobile": "shopify:\/\/shop_images\/Rectangle_499.png"
+        }
+      },
+      "checkout-carousel": {
+        "type": "checkout-carousel",
+        "settings": {
+          "collection": "toutes-les-routines",
+          "title": "Vous aimerez aussi"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
+  "presets": {
+    "Carbon": {
+      "button_border_radius": 0,
+      "block_border_radius": "none",
+      "heading_color": "#282828",
+      "text_color": "#282828",
+      "secondary_background": "#f5f5f5",
+      "success_color": "#2e9e7b",
+      "error_color": "#de2a2a",
+      "header_background": "#282828",
+      "footer_background": "#282828",
+      "footer_text_color": "#ffffff",
+      "primary_button_background": "#405de6",
+      "secondary_button_background": "#f3ff34",
+      "secondary_button_text_color": "#282828",
+      "product_on_sale_accent": "#de2a2a",
+      "product_custom_label_background": "#405de6",
+      "product_custom_label_2_background": "#f3ff34",
+      "product_in_stock_text_color": "#2e9e7b",
+      "product_low_stock_text_color": "#de2a2a",
+      "heading_font": "zurich_extended_n8",
+      "heading_font_size": "medium",
+      "heading_text_transform": "uppercase",
+      "text_font": "zurich_n4",
+      "text_font_size": 15,
+      "currency_code_enabled": false,
+      "stagger_products_apparition": true,
+      "round_color_swatches": false,
+      "show_vendor": false,
+      "show_secondary_image": true,
+      "product_color_display": "count",
+      "product_image_size": "natural",
+      "show_product_rating": false,
+      "cart_type": "message",
+      "cart_show_free_shipping_threshold": true,
+      "accent_color": "#405de6",
+      "checkout_sidebar_background_color": "#f5f5f5",
+      "checkout_accent_color": "#282828",
+      "checkout_button_color": "#405de6",
+      "checkout_error_color": "#de2a2a",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "message-1": {
+              "type": "message",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "message-1"
+          ],
+          "settings": {
+            "announcement_bar_position": "non_sticky",
+            "announcement_text_size": "normal",
+            "autoplay": true,
+            "cycle_speed": 5,
+            "background": "#f3ff34",
+            "text_color": "#282828",
+            "button_background": "#282828",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "enable_sticky_header": true,
+            "navigation_menu": "main-menu",
+            "header_layout": "logo_left_navigation_center",
+            "show_icons": false,
+            "reduce_desktop_padding": false,
+            "enable_transparent_header": false,
+            "transparent_header_text_color": "#ffffff",
+            "mobile_title_color": "#fff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "text": {
+              "type": "text",
+              "settings": {
+              }
+            },
+            "links": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {
+              }
+            },
+            "social_media": {
+              "type": "social_media",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "text",
+            "links",
+            "newsletter",
+            "social_media"
+          ],
+          "settings": {
+          }
+        }
+      }
+    },
+    "Ivory": {
+      "button_border_radius": 4,
+      "block_border_radius": "small",
+      "heading_color": "#1a1a1a",
+      "text_color": "#1a1a1a",
+      "secondary_background": "#f5f1ec",
+      "success_color": "#2e9e7b",
+      "error_color": "#de2a2a",
+      "header_background": "#56112a",
+      "header_text_color": "#ffffff",
+      "footer_background": "#56112a",
+      "footer_text_color": "#ffffff",
+      "primary_button_background": "#56112a",
+      "primary_button_text_color": "#ffffff",
+      "secondary_button_background": "#f7aea6",
+      "secondary_button_text_color": "#56112a",
+      "product_on_sale_accent": "#913b59",
+      "product_custom_label_background": "#405de6",
+      "product_custom_label_2_background": "#f3e5b6",
+      "product_in_stock_text_color": "#2e9e7b",
+      "product_low_stock_text_color": "#de2a2a",
+      "heading_font": "itc_caslon_no_224_n5",
+      "heading_font_size": "medium",
+      "heading_text_transform": "normal",
+      "text_font": "avenir_next_n4",
+      "text_font_size": 15,
+      "stagger_products_apparition": true,
+      "round_color_swatches": true,
+      "show_vendor": false,
+      "show_secondary_image": true,
+      "product_color_display": "count",
+      "product_image_size": "natural",
+      "cart_type": "drawer",
+      "accent_color": "#405de6",
+      "checkout_sidebar_background_color": "#f6f3ed",
+      "checkout_accent_color": "#353535",
+      "checkout_button_color": "#353535",
+      "checkout_error_color": "#de2a2a",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "message-1": {
+              "type": "message",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "message-1"
+          ],
+          "settings": {
+            "announcement_bar_position": "non_sticky",
+            "announcement_text_size": "small",
+            "autoplay": true,
+            "cycle_speed": 5,
+            "background": "#f7aea6",
+            "text_color": "#56112a",
+            "button_background": "#56112a",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "enable_sticky_header": true,
+            "navigation_menu": "main-menu",
+            "header_layout": "logo_center_navigation_inline",
+            "show_icons": false,
+            "reduce_desktop_padding": false,
+            "enable_transparent_header": false,
+            "transparent_header_text_color": "#ffffff",
+            "mobile_title_color": "#fff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "text": {
+              "type": "text",
+              "settings": {
+              }
+            },
+            "links": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {
+              }
+            },
+            "social_media": {
+              "type": "social_media",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "text",
+            "links",
+            "newsletter",
+            "social_media"
+          ],
+          "settings": {
+          }
+        }
+      }
+    },
+    "Quartz": {
+      "icon_stroke_width": 1.3,
+      "button_border_radius": 0,
+      "block_border_radius": "none",
+      "vertical_spacing": "medium",
+      "heading_color": "#0d0d0d",
+      "text_color": "#2e2e2e",
+      "background": "#ffffff",
+      "secondary_background": "#f5f5f5",
+      "success_color": "#3c6e71",
+      "error_color": "#de2a2a",
+      "header_background": "#ffffff",
+      "header_text_color": "#2e2e2e",
+      "footer_background": "#ffffff",
+      "footer_text_color": "#2e2e2e",
+      "primary_button_background": "#051e38",
+      "primary_button_text_color": "#ffffff",
+      "secondary_button_background": "#dfdfdf",
+      "secondary_button_text_color": "#2e2e2e",
+      "product_on_sale_accent": "#de2b2b",
+      "product_sold_out_accent": "#5b5b5b",
+      "product_custom_label_background": "#051e38",
+      "product_custom_label_2_background": "#2e9e7b",
+      "product_in_stock_text_color": "#2e9e7b",
+      "product_low_stock_text_color": "#de2b2b",
+      "heading_font": "futura_n3",
+      "heading_font_size": "medium",
+      "heading_text_transform": "uppercase",
+      "text_font": "din_next_n4",
+      "text_font_size": 15,
+      "stagger_products_apparition": true,
+      "round_color_swatches": false,
+      "show_vendor": false,
+      "show_secondary_image": true,
+      "product_color_display": "hide",
+      "product_image_size": "natural",
+      "cart_type": "drawer",
+      "cart_icon": "tote_bag",
+      "checkout_sidebar_background_color": "#f5f5f5",
+      "checkout_accent_color": "#051e38",
+      "checkout_button_color": "#051e38",
+      "checkout_error_color": "#de2a2a",
+      "accent_color": "#405de6",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "message-1": {
+              "type": "message",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "message-1"
+          ],
+          "settings": {
+            "announcement_bar_position": "non_sticky",
+            "announcement_text_size": "small",
+            "autoplay": true,
+            "cycle_speed": 5,
+            "background": "#051e38",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#051e38"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "enable_sticky_header": true,
+            "navigation_menu": "main-menu",
+            "header_layout": "logo_center_navigation_inline",
+            "show_icons": true,
+            "reduce_desktop_padding": false,
+            "enable_transparent_header": true,
+            "transparent_header_text_color": "#ffffff",
+            "mobile_title_color": "#fff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "text": {
+              "type": "text",
+              "settings": {
+              }
+            },
+            "links": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {
+              }
+            },
+            "social_media": {
+              "type": "social_media",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "text",
+            "links",
+            "newsletter",
+            "social_media"
+          ],
+          "settings": {
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-customers-login",
+      "blocks": {
+        "login_form": {
+          "type": "login",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "login_form"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/somatoline--banner_2000x_bf068845-77a7-4e96-b8b1-dab9edb7fbab.webp",
+        "image_mobile": "shopify:\/\/shop_images\/somatoline--banner-mobile.png",
+        "show_instructions": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,201 @@
+{%- capture status -%}
+  {%- form 'recover_customer_password' -%}
+    {%- if form.posted_successfully? -%}
+      {%- assign is_recover_posted_successfully = true -%}
+    {%- else -%}
+      {%- assign is_recover_posted_successfully = false -%}
+    {%- endif -%}
+  {%- endform -%}
+{%- endcapture -%}
+
+<section>
+    {%- comment -%}
+    --------------------------------------------------------------------------------------------------------------------
+    CUSTOMER LOGIN FORM
+    --------------------------------------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    <div id="login-form-container">
+
+    <div class="account__wrapper">
+      <div class="account__image">
+        {%- if section.settings.image != blank -%}
+          <img class="{%- if section.settings.image_mobile != blank -%} hidden-phone {% endif %}" loading="lazy" sizes="(max-width: 740px) 100vw, 500px" {% render 'image-attributes', image: section.settings.image, sizes: '300,400,500,600,700,800,900,1000' %}>
+        {%- endif -%}
+
+        {%- if section.settings.image_mobile != blank -%}
+          <img class="hidden-tablet hidden-lap-and-up" loading="lazy" sizes="(max-width: 740px) 100vw, 500px" {% render 'image-attributes', image: section.settings.image_mobile, sizes: '300,400,500,600,700,800,900,1000' %}>
+        {%- endif -%}
+      </div>
+      <div class="account__content">
+        <div class="account__header">
+          <div class="">
+            <h1 class="heading h3">{{ 'customer.login.title' | t }}</h1>
+            {%- if section.settings.show_instructions -%}
+              <p>{{ 'customer.login.instructions' | t }}</p>
+            {%- endif -%}
+          </div>
+      </div>
+      <div class="account__form">
+        <div class="account__block-list">
+          {%- for block in section.blocks -%}
+            <div class="account__block-item" {{ block.shopify_attributes }}>
+              {%- case block.type -%}
+
+                {%- when 'login' -%}
+                  {%- form 'customer_login', name: 'login', class: 'form' -%}
+                    {%- if form.errors -%}
+                      <div class="banner banner--error form__banner" id="login-form-error">
+                        <span class="banner__ribbon">{% render 'icon' with 'form-error' %}</span>
+                        <p class="banner__content">{{ form.errors.messages['form'] }}</p>
+                      </div>
+                    {%- endif -%}
+
+                    <div class="input">
+                      <input type="email" id="customer[email]" autocomplete="email" placeholder="{{ 'customer.login.email' | t }}" class="input__field" name="customer[email]" required="required" {% if form.errors %}aria-invalid="true" aria-describedby="login-form-error"{% endif %}>
+                      <!-- <label for="customer[email]" class="input__label">{{ 'customer.login.email' | t }}</label> -->
+                    </div>
+
+                    <div class="input">
+                      <input type="password" id="customer[password]" placeholder="{{ 'customer.login.password' | t }}" class="input__field" name="customer[password]" required="required" autocomplete="current-password" {% if form.errors %}aria-invalid="true" aria-describedby="login-form-error"{% endif %}>
+                      <!-- <label for="customer[password]" class="input__label">{{ 'customer.login.password' | t }}</label> -->
+                    </div>
+
+                    <button type="submit" is="loader-button" class="form__submit button button--primary button--full">{{ 'customer.login.submit' | t }}</button>
+
+                    <span class="form__secondary-action text--subdued">
+                      <a href="{{ routes.account_register_url }}" class="link-underline">{{ 'customer.login.create_account' | t }}</a>
+                    </span>
+                    <span class="form__forget-pass text--subdued">
+                      <button type="button" class="link-underline" data-action="switch-login-form">{{ 'customer.login.forgot_password' | t }}</button>
+                    </span>
+                  {%- endform -%}
+              {%- endcase -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+    </div>
+   </div>
+   {%- comment -%}
+   --------------------------------------------------------------------------------------------------------------------
+   CUSTOMER RECOVERY FORM
+   --------------------------------------------------------------------------------------------------------------------
+   {%- endcomment -%}
+
+   <div id="recover-form-container" style="display: none">
+     <div class="account__wrapper">
+       <div class="account__image">
+         {%- if section.settings.image != blank -%}
+           <img class="{%- if section.settings.image_mobile != blank -%} hidden-phone {% endif %}" loading="lazy" sizes="(max-width: 740px) 100vw, 500px" {% render 'image-attributes', image: section.settings.image, sizes: '300,400,500,600,700,800,900,1000' %}>
+         {%- endif -%}
+
+         {%- if section.settings.image_mobile != blank -%}
+           <img class="hidden-tablet hidden-lap-and-up" loading="lazy" sizes="(max-width: 740px) 100vw, 500px" {% render 'image-attributes', image: section.settings.image_mobile, sizes: '300,400,500,600,700,800,900,1000' %}>
+         {%- endif -%}
+       </div>
+      <div class="account__content">
+       <div class="account__header">
+         <div class="">
+           <h1 class="heading h3">{{ 'customer.recover_password.title' | t }}</h1>
+
+           {%- unless is_recover_posted_successfully -%}
+             {%- if section.settings.show_instructions -%}
+              <p>{{ 'customer.recover_password.instructions' | t }}</p>
+             {% endif %}
+           {%- endunless -%}
+         </div>
+       </div>
+
+      <div class="account__form">
+       {%- form 'recover_customer_password', name: 'recover', class: 'form' -%}
+         {%- if form.errors -%}
+           <div class="banner banner--error form__banner" id="recovery-form-error">
+             <span class="banner__ribbon">{% render 'icon' with 'form-error' %}</span>
+             <p class="banner__content">{{ form.errors.messages['form'] }}</p>
+           </div>
+         {%- endif -%}
+
+         {%- if form.posted_successfully? -%}
+           <div class="banner banner--success form__banner">
+             <span class="banner__ribbon">{% render 'icon' with 'form-success' %}</span>
+             <p class="banner__content">{{ 'customer.recover_password.success' | t }}</p>
+           </div>
+         {%- else -%}
+           <div class="input">
+             <input type="email" id="customer[recover_email]" class="input__field" name="email" required="required" {% if form.errors %}aria-invalid="true" aria-describedby="recovery-form-error"{% endif %}>
+             <label for="customer[recover_email]" class="input__label">{{ 'customer.recover_password.email' | t }}</label>
+           </div>
+
+           <button type="submit" is="loader-button" class="form__submit button button--primary button--full">{{ 'customer.recover_password.submit' | t }}</button>
+         {%- endif -%}
+
+         {%- unless form.posted_successfully? -%}
+           <span class="form__secondary-action text--subdued">
+             {{- 'customer.recover_password.remember_password' | t -}}
+             <button type="button" class="link" data-action="switch-login-form">{{ 'customer.recover_password.back_to_login' | t }}</button>
+           </span>
+         {%- endunless -%}
+       {%- endform -%}
+      </div>
+    </div>
+    </div>
+   </div>
+  <script>
+    // The script for this is very minimal so we just embed it here
+    window.addEventListener('DOMContentLoaded', () => {
+      const loginFormElement = document.getElementById('login-form-container'),
+        recoverFormElement = document.getElementById('recover-form-container');
+
+      const switchForms = () => {
+        loginFormElement.style.display = (window.getComputedStyle(loginFormElement).display) === 'block' ? 'none' : 'block';
+        recoverFormElement.style.display = (window.getComputedStyle(recoverFormElement).display) === 'block' ? 'none' : 'block';
+      }
+
+      {% if is_recover_posted_successfully %}
+        switchForms();
+      {% else %}
+        if (window.location.hash === '#recover') {
+          switchForms();
+        }
+      {% endif %}
+
+      Array.from(document.querySelectorAll('[data-action="switch-login-form"]')).forEach((button) => {
+        button.addEventListener('click', () => switchForms());
+      });
+    });
+  </script>
+</section>
+
+{% schema %}
+{
+  "name": "Customer login",
+  "class": "shopify-section--main-customers-login",
+  "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image desktop"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Image mobile"
+      },
+     {
+       "type": "checkbox",
+       "id": "show_instructions",
+       "label": "Show instructions ?",
+       "default": false
+     }
+  ],
+  "blocks": [
+    {
+      "type": "login",
+      "name": "Login form",
+      "limit": 1
+    }
+  ]
+}
+{% endschema %}

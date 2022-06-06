@@ -1,0 +1,63 @@
+<h1> {{section.settings.title}}  </h1>
+
+ <checkout-carousel data-collection="{{section.settings.collection}}" slidesToShow="xs:2 sm:3 lg:3 xl:3">
+
+  <carousel-container  >
+      <carousel-content>
+
+        <carousel-panel>
+          <div class="checkout-carousel__placeholder">
+          </div>
+        </carousel-panel>
+        <carousel-panel>
+          <div class="checkout-carousel__placeholder">
+          </div>
+        </carousel-panel>
+        <carousel-panel>
+          <div class="checkout-carousel__placeholder">
+          </div>
+        </carousel-panel>
+
+            <carousel-panel data-template="true">
+
+              <div  class="checkout-carousel__panel">
+              <div>
+                 <img src="https://i.picsum.photos/id/608/200/200.jpg?hmac=-p1htX-mFieavdRDr9vUIJKyDHCXZAY5B35nhdcgIgQ" alt="" class="checkout-carousel__image">
+               <h4>
+                Product title
+               </h4>
+              </div>
+               <checkout-carousel-product-form data-variant-id="hello" >
+                   <button type="submit" ></button>
+               </checkout-carousel-product-form>
+              </div>
+             </carousel-panel>
+
+          </carousel-content>
+  </carousel-container>
+
+  <carousel-dots class="absolute left-0 right-0 flex justify-center mx-auto space-x-4 w-fit bottom-10">
+      <carousel-dot class="w-4 h-4 transition-all bg-white rounded-full cursor-pointer ring-1 ring-slate-200 selected:ring-green-400 selected:scale-125 "></carousel-dot>
+  </carousel-dots>
+
+</checkout-carousel>
+
+{% schema %}
+{
+  "name": "Checkout carousel",
+  "class": "shopify-section--routines-carousel",
+  "settings": [
+    {
+      "type": "text",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Vous aimerez aussi"
+    }
+  ] 
+}
+{% endschema %}

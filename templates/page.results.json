@@ -1,0 +1,134 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "show_divider": true,
+        "page_width": "medium"
+      }
+    },
+    "16541771176aee6278": {
+      "type": "banner",
+      "settings": {
+        "max_height": "300px",
+        "reveal_on_scroll": false,
+        "image": "shopify:\/\/shop_images\/Rectangle_436_1632f298-21e7-4b5f-9100-038252f8176f.png",
+        "subheading": "",
+        "show_diver_green": false,
+        "content": "",
+        "text_position": "center",
+        "text_alignment": "center",
+        "button_text": "",
+        "button_url": "",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "quiz-results": {
+      "type": "quiz-results",
+      "blocks": {
+        "2152c293-b463-43a2-a407-08173cfc89d5": {
+          "type": "product",
+          "settings": {
+            "title": "LE TRAITEMENT D'ATTAQUE",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <\/p>",
+            "product": "defatigant-jambes"
+          }
+        },
+        "c2ba4c04-f21c-4eb8-b517-25a36a9f63b5": {
+          "type": "product",
+          "settings": {
+            "title": "SUR LA DURÉE",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <\/p>",
+            "product": "amincissant-7-nuits-peaux-sensibles"
+          }
+        }
+      },
+      "block_order": [
+        "2152c293-b463-43a2-a407-08173cfc89d5",
+        "c2ba4c04-f21c-4eb8-b517-25a36a9f63b5"
+      ],
+      "settings": {
+        "title": "REMODELANTE",
+        "subtitle": "Comme 24% de nos consommatrices, la routine Remodelante est le plus adaptée à vos besoins !",
+        "text": "<p>D’après ce que vous nous avez confié, la routine Remodelante est celui qui correspond le mieux à vos attentes et vos objectifs.Votre profil nous indique que vous souhaitez traiter efficacement votre ventre et vos fesses pour remodeler ces parties de votre corps...<\/p>",
+        "cta_title": "Cette routine est spécifiquement conçue pour les zones que vous souhaitez traitées et vos objectifs.",
+        "cta_product": "routine-grossesse",
+        "result_image": "shopify:\/\/shop_images\/Mask_group.png",
+        "list_title": "Les produits de votre routine idéale",
+        "list_text": "<p>Découvrez les produits qui correspondent à vos besoins, avec leurs applications pour un effet maximal. <\/p>"
+      }
+    },
+    "165424608056f86732": {
+      "type": "results-carousel",
+      "blocks": {
+        "165424608046eb4140-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_447.png",
+            "quote": "<p>“ En 2 semaines déjà, j’ai clairement vu les résultats sur ma peau. Au final, j’ai perdu 1,3 cm de tour de cuisse en faisait deux séances de sport par semaine ! ” <\/p>",
+            "name": "Marie, 28 ans"
+          }
+        },
+        "165424608046eb4140-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FBC5032_1600x_1132408b-d7b0-44b1-86e4-a56a5526098c.webp",
+            "quote": "<p>“ En 2 semaines déjà, j’ai clairement vu les résultats sur ma peau. Au final, j’ai perdu 1,3 cm de tour de cuisse en faisait deux séances de sport par semaine ! ” <\/p>",
+            "name": "Julie, 30 ans"
+          }
+        }
+      },
+      "block_order": [
+        "165424608046eb4140-0",
+        "165424608046eb4140-1"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "Vos résultats en photo",
+        "content": "<p>Tous vos avant\/après avec la routine REMODELANTE<\/p>",
+        "background": "#fdfdfd",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1654252172ebb0b2cc": {
+      "type": "image-text-blocks",
+      "blocks": {
+        "411a6dae-f926-4130-be9e-86e8623ec31f": {
+          "type": "block",
+          "settings": {
+            "heading": "",
+            "image_position": "right",
+            "image_position_mobile": "above",
+            "image": "shopify:\/\/shop_images\/Rectangle_436_9def2231-f64f-48c4-b2dd-b06511543b2b.png",
+            "title": "Le drainage de la peau est essentiel",
+            "subtitle": "",
+            "show_divider": true,
+            "title_color": "#282828",
+            "text": "<p>Le drainage permet de réactiver la cirulation de la peau pour ainsi activer la microcirculation. C’est ce processus qui permet aux produits d’agir directement sur la 2ème couche de votre épiderme. <\/p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "411a6dae-f926-4130-be9e-86e8623ec31f"
+      ],
+      "settings": {
+        "title": "Heading"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16541771176aee6278",
+    "quiz-results",
+    "165424608056f86732",
+    "1654252172ebb0b2cc"
+  ]
+}

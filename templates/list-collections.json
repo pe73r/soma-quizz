@@ -1,0 +1,325 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "disabled": true,
+      "settings": {
+        "collections_to_show": "all",
+        "show_collection_title": true
+      }
+    },
+    "collection-list-header": {
+      "type": "collection-list-header",
+      "settings": {
+        "title": "Tous nos produits",
+        "content": "",
+        "show_number_products": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "collection-list-links": {
+      "type": "collection-list-links",
+      "blocks": {
+        "15035a5f-0280-4cf5-9641-763dc849ff85": {
+          "type": "Link",
+          "settings": {
+            "title": "Mincir",
+            "url": "#section-mincir"
+          }
+        },
+        "2a5e3021-6b0c-4d11-931c-f5587f2ac4d3": {
+          "type": "Link",
+          "settings": {
+            "title": "Cellulite",
+            "url": "#section-cellulite"
+          }
+        },
+        "7777818d-3e7e-4522-bb41-2de4bf4fc1a2": {
+          "type": "Link",
+          "settings": {
+            "title": "Drainer",
+            "url": "#section-drainer"
+          }
+        },
+        "3f18e649-fc6b-42cc-a5fc-1f76aba34edc": {
+          "type": "Link",
+          "settings": {
+            "title": "Exfolier",
+            "url": "#section-exfolier"
+          }
+        },
+        "e547254d-df36-4a7d-9c25-df10fcbc65dc": {
+          "type": "Link",
+          "settings": {
+            "title": "Vergetures",
+            "url": "#section-vergetures"
+          }
+        },
+        "afb71e8a-5e2f-448f-82d7-8efa0b9341f5": {
+          "type": "Link",
+          "settings": {
+            "title": "Sculpter",
+            "url": "#section-sculpter"
+          }
+        },
+        "ef0674de-9589-4fd0-96ad-d67b49471792": {
+          "type": "Link",
+          "settings": {
+            "title": "Exclusivités",
+            "url": "shopify:\/\/collections\/promotions"
+          }
+        }
+      },
+      "block_order": [
+        "15035a5f-0280-4cf5-9641-763dc849ff85",
+        "2a5e3021-6b0c-4d11-931c-f5587f2ac4d3",
+        "7777818d-3e7e-4522-bb41-2de4bf4fc1a2",
+        "3f18e649-fc6b-42cc-a5fc-1f76aba34edc",
+        "e547254d-df36-4a7d-9c25-df10fcbc65dc",
+        "afb71e8a-5e2f-448f-82d7-8efa0b9341f5",
+        "ef0674de-9589-4fd0-96ad-d67b49471792"
+      ],
+      "settings": {
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1650530609635a739b": {
+      "type": "collection-list",
+      "blocks": {
+        "670b4bc7-8714-47a5-a6de-7b7940979ddb": {
+          "type": "routine",
+          "settings": {
+            "product": "routine-minceur-ultime",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "670b4bc7-8714-47a5-a6de-7b7940979ddb"
+      ],
+      "settings": {
+        "position": "MINCIR",
+        "collection": "mincir",
+        "products_count": 8,
+        "title": "Mincir jour et nuit",
+        "content": "<p>Un traitement d’attaque à appliquer la nuit, avec une rapidité d’action prouvée ! <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16504718886004afab": {
+      "type": "collection-list",
+      "blocks": {
+        "3e33ae1e-d931-486a-a4a6-1ea73df4e83a": {
+          "type": "routine",
+          "settings": {
+            "product": "routine-anti-cellulite-complete-effet-froid-1",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "3e33ae1e-d931-486a-a4a6-1ea73df4e83a"
+      ],
+      "settings": {
+        "position": "CELLULITE",
+        "collection": "cellulite",
+        "products_count": 8,
+        "title": "Bye bye la cellulite",
+        "content": "<p>Pour une action intensive sur la cellulite, les capitons et la peau d’orange. <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1650471905d6d65d48": {
+      "type": "collection-list",
+      "blocks": {
+        "f824a6af-b2d3-4278-af90-cbd683cc644f": {
+          "type": "routine",
+          "settings": {
+            "product": "pack-drainant-intensif",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "f824a6af-b2d3-4278-af90-cbd683cc644f"
+      ],
+      "settings": {
+        "position": "DRAINER",
+        "collection": "drainer",
+        "products_count": 8,
+        "title": "Drainer vos jambes",
+        "content": "<p>Pour combattre les jambes lourdes et la rétention d’eau. <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1650472011be9d8275": {
+      "type": "collection-list",
+      "blocks": {
+        "18f5879d-1e18-42bf-8ee2-58990f1215eb": {
+          "type": "routine",
+          "settings": {
+            "product": "pack-decouverte",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "18f5879d-1e18-42bf-8ee2-58990f1215eb"
+      ],
+      "settings": {
+        "position": "EXFOLIER",
+        "collection": "exfolier",
+        "products_count": 8,
+        "title": "Exfolier votre peau",
+        "content": "<p>Une action nourrisante et exfoliante intense pour une plus peau douce. <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16506292139f8fc341": {
+      "type": "collection-list",
+      "blocks": {
+        "8ad5c5b8-1752-4228-b0d5-e363bbed9cb5": {
+          "type": "routine",
+          "settings": {
+            "product": "routine-minceur-vergetures",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "8ad5c5b8-1752-4228-b0d5-e363bbed9cb5"
+      ],
+      "settings": {
+        "position": "VERGETURES",
+        "collection": "vergetures",
+        "products_count": 8,
+        "title": "Traiter vos vergetures",
+        "content": "<p>Pour prévenir et éliminer la formation des vergetures. <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1650629093d9b7da7d": {
+      "type": "collection-list",
+      "blocks": {
+        "a3fbe3b7-205d-419b-bfe3-d714981522c3": {
+          "type": "routine",
+          "settings": {
+            "product": "routine-sport-addict-pour-lui",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "a3fbe3b7-205d-419b-bfe3-d714981522c3"
+      ],
+      "settings": {
+        "position": "SCULPTER",
+        "collection": "sculpter",
+        "products_count": 8,
+        "title": "Sculpter vos abdos",
+        "content": "<p>Des solutions efficaces et dédiées à la physiologie masculine. <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1652099529b590a045": {
+      "type": "collection-list",
+      "blocks": {
+        "3b650bf2-02fb-4e8b-a025-d5815b63bce1": {
+          "type": "routine",
+          "settings": {
+            "product": "routine-jour-et-nuit",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "3b650bf2-02fb-4e8b-a025-d5815b63bce1"
+      ],
+      "settings": {
+        "position": "EXCLUSIVITES",
+        "collection": "promotions",
+        "products_count": 8,
+        "title": "Exclusivités",
+        "content": "",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16524453147482c6b7": {
+      "type": "collection-list",
+      "disabled": true,
+      "blocks": {
+        "2ea9cf33-9c76-4205-b92c-fa1c83fa55d0": {
+          "type": "routine",
+          "settings": {
+            "product": "la-routine-cellulite",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "2ea9cf33-9c76-4205-b92c-fa1c83fa55d0"
+      ],
+      "settings": {
+        "position": "",
+        "collection": "emblematiques",
+        "products_count": 8,
+        "title": "New section",
+        "content": "",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1650630006f3d0f275": {
+      "type": "routines-carousel",
+      "settings": {
+        "collection": "routines",
+        "subheading": "",
+        "title": "FAÎTES DES ÉCONOMIES AVEC NOS ROUTINES",
+        "content": "",
+        "products_count": 8,
+        "background": "#ebf8ff",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1652277983d0f5fd54": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "A propos de Somatoline",
+        "title": "",
+        "content": "De l'expérience de Somatoline, une efficacité cliniquement prouvée au service de la beauté, pour des résultats ressentis sur la peau grâce à un mécanisme fondamental qui optimise les processus métaboliques : la réactivation de la microcirculation cutanée.<br><br>La microcirculation cutanée joue un rôle fondamental dans le bien-être et l'entretien des tissus cutanés, car c'est le système qui oxygène, nourrit et purifie la peau.\n--split--\n<br><br>Physiologiquement, le passage du temps et une hygiène de vie inadaptée contribuent à un ralentissement des fonctions de la microcirculation, qui perd ainsi son efficacité entraînant un dysfonctionnement des processus physiologiques qui impactent les tissus cutanés dont le pannicule adipeux.",
+        "show_more": true,
+        "button_text": "",
+        "button_link": "",
+        "text_alignment": "center",
+        "background": "#f3f3f3",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collection-list-header",
+    "collection-list-links",
+    "1650530609635a739b",
+    "16504718886004afab",
+    "1650471905d6d65d48",
+    "1650472011be9d8275",
+    "16506292139f8fc341",
+    "1650629093d9b7da7d",
+    "1652099529b590a045",
+    "16524453147482c6b7",
+    "1650630006f3d0f275",
+    "1652277983d0f5fd54"
+  ]
+}

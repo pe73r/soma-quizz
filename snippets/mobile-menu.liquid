@@ -1,0 +1,148 @@
+{%- assign direction = 'ltr' -%}
+{%- case request.locale.iso_code -%}
+  {%- when 'ar' or 'arc' or 'dv' or 'fa' or 'ha' or 'he' or 'kwh' or 'ks' or 'ku' or 'ps' or 'ur' or 'yi' -%}
+    {%- assign direction = 'rtl' -%}
+{%- endcase -%}
+
+<mobile-navigation append-body id="mobile-menu-drawer" class="drawer menu--drawer {% if direction == 'ltr' %}drawer--from-left{% endif %}">
+  <span class="drawer__overlay"></span>
+
+  <div class="drawer__header drawer__header--shadowed">
+    <img class="logo-menu" src="{{ 'logo-menu.png' | asset_url }}" alt="">
+    <button type="button" class="drawer__close-button drawer__close-button--block tap-area" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
+      {%- render 'icon' with 'close' -%}
+    </button>
+  </div>
+
+  {%- if section.settings.image_mobile != blank -%}
+    <div class="menu-mobile__banner relative">
+        <img src="{{ section.settings.image_mobile | img_url: 'master' }}" alt="{{ section.settings.image_mobile.alt }}">
+       <h4 class="heading h3 menu-mobile__title">{{ section.settings.title_mobile }}</h4>
+    </div>
+  {%- endif -%}
+
+  <div class="drawer__content">
+    <ul class="mobile-nav list--unstyled" role="list">
+      {%- for link in menu.links -%}
+        {%- assign link_title_downcase = link.title | strip | downcase -%}
+        {%- assign mega_menu_block = '' -%}
+        {%- assign mega_menu_images = '' -%}
+
+        {%- for block in section.blocks -%}
+          {%- assign menu_item_downcase = block.settings.menu_item | strip | downcase -%}
+
+          {%- if menu_item_downcase == link_title_downcase -%}
+            {%- assign mega_menu_block = block -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- if mega_menu_block != '' -%}
+          {%- assign images_count = 0 -%}
+
+          {%- capture mega_menu_images -%}
+            {%- for i in (1..6) -%}
+              {%- capture image_setting -%}image_{{ i }}{%- endcapture -%}
+
+              {%- if mega_menu_block.settings[image_setting] != blank -%}
+                {%- assign images_count = images_count | plus: 1 -%}
+
+                {%- capture image_heading_setting -%}image_{{ i }}_heading{%- endcapture -%}
+                {%- capture image_text_setting -%}image_{{ i }}_text{%- endcapture -%}
+                {%- capture image_link_setting -%}image_{{ i }}_link{%- endcapture -%}
+
+                {%- capture image_push -%}
+                  <img class="mobile-nav__image" loading="lazy" sizes="270px" {% render 'image-attributes', image: mega_menu_block.settings[image_setting], sizes: '270,540,810' %}>
+
+                  {%- if mega_menu_block.settings[image_heading_setting] != '' -%}
+                    <p class="mobile-nav__image-heading heading heading--xsmall">{{ mega_menu_block.settings[image_heading_setting] }}</p>
+                  {%- endif -%}
+
+                  {%- if mega_menu_block.settings[image_text_setting] != '' -%}
+                    <span class="mobile-nav__image-text text--xsmall">{{ mega_menu_block.settings[image_text_setting] }}</span>
+                  {%- endif -%}
+                {%- endcapture -%}
+
+                {%- if mega_menu_block.settings[image_link_setting] != blank -%}
+                  <a href="{{ mega_menu_block.settings[image_link_setting] }}" class="mobile-nav__image-push">
+                    {{- image_push -}}
+                  </a>
+                {%- else -%}
+                  <div class="mobile-nav__image-push">
+                    {{- image_push -}}
+                  </div>
+                {%- endif -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endcapture -%}
+        {%- endif -%}
+
+        <li class="mobile-nav__item" data-level="1">
+          {%- if link.links.size > 0 or mega_menu_images != blank -%}
+            <button is="toggle-button" class="mobile-nav__link heading h6" aria-controls="mobile-menu-{{ forloop.index }}" aria-expanded="false">
+              {{- link.title -}}
+              <!-- <span class="animated-plus"></span> -->
+              <span class="animated-arrow">
+                {% render 'icon' with 'arrow-menu' %}
+              </span>
+            </button>
+
+            <collapsible-content id="mobile-menu-{{ forloop.index }}" class="collapsible">
+              {%- if link.links.size > 0 -%}
+                <ul class="mobile-nav list--unstyled" role="list">
+                  {%- for sub_link in link.links -%}
+                    <li class="mobile-nav__item" data-level="2">
+                      {%- if sub_link.links.size > 0 -%}
+                        <button is="toggle-button" class="mobile-nav__link" aria-controls="mobile-menu-{{ forloop.parentloop.index }}-{{ forloop.index }}" aria-expanded="false">
+                          {{- sub_link.title -}}
+                          <span class="animated-plus"></span>
+                        </button>
+
+                        <collapsible-content id="mobile-menu-{{ forloop.parentloop.index }}-{{ forloop.index }}" class="collapsible">
+                          <ul class="mobile-nav list--unstyled" role="list">
+                            {%- for sub_sub_link in sub_link.links -%}
+                              <li class="mobile-nav__item" data-level="3">
+                                <a href="{{ sub_sub_link.url }}" class="mobile-nav__link">{{ sub_sub_link.title }}</a>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        </collapsible-content>
+                      {%- else -%}
+                        <a href="{{ sub_link.url }}" class="mobile-nav__link">{{ sub_link.title }}</a>
+                      {%- endif -%}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+
+              {%- if mega_menu_images != blank -%}
+                <div class="mobile-nav__images-wrapper {% if images_count >= 3 %}mobile-nav__images-wrapper--tight{% endif %} hide-scrollbar">
+                  <div class="mobile-nav__images-scroller">
+                    {{- mega_menu_images -}}
+                  </div>
+                </div>
+              {%- endif -%}
+            </collapsible-content>
+          {%- else -%}
+            <a href="{{ link.url }}" class="mobile-nav__link heading h6 ">{{ link.title }}</a>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+    <div class="menu-mobile__footer">
+       {%- if section.settings.mobile_link_title != blank -%}
+         <a href="{{ section.settings.mobile_link }}">{{ section.settings.mobile_link_title }}</a>
+       {%- endif -%}
+
+       {%- if section.settings.mobile_link_title_2 != blank -%}
+         <a href="{{ section.settings.mobile_link_2 }}">{{ section.settings.mobile_link_title_2 }}</a>
+       {%- endif -%}
+    </div>
+  </div>
+
+</mobile-navigation>
+<style>
+   .menu-mobile__title{
+      color: {{ section.settings.mobile_title_color }};
+    }
+</style>

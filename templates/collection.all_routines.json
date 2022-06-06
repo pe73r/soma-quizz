@@ -1,0 +1,318 @@
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_description": true,
+        "section_height": "small",
+        "text_width": "medium",
+        "image_text_color": "#ffffff",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 30,
+        "quick_links": ""
+      }
+    },
+    "collection-list-header": {
+      "type": "collection-list-header",
+      "settings": {
+        "title": "Votre routine beauté",
+        "content": "",
+        "show_number_products": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "collection-list-links": {
+      "type": "collection-list-links",
+      "blocks": {
+        "f0156262-00b7-4421-bf1c-7db58181050d": {
+          "type": "Link",
+          "settings": {
+            "title": "MINCIR",
+            "url": "#MINCIR"
+          }
+        },
+        "9e27669d-31cb-4c67-9d7d-d278b0eeeaef": {
+          "type": "Link",
+          "settings": {
+            "title": "CELLULITE",
+            "url": "#CELLULITE"
+          }
+        },
+        "4611c003-c585-481c-8f4c-f90736d12445": {
+          "type": "Link",
+          "settings": {
+            "title": "JAMBES",
+            "url": "#JAMBES"
+          }
+        },
+        "388aec66-e5e4-4d1c-96bc-d8cd59185836": {
+          "type": "Link",
+          "settings": {
+            "title": "VERGETURES",
+            "url": "#VERGETURES"
+          }
+        },
+        "a83b5676-d407-4a67-8d7f-b9f8514ab4da": {
+          "type": "Link",
+          "settings": {
+            "title": "HOMME",
+            "url": "#HOMME"
+          }
+        },
+        "8f9522ae-61a3-4103-8d11-180fe0e50e20": {
+          "type": "Link",
+          "settings": {
+            "title": "OFFRES SPECIALES",
+            "url": "#OFFRES SPECIALES"
+          }
+        },
+        "cd2d233e-a5db-4fc2-bdc2-1f1a73b9d997": {
+          "type": "Link",
+          "disabled": true,
+          "settings": {
+            "title": "ROUTINE HOMME",
+            "url": "#ROUTINE HOMME"
+          }
+        }
+      },
+      "block_order": [
+        "f0156262-00b7-4421-bf1c-7db58181050d",
+        "9e27669d-31cb-4c67-9d7d-d278b0eeeaef",
+        "4611c003-c585-481c-8f4c-f90736d12445",
+        "388aec66-e5e4-4d1c-96bc-d8cd59185836",
+        "a83b5676-d407-4a67-8d7f-b9f8514ab4da",
+        "8f9522ae-61a3-4103-8d11-180fe0e50e20",
+        "cd2d233e-a5db-4fc2-bdc2-1f1a73b9d997"
+      ],
+      "settings": {
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "collection-breadcrumb": {
+      "type": "collection-breadcrumb",
+      "settings": {
+      }
+    },
+    "16522145288d7cf7c6": {
+      "type": "collection-list",
+      "blocks": {
+        "190bb4b0-679d-4291-8b31-e8a5c020fc37": {
+          "type": "routine",
+          "settings": {
+            "product": "routine-minceur-ultime",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "190bb4b0-679d-4291-8b31-e8a5c020fc37"
+      ],
+      "settings": {
+        "position": "MINCIR",
+        "collection": "routines-minceur",
+        "products_count": 8,
+        "title": "Mincir jour et nuit",
+        "content": "<p>Un traitement d’attaque à appliquer la nuit, avec une rapidité d’action prouvée ! <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16521917680b26fe72": {
+      "type": "collection-list",
+      "blocks": {
+        "c2a54964-ba6b-4b38-a389-1078a7cca57f": {
+          "type": "routine",
+          "settings": {
+            "product": "routine-anti-cellulite-complete-effet-froid",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "c2a54964-ba6b-4b38-a389-1078a7cca57f"
+      ],
+      "settings": {
+        "position": "CELLULITE",
+        "collection": "routines-cellulite",
+        "products_count": 6,
+        "title": "Bye bye la cellulite",
+        "content": "<p>Pour une action intensive sur la cellulite, les capitons et la peau d’orange. <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16522141687765cef0": {
+      "type": "collection-list",
+      "blocks": {
+        "bc995c78-932a-4a68-81e1-9c0d463564b6": {
+          "type": "routine",
+          "settings": {
+            "product": "pack-drainant-intensif",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "bc995c78-932a-4a68-81e1-9c0d463564b6"
+      ],
+      "settings": {
+        "position": "JAMBES",
+        "collection": "routines-jambes",
+        "products_count": 6,
+        "title": "Drainer vos jambes",
+        "content": "<p>Pour combattre les jambes lourdes et la rétention d’eau. <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16522189455afdd6b9": {
+      "type": "collection-list",
+      "blocks": {
+        "c2cbc845-1554-48b5-91d5-ec746df64115": {
+          "type": "routine",
+          "settings": {
+            "product": "routine-prise-de-poids-rapide",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "c2cbc845-1554-48b5-91d5-ec746df64115"
+      ],
+      "settings": {
+        "position": "VERGETURES",
+        "collection": "routines-vergetures",
+        "products_count": 8,
+        "title": "Traiter vos vergetures",
+        "content": "<p>Pour prévenir et éliminer la formation des vergetures. <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1652218138c13b0184": {
+      "type": "collection-list",
+      "blocks": {
+        "899a54b8-993e-49e8-972e-b940254ba16d": {
+          "type": "routine",
+          "settings": {
+            "product": "routine-sport-addict-pour-lui",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "899a54b8-993e-49e8-972e-b940254ba16d"
+      ],
+      "settings": {
+        "position": "HOMME",
+        "collection": "routines-homme",
+        "products_count": 8,
+        "title": "Sculpter vos abdos",
+        "content": "<p>Des solutions efficaces et dédiées à la physiologie masculine. <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1652219113156f43a3": {
+      "type": "collection-list",
+      "blocks": {
+        "22f1e467-face-45b1-980f-00de2fd30eed": {
+          "type": "routine",
+          "settings": {
+            "product": "routine-ultime",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "22f1e467-face-45b1-980f-00de2fd30eed"
+      ],
+      "settings": {
+        "position": "OFFRES SPECIALES",
+        "collection": "routines-speciales",
+        "products_count": 8,
+        "title": "Nos offres spéciales du moment",
+        "content": "<p>Des solutions efficaces et dédiées à la physiologie masculine. <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1652225581d40b6835": {
+      "type": "collection-list",
+      "disabled": true,
+      "blocks": {
+        "fcbe2193-4050-464a-8ca9-c55f72aae8ae": {
+          "type": "routine",
+          "settings": {
+            "product": "la-routine-cellulite",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "fcbe2193-4050-464a-8ca9-c55f72aae8ae"
+      ],
+      "settings": {
+        "position": "ROUTINE HOMME",
+        "collection": "emblematiques",
+        "products_count": 8,
+        "title": "Routine homme",
+        "content": "",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "disabled": true,
+      "settings": {
+        "show_sort_by": true,
+        "products_per_page": 24,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_filters": false,
+        "show_filter_group_name": false,
+        "show_color_swatch": false,
+        "open_first_filter_group": false,
+        "filter_position": "always_visible",
+        "promotion_position": "top",
+        "promotion_height": "small"
+      }
+    },
+    "1652214163f9cae2c5": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "A propos de Somatoline",
+        "title": "",
+        "content": "De l'expérience de Somatoline, une efficacité cliniquement prouvée au service de la beauté, pour des résultats ressentis sur la peau grâce à un mécanisme fondamental qui optimise les processus métaboliques : la réactivation de la microcirculation cutanée.<br><br>La microcirculation cutanée joue un rôle fondamental dans le bien-être et l'entretien des tissus cutanés, car c'est le système qui oxygène, nourrit et purifie la peau.\n--split--\n<br><br>Physiologiquement, le passage du temps et une hygiène de vie inadaptée contribuent à un ralentissement des fonctions de la microcirculation, qui perd ainsi son efficacité entraînant un dysfonctionnement des processus physiologiques qui impactent les tissus cutanés dont le pannicule adipeux.",
+        "show_more": true,
+        "button_text": "",
+        "button_link": "",
+        "text_alignment": "center",
+        "background": "#f3f3f3",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "collection-list-header",
+    "collection-list-links",
+    "collection-breadcrumb",
+    "16522145288d7cf7c6",
+    "16521917680b26fe72",
+    "16522141687765cef0",
+    "16522189455afdd6b9",
+    "1652218138c13b0184",
+    "1652219113156f43a3",
+    "1652225581d40b6835",
+    "main",
+    "1652214163f9cae2c5"
+  ]
+}

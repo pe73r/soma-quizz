@@ -1,0 +1,177 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "show_divider": true,
+        "page_width": "medium"
+      }
+    },
+    "1651058015a9b4fe34": {
+      "type": "image-text-blocks",
+      "blocks": {
+        "9dedf288-9d89-44ae-9d35-c7b497004060": {
+          "type": "block",
+          "settings": {
+            "heading": "",
+            "image_position": "left",
+            "image_position_mobile": "above",
+            "image": "shopify:\/\/shop_images\/visuel_exfolier.png",
+            "title": "Des actions ciblées sur la peau",
+            "title_color": "#009760",
+            "text": "<p>Notre expertise sur la physiologie de la peau nous a permis de développer des soins qui agissent efficacement sur les différentes couches dermiques. <\/p><p>De l'épiderme, enveloppe corporelle qui nous protège, à l'hypoderme, tissu profond contenant les graisses, en passant par le derme, couche ayant un rôle déterminant dans la thermorégulation, nos traitements agissent spécifiquement sur les différentes strates de la peau en fonction de vos besoins. <\/p><p>Somatoline Cosmetic, l'expert de la peau, vous accompagne au quotidien dans la recherche de votre bien-être. Cliquez ici pour découvrir nos valeurs.<\/p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "746d26f0-6f24-40a6-a454-152e2d0b0593": {
+          "type": "block",
+          "settings": {
+            "heading": "La science derrière nos produits",
+            "image_position": "right",
+            "image_position_mobile": "above",
+            "image": "shopify:\/\/shop_images\/appli_7n.png",
+            "title": "La triple action de nos crèmes amincissantes",
+            "title_color": "#009760",
+            "text": "<p>Le processus d'assimilation et d'accumulation des lipides, la lipogénèse, conduit au stockage d'adipocytes dans des poches graisseuses au niveau de l'épiderme.<br\/>Un processus métabolique, la différenciation cellulaire, multiplie ces poches graisseuses jusqu'à aboutir à des amas graisseux au moment de l'absorption de nouveaux lipides.  <br\/>Une production d'énergie est alors nécessaire pour combattre le stockage de ces amas. Cette combustion est la lipolyse.<\/p><p>Les crèmes et gels aminicissants de Somatoline Cosmetic ont alors une triple action :<\/p><p>- empêchent la création de nouvelles cellules graisseuses (action anti-récidive contre la différentiation cellulaire)<br\/>- augmentent la combustion des adipocytes existants (action lipolytique amincissante)<br\/>- rendent la peau plus réceptive aux principes actifs par drainage (action drainante)<\/p><p><\/p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "55e0c001-c530-451d-b94d-a07a86a3d926": {
+          "type": "block",
+          "settings": {
+            "heading": "",
+            "image_position": "left",
+            "image_position_mobile": "above",
+            "image": "shopify:\/\/shop_images\/Rectangle_500_3.png",
+            "title": "L'absorption des principes actifs facilitée",
+            "title_color": "#009760",
+            "text": "<p>La recherche Somatoline Cosmetic a mis au point des formules efficaces en sourçant des principes actifs choisis spécifiquement pour leurs propriétés naturelles.<\/p><p>Appliquez entre autres, des soins à base de sel marin pour lisser la peau et drainer, des extraits de gingembre raffermissants ou des extraits d'algues rouges, amincissants.<\/p><p>L'absorption de ces principes actifs est facilitée par la stimulation de la <strong>microcirculation <\/strong>grâce à la maîtrise des effets thermiques des produits Somatoline Cosmetic. Les effets, chaud ou froid permis par l'ethyl nicotinate ou le menthol, amplifient alors les résulats.<\/p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "4a045378-5c9a-480d-850a-bac49c21f36f": {
+          "type": "block",
+          "settings": {
+            "heading": "",
+            "image_position": "right",
+            "image_position_mobile": "below",
+            "image": "shopify:\/\/shop_images\/Rectangle_500_4.png",
+            "title": "Des résultats prouvés",
+            "title_color": "#009760",
+            "text": "<p>L'efficacité de tous nos produits est mise à l'épreuve lors de tests objectifs réalisés dans un laboratoire indépendant situé à Padoue en Italie.<\/p><p>De nombreuses typologies de tests sont effectuées pour garantir l'efficacité de nos produits. Des tests cliniques, instrumentaux, in vitro, et in vivo sont réalisés contre pacébo en suivant des protocoles bien définis.<\/p><p>La sélection des volontaires est rigoureuse. Une attention particulière est prêtée à leur mode de vie. Ils ne doivent en effet pas perdre de poids pendant l'étude.<br\/>Les résulats obtenus doivent être statistiquement significatifs pour être approuvés.<\/p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "e374e108-a1e8-4a0b-8d9f-8faba584dfe4": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_502.png",
+            "image_mobile": "shopify:\/\/shop_images\/mob.png"
+          }
+        },
+        "5a8adfcb-f5c2-4f53-b4e1-9d076075851e": {
+          "type": "block",
+          "settings": {
+            "heading": "",
+            "image_position": "left",
+            "image_position_mobile": "above",
+            "image": "shopify:\/\/shop_images\/visuel_cellulite.png",
+            "title": "Action anti cellulite",
+            "title_color": "#009760",
+            "text": "<p>Souvent d'origine génétique ou à la suite d'un dérèglement hormonal, la cellulite apparait aussi lors d'une exposition au stress, à une mauvaise alimentation ou à une prise de poids rapide.<\/p><p>Ces différents facteurs altèrent la microcirculation et la structure du derme au point d'aboutir à une répartition non homogène des cellules adipeuses. Des nodules apparaissent, l'apport en oxygène est réduit et les déchets s'accumulent.<\/p><p>Cette peau d'orange nécessite alors des principes actifs spécifiques pour être combattue.<\/p><p><\/p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "c9989598-5398-4421-8982-f36488de7bf8": {
+          "type": "block",
+          "settings": {
+            "heading": "",
+            "image_position": "right",
+            "image_position_mobile": "above",
+            "image": "shopify:\/\/shop_images\/Rectangle_500_6.png",
+            "title": "Action cutanée anti vergetures",
+            "title_color": "#009760",
+            "text": "<p>Grossesse, prise de poids rapide, adolescence...les vergetures apparaissent lors de pics de croissance soudains.<\/p><p>Elles résultent d'une rupture de la fibre élastique au niveau de l'hypoderme. Après lignes rouges, des bandes linéaires et parallèles (striae albae) apparaissent en phase de cicatrisation.<\/p><p>Situées à la surface de la peau, souvent disgracieuses, un traitement spécifique leur est réservé à l'aide de principes actifs dédiés testés pendant la grossesse.<\/p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "6818b86e-a032-4a78-ae2b-df88d759b9d8": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_501.png",
+            "image_mobile": "shopify:\/\/shop_images\/hand.png"
+          }
+        },
+        "00d8ed7a-83f3-458a-950b-a1440e515f2b": {
+          "type": "block",
+          "settings": {
+            "heading": "",
+            "image_position": "left",
+            "image_position_mobile": "above",
+            "image": "shopify:\/\/shop_images\/visuel_homme_1.png",
+            "title": "Un métabolisme spécifique chez les hommes",
+            "title_color": "#009760",
+            "text": "<p>Si le métabolisme reste similaire entre la femme et l'homme, la différence de métabolisme nous à amenés à développer des solutions spécifiques pour les hommes.<\/p><p>La peau, plus dure, épaisse et grasse nécessite une formule plus concentrée.<\/p><p>La structure de l'épiderme et des cellules graisseuses, plus petites et diffuses nécessitent des principes actifs différents : le guarana et le gingembre.<\/p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "9dedf288-9d89-44ae-9d35-c7b497004060",
+        "746d26f0-6f24-40a6-a454-152e2d0b0593",
+        "55e0c001-c530-451d-b94d-a07a86a3d926",
+        "4a045378-5c9a-480d-850a-bac49c21f36f",
+        "e374e108-a1e8-4a0b-8d9f-8faba584dfe4",
+        "5a8adfcb-f5c2-4f53-b4e1-9d076075851e",
+        "c9989598-5398-4421-8982-f36488de7bf8",
+        "6818b86e-a032-4a78-ae2b-df88d759b9d8",
+        "00d8ed7a-83f3-458a-950b-a1440e515f2b"
+      ],
+      "settings": {
+        "title": "Heading"
+      }
+    },
+    "165113495534f0c6e0": {
+      "type": "routines-carousel",
+      "settings": {
+        "collection": "routines",
+        "subheading": "",
+        "title": "FAÎTES DES ÉCONOMIES AVEC NOS ROUTINES",
+        "content": "",
+        "products_count": 8,
+        "background": "#ebf8ff",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1652707208e46ab689": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "A propos de Somatoline",
+        "title": "",
+        "content": "De l'expérience de Somatoline, une efficacité cliniquement prouvée au service de la beauté, pour des résultats ressentis sur la peau grâce à un mécanisme fondamental qui optimise les processus métaboliques : la réactivation de la microcirculation cutanée.<br><br>La microcirculation cutanée joue un rôle fondamental dans le bien-être et l'entretien des tissus cutanés, car c'est le système qui oxygène, nourrit et purifie la peau.\n--split--\n<br><br>Physiologiquement, le passage du temps et une hygiène de vie inadaptée contribuent à un ralentissement des fonctions de la microcirculation, qui perd ainsi son efficacité entraînant un dysfonctionnement des processus physiologiques qui impactent les tissus cutanés dont le pannicule adipeux.",
+        "show_more": true,
+        "button_text": "",
+        "button_link": "",
+        "text_alignment": "center",
+        "background": "#f3f3f3",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1651058015a9b4fe34",
+    "165113495534f0c6e0",
+    "1652707208e46ab689"
+  ]
+}

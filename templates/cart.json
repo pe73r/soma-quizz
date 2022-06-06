@@ -1,0 +1,42 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "blocks": {
+        "totals": {
+          "type": "totals",
+          "settings": {
+          }
+        },
+        "order_note": {
+          "type": "order_note",
+          "disabled": true,
+          "settings": {
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "totals",
+        "order_note"
+      ],
+      "settings": {
+        "show_payment_methods": false,
+        "show_shipping_estimator": false,
+        "shipping_estimator_default_country": "France",
+        "empty_button_link": "shopify:\/\/collections\/all"
+      }
+    },
+    "cart-recommendations": {
+      "type": "cart-recommendations",
+      "disabled": true,
+      "settings": {
+        "title": "You may also like"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cart-recommendations"
+  ]
+}

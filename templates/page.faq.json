@@ -1,0 +1,168 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "show_divider": true,
+        "page_width": "medium"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "31666bfd-c5c6-4958-9ab7-fa288add2db5": {
+          "type": "category",
+          "settings": {
+            "title": "Livraison",
+            "image": "shopify:\/\/shop_images\/Capture_d_ecran_2022-05-12_a_11.50.13.png"
+          }
+        },
+        "d4309a9a-9261-465a-a3cb-fe4fb63fe68a": {
+          "type": "question",
+          "settings": {
+            "title": "Est-il possible de modifier mon adresse de livraison ?",
+            "answer": "<p>Après validation, votre commande est transmise à notre service logistique pour vous acheminer la commande au plus vite. Il est malheureusement impossible de modifier votre adresse.<\/p>"
+          }
+        },
+        "a72f4927-96e3-4be3-81a6-42d0caacde34": {
+          "type": "question",
+          "settings": {
+            "title": "Est-il possible d'annuler ma commande ?",
+            "answer": "<p>Votre commande ne peut malheusement plus être annulée une fois que nous l'avons expédiée. <\/p>"
+          }
+        },
+        "f151b954-c34a-4c0d-a450-3c5dada955f1": {
+          "type": "question",
+          "settings": {
+            "title": "Puis-je modifier ma commande ?",
+            "answer": "<p>Une fois validée, votre commande est transmise à notre service logistique pour vous livrer dans les meilleurs délais. La modification de la commande est impossible.<\/p>"
+          }
+        },
+        "c929c358-f2b2-4953-84a6-819f82f18395": {
+          "type": "question",
+          "settings": {
+            "title": "Puis-je modifier ma date de livraison ?",
+            "answer": "<p>Les dates de livraison sont calculées selon votre code postal. Ce sont les premières disponibles. Il est malheureusement impossible de les avancer. <\/p>"
+          }
+        },
+        "e0fd03d2-683e-46f9-af89-11f5c54f9cf5": {
+          "type": "question",
+          "settings": {
+            "title": "Quand vais-je recevoir ma facture ?",
+            "answer": "<p>Votre facture sera envoyée par mail au moment de l'expédition de votre commande.<\/p>"
+          }
+        },
+        "6fcec1b4-8641-4db1-a637-f8de94a7df60": {
+          "type": "category",
+          "settings": {
+            "title": "Commande",
+            "image": "shopify:\/\/shop_images\/Rectangle_443.png"
+          }
+        },
+        "81dbf80c-2362-4555-9a2f-b76983498251": {
+          "type": "question",
+          "settings": {
+            "title": "La livraison est-elle gratuite ?",
+            "answer": "<p>La livraison vous est offerte à partir de 60€ d'achat.<\/p>"
+          }
+        },
+        "1f2e5c67-e99c-42c4-940b-1e18b736c455": {
+          "type": "question",
+          "settings": {
+            "title": "Où livrez-vous ?",
+            "answer": "<p>Nous vous livrons en France métropolitaine, Belgique, Suisse et Luxembourg.<\/p>"
+          }
+        },
+        "e15e4756-78d7-4b46-b53e-c3da7ef66c49": {
+          "type": "question",
+          "settings": {
+            "title": "En combien de temps expédiez-vous ?",
+            "answer": "<p>Nous expédions vos commandes sous 1 à 3 journées ouvrées.<\/p>"
+          }
+        },
+        "f7c60d84-2a0e-4707-bb7f-bf7d2213f61b": {
+          "type": "question",
+          "settings": {
+            "title": "Les produits sont-ils en stock ?",
+            "answer": "<p>Oui, tous les produits affichés sur notre site sont en stock.<\/p>"
+          }
+        },
+        "0f30781b-f4a5-4ab4-9f65-da4bb8b3019e": {
+          "type": "question",
+          "settings": {
+            "title": "Comment retourner mon colis ?",
+            "answer": "<p>Si vous avez changé d'avis, nous vous offrons la possibilité de retourner votre colis sous 14 jours après réception. Nous vous laissons le choix entre un remboursement direct et un bon d'achat. <\/p><p>Il vous suffit de renvoyer le colis avec l'étiquette pré-imprimée dans votre box initiale. <\/p>"
+          }
+        },
+        "c8242c26-381d-4c37-a0b1-4545c545cead": {
+          "type": "category",
+          "settings": {
+            "title": "Produits",
+            "image": "shopify:\/\/shop_images\/Rectangle_443_4.png"
+          }
+        },
+        "f34ff2b3-382f-4130-8e17-660669efd904": {
+          "type": "question",
+          "settings": {
+            "title": "Comment puis-je payer ?",
+            "answer": "<p>Nous acceptons toutes les cartes bancaires (CB, Visa, MasterCard, American Express). Vous pouvez également payer avec votre compte Paypal ou par Bancontact.<\/p><p>Nous vous proponsons également d'effectuer vos achats en 3x sans frais à partir de 50€.<\/p>"
+          }
+        },
+        "afd66a54-9f56-4edc-8031-e793791ec921": {
+          "type": "question",
+          "settings": {
+            "title": "Comment fonctionne le 3x sans frais ?",
+            "answer": "<p>Nous vous proposons le paiement en 3 fois sans frais à partir de 50€.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "31666bfd-c5c6-4958-9ab7-fa288add2db5",
+        "d4309a9a-9261-465a-a3cb-fe4fb63fe68a",
+        "a72f4927-96e3-4be3-81a6-42d0caacde34",
+        "f151b954-c34a-4c0d-a450-3c5dada955f1",
+        "c929c358-f2b2-4953-84a6-819f82f18395",
+        "e0fd03d2-683e-46f9-af89-11f5c54f9cf5",
+        "6fcec1b4-8641-4db1-a637-f8de94a7df60",
+        "81dbf80c-2362-4555-9a2f-b76983498251",
+        "1f2e5c67-e99c-42c4-940b-1e18b736c455",
+        "e15e4756-78d7-4b46-b53e-c3da7ef66c49",
+        "f7c60d84-2a0e-4707-bb7f-bf7d2213f61b",
+        "0f30781b-f4a5-4ab4-9f65-da4bb8b3019e",
+        "c8242c26-381d-4c37-a0b1-4545c545cead",
+        "f34ff2b3-382f-4130-8e17-660669efd904",
+        "afd66a54-9f56-4edc-8031-e793791ec921"
+      ],
+      "settings": {
+        "show_navigation": true,
+        "title": "Questions",
+        "content": "",
+        "background": "#f5f5f5",
+        "box_background": "#ffffff",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "165270701461957335": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "A propos de Somatoline",
+        "title": "",
+        "content": "De l'expérience de Somatoline, une efficacité cliniquement prouvée au service de la beauté, pour des résultats ressentis sur la peau grâce à un mécanisme fondamental qui optimise les processus métaboliques : la réactivation de la microcirculation cutanée.<br><br>La microcirculation cutanée joue un rôle fondamental dans le bien-être et l'entretien des tissus cutanés, car c'est le système qui oxygène, nourrit et purifie la peau.\n--split--\n<br><br>Physiologiquement, le passage du temps et une hygiène de vie inadaptée contribuent à un ralentissement des fonctions de la microcirculation, qui perd ainsi son efficacité entraînant un dysfonctionnement des processus physiologiques qui impactent les tissus cutanés dont le pannicule adipeux.",
+        "show_more": true,
+        "button_text": "",
+        "button_link": "",
+        "text_alignment": "center",
+        "background": "#f3f3f3",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faq",
+    "165270701461957335"
+  ]
+}

@@ -1,0 +1,226 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    {%- if section.settings.background == 'rgba(0,0,0,0)' -%}
+      {%- assign section_background = settings.background -%}
+    {%- else -%}
+      {%- assign section_background = section.settings.background -%}
+    {%- endif -%}
+
+    {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
+      {%- assign heading_color = settings.heading_color -%}
+      {%- assign text_color = settings.text_color -%}
+    {%- else -%}
+      {%- assign heading_color = section.settings.text_color -%}
+      {%- assign text_color = section.settings.text_color -%}
+    {%- endif -%}
+
+    {%- if section.settings.button_background == 'rgba(0,0,0,0)' -%}
+      {%- assign button_background = settings.primary_button_background -%}
+    {%- else -%}
+      {%- assign button_background = section.settings.button_background -%}
+    {%- endif -%}
+
+    --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
+    --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
+    --section-background: {{ section_background.red }}, {{ section_background.green }}, {{ section_background.blue }};
+  }
+</style>
+<section class="section__color-wrapper">
+  <div class="section">
+    {%- for block in section.blocks -%}
+      {%- if block.type == "banner" -%}
+        <div class="image-text__banner">
+          {%- if block.settings.image != blank -%}
+            <img class="w-100 {% if block.settings.image_mobile != blank %} hidden-phone {% endif %}" loading="lazy" sizes="(max-width: 740px) 100vw, 500px" {% render 'image-attributes', image: block.settings.image, sizes: '300,400,500,600,700,800,900,1000' %}>
+          {%- endif -%}
+
+          {%- if block.settings.image_mobile != blank -%}
+            <img class="w-100 hidden-tablet hidden-lap-and-up" loading="lazy" sizes="(max-width: 740px) 100vw, 500px" {% render 'image-attributes', image: block.settings.image_mobile, sizes: '300,400,500,600,700,800,900,1000' %}>
+          {%- endif -%}
+        </div>
+      {% else %}
+       <div class="container container--medium">
+          {%- if block.settings.heading != blank -%}
+             <h2 class="heading h2 align-center">{{ block.settings.heading }}</h2>
+          {%- endif -%}
+          <div id="block-{{ block.id }}" class="image-text__block {% if block.settings.image_position == 'right' %} block__reverse {% endif %} {% if block.settings.image_position_mobile == 'below' %} block__image-below {% endif %} {% if forloop.last == true %} image-text__block-spacing {% endif %}">
+              <div class="image-text__block__image">
+                {%- if block.settings.image != blank -%}
+                  <img class="" loading="lazy" sizes="{% if block.settings.content != blank %}50vw{% else %}100vw{% endif %}" {% render 'image-attributes', image: block.settings.image, sizes: '400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' %}>
+                {% else %}
+                   {{- 'image' | placeholder_svg_tag: image_classes -}}
+                {%- endif -%}
+              </div>
+              <div class="image-text__block__text">
+                <h3 class="heading h5">{{ block.settings.title }}</h3>
+
+                <h4 class="heading heading--light">{{ block.settings.subtitle }}</h4>
+
+                {%- if block.settings.show_divider  -%}
+                  <div class="divider">
+                    {% render 'icon' with 'divider-green' %}
+                  </div>
+                {%- endif -%}
+
+                {{ block.settings.text }}
+                {%- if block.settings.button_text != blank -%}
+                  <a class="specs__text-button" href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
+                {%- endif -%}
+              </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {%- endfor -%}
+</section>
+<style>
+   {%- for block in section.blocks -%}
+     #block-{{ block.id }} h3{
+        color: {{ block.settings.title_color }};
+      }
+   {% endfor %}
+</style>
+{% schema %}
+{
+  "name": "Image text blocks",
+  "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Heading"
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background",
+        "default": "rgba(0,0,0,0)"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "rgba(0,0,0,0)"
+      }
+  ],
+  "blocks": [
+      {
+        "type": "block",
+        "name": "Image-text",
+        "settings": [
+            {
+              "type": "text",
+              "id": "heading",
+              "label": "Heading"
+            },
+            {
+              "type": "select",
+              "id": "image_position",
+              "label": "Image position",
+              "options": [
+                {
+                  "value": "left",
+                  "label": "Left"
+                },
+                {
+                  "value": "right",
+                  "label": "Right"
+                }
+              ],
+              "default": "left"
+            },
+            {
+              "type": "select",
+              "id": "image_position_mobile",
+              "label": "Image position mobile",
+              "options": [
+                {
+                  "value": "above",
+                  "label": "Above text"
+                },
+                {
+                  "value": "below",
+                  "label": "Below text"
+                }
+              ],
+              "default": "above"
+            },
+             {
+               "type": "image_picker",
+               "id": "image",
+               "label": "Image"
+             },
+             {
+               "type": "text",
+               "id": "title",
+               "label": "Title",
+               "default": "Title"
+             },
+             {
+               "type": "text",
+               "id": "subtitle",
+               "label": "Subtitle"
+             },
+             {
+               "type": "checkbox",
+               "id": "show_divider",
+               "label": "Show divider ?",
+               "default": false
+             },
+             {
+               "type": "richtext",
+               "id": "text",
+               "label": "Text",
+               "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+             },
+             {
+               "type": "text",
+               "id": "button_text",
+               "label": "Button"
+             },
+             {
+               "type": "url",
+               "id": "button_url",
+               "label": "Button link"
+             },
+             {
+               "type": "header",
+               "content": "colors"
+             },
+             {
+               "type": "color",
+               "id": "title_color",
+               "label": "Title color",
+               "default": "#009760"
+             }
+        ]
+      },
+      {
+        "type": "banner",
+        "name": "Banner",
+        "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image desktop"
+           },
+           {
+             "type": "image_picker",
+             "id": "image_mobile",
+             "label": "Image mobile"
+           }
+        ]
+      }
+  ],
+  "presets": [
+    {
+      "name": "Image text blocks",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

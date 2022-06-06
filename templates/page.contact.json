@@ -1,0 +1,88 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": false,
+        "show_divider": true,
+        "page_width": "medium"
+      }
+    },
+    "contact-form": {
+      "type": "contact-form",
+      "blocks": {
+        "de6332e7-c969-414c-9a8c-9938b2f1afa9": {
+          "type": "text",
+          "settings": {
+            "title": "Téléphone",
+            "use_long_text": false,
+            "is_required": true
+          }
+        },
+        "761e0f93-e95d-424f-9724-411c7ae5f1ac": {
+          "type": "text",
+          "settings": {
+            "title": "N° de commande",
+            "use_long_text": false,
+            "is_required": false
+          }
+        },
+        "497fdff3-daf9-48b8-8d40-92cec341a23c": {
+          "type": "text",
+          "settings": {
+            "title": "Objet du contact",
+            "use_long_text": false,
+            "is_required": true
+          }
+        },
+        "45259c74-cc4c-43b0-bca6-a21d4e533f23": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Raison de la demande de contact",
+            "values": "Informations produits, Question sur ma commande, Autre"
+          }
+        }
+      },
+      "block_order": [
+        "de6332e7-c969-414c-9a8c-9938b2f1afa9",
+        "761e0f93-e95d-424f-9724-411c7ae5f1ac",
+        "497fdff3-daf9-48b8-8d40-92cec341a23c",
+        "45259c74-cc4c-43b0-bca6-a21d4e533f23"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_505.png",
+        "image_mobile": "shopify:\/\/shop_images\/Rectangle_500_ea51912b-a1e7-48c8-90fd-32ef4aa3e0f8.png",
+        "title": "Contactez-nous",
+        "content": "",
+        "title_footer": "Vous souhaitez trouver nos produits en pharmacie ?",
+        "text_footer": "<p>Consultez notre liste de revendeurs <a href=\"\/pages\/livraison-retours\" target=\"_blank\" title=\"Livraison & retours\">ici<\/a> <\/p>",
+        "background": "#f5f5f5",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1652707148062f81b9": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "A propos de Somatoline",
+        "title": "",
+        "content": "De l'expérience de Somatoline, une efficacité cliniquement prouvée au service de la beauté, pour des résultats ressentis sur la peau grâce à un mécanisme fondamental qui optimise les processus métaboliques : la réactivation de la microcirculation cutanée.<br><br>La microcirculation cutanée joue un rôle fondamental dans le bien-être et l'entretien des tissus cutanés, car c'est le système qui oxygène, nourrit et purifie la peau.\n--split--\n<br><br>Physiologiquement, le passage du temps et une hygiène de vie inadaptée contribuent à un ralentissement des fonctions de la microcirculation, qui perd ainsi son efficacité entraînant un dysfonctionnement des processus physiologiques qui impactent les tissus cutanés dont le pannicule adipeux.",
+        "show_more": true,
+        "button_text": "",
+        "button_link": "",
+        "text_alignment": "center",
+        "background": "#f3f3f3",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "contact-form",
+    "1652707148062f81b9"
+  ]
+}

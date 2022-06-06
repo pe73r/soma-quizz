@@ -1,0 +1,100 @@
+<section id="section-{{ section.id }}" class="section-image-text">
+    <div class="image-text__wrapper">
+         <div class="image-text__image">
+
+           {%- if section.settings.image != blank -%}
+              <img class="{% if section.settings.mobile_image != blank %}hidden-pocket{% endif %}" {% if section.settings.reveal_on_scroll %}reveal{% endif %} loading="lazy" sizes="(max-width: 999px) 100vw, {% if section.settings.text_position contains 'overlap' %}72vw{% elsif section.settings.background_type == 'boxed' %}min(1520px, 100vw){% else %}100vw{% endif %}" {% render 'image-attributes', image: section.settings.image, sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' %}>
+
+              {%- if section.settings.mobile_image != blank -%}
+                <img class="image-with-text-block__image hidden-lap-and-up" {% if section.settings.reveal_on_scroll %}reveal{% endif %} loading="lazy" sizes="100vw" {% render 'image-attributes', image: section.settings.mobile_image, sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400' %}>
+              {%- endif -%}
+            {%- else -%}
+
+              {%- if section.settings.reveal_on_scroll -%}
+                {{- 'image' | placeholder_svg_tag: image_classes | replace: '<svg', '<svg reveal' -}}
+              {%- else -%}
+                {{- 'image' | placeholder_svg_tag: image_classes -}}
+              {%- endif -%}
+            {%- endif -%}
+         </div>
+         <div class="image-text__content">
+            <div class="image-text__heading">
+              {%- if section.settings.title != blank -%}
+                <h3 class="image-text__title heading h2">
+                  <split-lines {% if section.settings.reveal_on_scroll %}reveal{% endif %}>{{ section.settings.title }}</split-lines>
+                </h3>
+              {%- endif -%}
+
+              {%- if section.settings.subtitle != blank -%}
+                <h2 class="heading heading--small">
+                  <split-lines {% if section.settings.reveal_on_scroll %}reveal{% endif %}>{{ section.settings.subtitle | escape }}</split-lines>
+                </h2>
+              {%- endif -%}
+            </div>
+
+            <div class="image-with-text-block__text-container" {% if section.settings.reveal_on_scroll %}reveal{% endif %}>
+              {%- if section.settings.content != blank -%}
+                {{- section.settings.content -}}
+              {%- endif -%}
+
+              {%- if section.settings.button_text != blank -%}
+                <div class="button-wrapper">
+                  <a href="{{ section.settings.button_link }}" class="button button--primary">{{ section.settings.button_text | escape }}</a>
+                </div>
+              {%- endif -%}
+          </div>
+       </div>
+    </div>
+</section>
+{% schema %}
+{
+  "name": "Image text",
+  "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image desktop"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Image mobile"
+      },
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Title",
+        "default": "Les coffrets de votre routine beauté"
+      },
+      {
+        "type": "text",
+        "id": "title_mobile",
+        "label": "Title mobile",
+        "default": "Les coffrets de votre routine beauté"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "EFFICACE DÈS LA PREMIERE SEMAINE"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      }
+
+  ],
+  "presets": [
+    {
+      "name": "Image text",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

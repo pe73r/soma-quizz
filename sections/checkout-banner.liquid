@@ -1,0 +1,42 @@
+<section>
+  <div class="checkout-logo" >
+      {%- if section.settings.logo_svg != blank -%}
+      <img class="header__logo-image" src="{{ section.settings.logo_svg }}" alt="{{ section.settings.logo_svg.alt | escape }}"/>
+      <img  src="{{ section.settings.logo_svg | img_url: logo_size }}" alt="{{ section.settings.logo_svg.alt | escape }}">
+    {% endif %}
+  </div>
+  {%- if section.settings.image != blank -%}
+    <div class="checkout-banner">
+       <img class="{% if section.settings.mobile_image != blank %} hidden-image-mb {% endif %}" {% if section.settings.reveal_on_scroll %}reveal{% endif %} loading="lazy" sizes="(max-width: 999px) 100vw, {% if section.settings.text_position contains 'overlap' %}72vw{% elsif section.settings.background_type == 'boxed' %}min(1520px, 100vw){% else %}100vw{% endif %}" {% render 'image-attributes', image: section.settings.image, sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' %}>
+
+       {%- if section.settings.mobile_image != blank -%}
+         <img class="image-with-text-block__image hidden-image-lap" {% if section.settings.reveal_on_scroll %}reveal{% endif %} loading="lazy" sizes="100vw" {% render 'image-attributes', image: section.settings.mobile_image, sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400' %}>
+       {%- endif -%}
+     </div>
+   {%- endif -%}
+
+</section>
+
+{% schema %}
+  {
+    "name": "Checkout banner",
+    "class": "shopify-section--checkout-banner",
+    "settings": [
+          {
+              "type": "image_picker",
+              "id": "logo_svg",
+              "label": "Logo svg"
+          },
+          {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image banner"
+          },
+          {
+              "type": "image_picker",
+              "id": "image_mobile",
+              "label": "Image banner"
+          }
+      ]
+  }
+{% endschema %}

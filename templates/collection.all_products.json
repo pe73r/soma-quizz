@@ -1,0 +1,337 @@
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_description": true,
+        "section_height": "small",
+        "text_width": "medium",
+        "image_text_color": "#ffffff",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 30,
+        "quick_links": ""
+      }
+    },
+    "collection-list-header": {
+      "type": "collection-list-header",
+      "settings": {
+        "title": "Des soins pour chaque besoin",
+        "content": "",
+        "show_number_products": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "collection-breadcrumb": {
+      "type": "collection-breadcrumb",
+      "settings": {
+      }
+    },
+    "collection-list-links": {
+      "type": "collection-list-links",
+      "blocks": {
+        "65a0f67a-e464-4d21-9313-ab2c8303462e": {
+          "type": "Link",
+          "settings": {
+            "title": "MINCIR",
+            "url": "#MINCIR"
+          }
+        },
+        "bc6f5d1c-c84f-4acf-b1a0-548a5e684c02": {
+          "type": "Link",
+          "settings": {
+            "title": "CELLULITE",
+            "url": "#CELLULITE"
+          }
+        },
+        "56fc85f7-ad61-4673-9feb-2edaf74bffe2": {
+          "type": "Link",
+          "settings": {
+            "title": "DRAINER",
+            "url": "#DRAINER"
+          }
+        },
+        "2c643d1d-59b6-4bdf-bf4a-81316b2f5c75": {
+          "type": "Link",
+          "settings": {
+            "title": "EXFOLIER",
+            "url": "#EXFOLIER"
+          }
+        },
+        "18fe6878-fe5b-4854-84d9-fbdedf9b1981": {
+          "type": "Link",
+          "settings": {
+            "title": "VERGETURES",
+            "url": "#VERGETURES"
+          }
+        },
+        "bb998417-4adb-410b-b4a4-c64c750994dd": {
+          "type": "Link",
+          "settings": {
+            "title": "SCULPTER",
+            "url": "#SCULPTER"
+          }
+        },
+        "aac3d003-0fc2-4c09-b548-44e447ac1af6": {
+          "type": "Link",
+          "settings": {
+            "title": "EXCLUSIVITES",
+            "url": "#EXCLUSIVITES"
+          }
+        }
+      },
+      "block_order": [
+        "65a0f67a-e464-4d21-9313-ab2c8303462e",
+        "bc6f5d1c-c84f-4acf-b1a0-548a5e684c02",
+        "56fc85f7-ad61-4673-9feb-2edaf74bffe2",
+        "2c643d1d-59b6-4bdf-bf4a-81316b2f5c75",
+        "18fe6878-fe5b-4854-84d9-fbdedf9b1981",
+        "bb998417-4adb-410b-b4a4-c64c750994dd",
+        "aac3d003-0fc2-4c09-b548-44e447ac1af6"
+      ],
+      "settings": {
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "disabled": true,
+      "blocks": {
+        "91a77845-cfcb-40ee-bab5-918484122130": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "subheading": "Your subheading",
+            "title": "Your heading",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#f7f8fd",
+            "text_color": "#1e316a",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        }
+      },
+      "block_order": [
+        "91a77845-cfcb-40ee-bab5-918484122130"
+      ],
+      "settings": {
+        "show_sort_by": true,
+        "products_per_page": 24,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_filters": false,
+        "show_filter_group_name": false,
+        "show_color_swatch": false,
+        "open_first_filter_group": false,
+        "filter_position": "always_visible",
+        "promotion_position": "top",
+        "promotion_height": "small"
+      }
+    },
+    "1653327979d14c22a4": {
+      "type": "collection-list",
+      "blocks": {
+        "9b6db677-3367-43b9-8589-bb9d32121bb8": {
+          "type": "routine",
+          "settings": {
+            "product": "routine-minceur-ultime",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "9b6db677-3367-43b9-8589-bb9d32121bb8"
+      ],
+      "settings": {
+        "position": "MINCIR",
+        "collection": "mincir",
+        "products_count": 8,
+        "title": "Mincir jour et nuit",
+        "content": "<p>Un traitement d’attaque à appliquer la nuit, avec une rapidité d’action prouvée ! <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1653329115367f9057": {
+      "type": "collection-list",
+      "blocks": {
+        "7f428460-8296-4149-9a28-8e0a2d10da82": {
+          "type": "routine",
+          "settings": {
+            "product": "routine-anti-cellulite-complete-effet-froid-1",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "7f428460-8296-4149-9a28-8e0a2d10da82"
+      ],
+      "settings": {
+        "position": "CELLULITE",
+        "collection": "cellulite",
+        "products_count": 8,
+        "title": "Bye bye la cellulite",
+        "content": "<p>Pour une action intensive sur la cellulite, les capitons et la peau d’orange. <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16533361835358a316": {
+      "type": "collection-list",
+      "blocks": {
+        "a5576bb4-d376-4b87-81c9-16f018baa79f": {
+          "type": "routine",
+          "settings": {
+            "product": "pack-drainant-intensif",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "a5576bb4-d376-4b87-81c9-16f018baa79f"
+      ],
+      "settings": {
+        "position": "DRAINER",
+        "collection": "drainer",
+        "products_count": 8,
+        "title": "Drainer vos jambes",
+        "content": "<p>Pour combattre les jambes lourdes et la rétention d’eau. <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16533361947bba8951": {
+      "type": "collection-list",
+      "blocks": {
+        "6f4d4dc3-615c-46cf-bdb1-c6356b9c32f8": {
+          "type": "routine",
+          "settings": {
+            "product": "pack-decouverte",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "6f4d4dc3-615c-46cf-bdb1-c6356b9c32f8"
+      ],
+      "settings": {
+        "position": "EXFOLIER",
+        "collection": "exfolier",
+        "products_count": 8,
+        "title": "Exfolier votre peau",
+        "content": "<p>Une action nourrisante et exfoliante intense pour une plus peau douce. <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16533400218b4914f8": {
+      "type": "collection-list",
+      "blocks": {
+        "86a864ab-c51c-4aee-9f6d-5537295afba0": {
+          "type": "routine",
+          "settings": {
+            "product": "routine-minceur-vergetures",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "86a864ab-c51c-4aee-9f6d-5537295afba0"
+      ],
+      "settings": {
+        "position": "VERGETURES",
+        "collection": "vergetures",
+        "products_count": 8,
+        "title": "Traiter vos vergetures",
+        "content": "<p>Pour prévenir et éliminer la formation des vergetures. <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16533362793fbd3c7d": {
+      "type": "collection-list",
+      "blocks": {
+        "60d35077-d2c9-47f8-8e65-9902b5fbf1cd": {
+          "type": "routine",
+          "settings": {
+            "product": "routine-sport-addict-pour-lui",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "60d35077-d2c9-47f8-8e65-9902b5fbf1cd"
+      ],
+      "settings": {
+        "position": "SCULPTER",
+        "collection": "sculpter",
+        "products_count": 8,
+        "title": "Sculpter vos abdos",
+        "content": "<p>Des solutions efficaces et dédiées à la physiologie masculine. <\/p>",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1653336376927b9b94": {
+      "type": "collection-list",
+      "blocks": {
+        "634ba5df-9746-44a8-8d9a-7858f8318012": {
+          "type": "routine",
+          "settings": {
+            "product": "routine-jour-et-nuit",
+            "show_price_under_title": true,
+            "button_type": "voir_plus"
+          }
+        }
+      },
+      "block_order": [
+        "634ba5df-9746-44a8-8d9a-7858f8318012"
+      ],
+      "settings": {
+        "position": "EXCLUSIVITES",
+        "collection": "promotions",
+        "products_count": 8,
+        "title": "Exclusivités",
+        "content": "",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1653341461f38dc1aa": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "À PROPOS DE SOMATOLINE",
+        "title": "",
+        "content": "De l'expérience de Somatoline, une efficacité cliniquement prouvée au service de la beauté, pour des résultats ressentis sur la peau grâce à un mécanisme fondamental qui optimise les processus métaboliques : la réactivation de la microcirculation cutanée.<br><br>La microcirculation cutanée joue un rôle fondamental dans le bien-être et l'entretien des tissus cutanés, car c'est le système qui oxygène, nourrit et purifie la peau.\n--split--\n<br><br>Physiologiquement, le passage du temps et une hygiène de vie inadaptée contribuent à un ralentissement des fonctions de la microcirculation, qui perd ainsi son efficacité entraînant un dysfonctionnement des processus physiologiques qui impactent les tissus cutanés dont le pannicule adipeux.",
+        "show_more": true,
+        "button_text": "",
+        "button_link": "",
+        "text_alignment": "center",
+        "background": "#f3f3f3",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "collection-list-header",
+    "collection-list-links",
+    "collection-breadcrumb",
+    "main",
+    "1653327979d14c22a4",
+    "1653329115367f9057",
+    "16533361835358a316",
+    "16533361947bba8951",
+    "16533400218b4914f8",
+    "16533362793fbd3c7d",
+    "1653336376927b9b94",
+    "1653341461f38dc1aa"
+  ]
+}

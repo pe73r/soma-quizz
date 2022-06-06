@@ -1,0 +1,218 @@
+{%- if section.settings.background != settings.background and section.settings.background != 'rgba(0,0,0,0)' -%}
+  {%- assign blends_with_background = false -%}
+{%- else -%}
+  {%- assign blends_with_background = true -%}
+{%- endif -%}
+
+{%- assign use_recommendations = true -%}
+{%- assign hand_picked_count = 0 -%}
+
+{%- for block in section.blocks -%}
+  {%- if block.settings.product != blank -%}
+    {%- assign use_recommendations = false -%}
+    {%- assign hand_picked_count = hand_picked_count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    {%- if section.settings.background == 'rgba(0,0,0,0)' -%}
+      {%- assign section_background = settings.background -%}
+    {%- else -%}
+      {%- assign section_background = section.settings.background -%}
+    {%- endif -%}
+
+    {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
+      {%- assign heading_color = settings.heading_color -%}
+      {%- assign text_color = settings.text_color -%}
+    {%- else -%}
+      {%- assign heading_color = section.settings.text_color -%}
+      {%- assign text_color = section.settings.text_color -%}
+    {%- endif -%}
+
+    --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
+    --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
+    --prev-next-button-background: {{ settings.background.red }}, {{ settings.background.green }}, {{ settings.background.blue }};
+    --prev-next-button-color: {{ settings.text_color.red }}, {{ settings.text_color.green }}, {{ settings.text_color.blue }};
+
+    --section-background: {{ section_background.red }}, {{ section_background.green }}, {{ section_background.blue }};
+    --section-products-per-row: 2;
+  }
+
+  @media screen and (min-width: 741px) {
+    #shopify-section-{{ section.id }} {
+      --section-products-per-row: 3;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    #shopify-section-{{ section.id }} {
+      --section-products-per-row: 4;
+    }
+  }
+</style>
+
+<product-recommendations section-id="{{ section.id }}" product-id="{{ product.id }}" {% if use_recommendations %}use-automatic-recommendations recommendations-count="{{ section.settings.recommendations_count }}"{% endif %} class="section {% unless blends_with_background %}section--flush{% endunless %}">
+  {%- if hand_picked_count > 0 or recommendations.performed and recommendations.products.size > 0 -%}
+    <div class="section__color-wrapper">
+      <div class="container container--small container-carousel {% unless blends_with_background %}vertical-breather{% endunless %}">
+        {%- if section.settings.title != blank or section.settings.subheading != blank -%}
+          <header class="section__header">
+            <div class="text-container">
+              {%- if section.settings.subheading != blank -%}
+                <h2 class="heading heading--small">{{ section.settings.subheading }}</h2>
+              {%- endif -%}
+
+              {%- if section.settings.title != blank -%}
+                <h3 class="heading h4">{{ section.settings.title }}</h3>
+              {%- endif -%}
+
+              {% render 'icon' with 'divider-green' %}
+            </div>
+          </header>
+        {%- endif -%}
+
+        <product-list {% if settings.stagger_products_apparition %}stagger-apparition{% endif %} class="product-list product-list--center">
+          {%- assign smallest_image_aspect_ratio = 0 -%}
+
+          {%- capture flickity_config -%}
+          {
+            "adaptiveHeight": false,
+            "dragThreshold": 10,
+            "initialIndex": ".is-initial-selected",
+            "fade": {% if section.settings.transition_effect == 'fade' %}true{% else %}false{% endif %},
+            "draggable": ">1",
+            "contain": true,
+            "wrapAround": true,
+            "freeScroll": true,
+            "groupCells": 4,
+            "cellSelector": ".product-item:not(.is-filtered)",
+            "percentPosition": false,
+            "pageDots": true,
+            "prevNextButtons": true
+          }
+          {%- endcapture -%}
+
+          {%- if recommendations.products_count > 4 or hand_picked_count > 4 -%}
+          <flickity-carousel flickity-config="{{ flickity_config | escape }}" id="product-{{ section.id }}-placeholder-media-list" class="product__media-list routines-carousel">
+              {%- if use_recommendations -%}
+                {%- for product in recommendations.products -%}
+                  {%- assign smallest_image_aspect_ratio = smallest_image_aspect_ratio | at_least: product.featured_media.aspect_ratio -%}
+
+                  {%- capture sizes_attribute -%}(max-width: 740px) 75vw, min({{ 100.0 | divided_by: 4 | ceil }}vw, {{ 1520.0 | divided_by: 4 | ceil }}px){%- endcapture -%}
+                  {%- render 'product-item-card', product: product, sizes_attribute: sizes_attribute, show_cta: true, reveal: settings.stagger_products_apparition -%}
+                {%- endfor -%}
+              {%- else -%}
+                {%- for block in section.blocks -%}
+                  {%- if block.settings.product != blank -%}
+                    {%- assign largest_image_aspect_ratio = largest_image_aspect_ratio | at_most: block.settings.product.featured_media.aspect_ratio -%}
+
+                    {%- capture sizes_attribute -%}(max-width: 740px) 75vw, min({{ 100.0 | divided_by: 4 | ceil }}vw, {{ 1520.0 | divided_by: 4 | ceil }}px){%- endcapture -%}
+                    {%- render 'product-item-card', product: block.settings.product, sizes_attribute: sizes_attribute, show_cta: true, reveal: settings.stagger_products_apparition -%}
+                  {%- endif -%}
+                {%- endfor -%}
+              {%- endif -%}
+          </flickity-carousel>
+          {% else %}
+            <div class="product-list__inner">
+                  {%- if use_recommendations -%}
+                    {%- for product in recommendations.products -%}
+                      {%- assign smallest_image_aspect_ratio = smallest_image_aspect_ratio | at_least: product.featured_media.aspect_ratio -%}
+
+                      {%- capture sizes_attribute -%}(max-width: 740px) 75vw, min({{ 100.0 | divided_by: 4 | ceil }}vw, {{ 1520.0 | divided_by: 4 | ceil }}px){%- endcapture -%}
+
+                      {%- if product.title contains 'Routine' or product.title contains 'routine' -%}
+                        {%- render 'product-item-routine', product: product, show_cta: true, block: block, sizes_attribute: sizes_attribute, reveal: settings.stagger_products_apparition -%}
+                      {%- else -%}
+                       {%- render 'product-item-card', product: product, sizes_attribute: sizes_attribute, show_cta: true, reveal: settings.stagger_products_apparition -%}
+                      {% endif %}
+                    {%- endfor -%}
+                  {%- else -%}
+                    {%- for block in section.blocks -%}
+                      {%- if block.settings.product != blank -%}
+                        {%- assign largest_image_aspect_ratio = largest_image_aspect_ratio | at_most: block.settings.product.featured_media.aspect_ratio -%}
+
+                        {%- capture sizes_attribute -%}(max-width: 740px) 75vw, min({{ 100.0 | divided_by: 4 | ceil }}vw, {{ 1520.0 | divided_by: 4 | ceil }}px){%- endcapture -%}
+                        {%- render 'product-item-card', product: block.settings.product, sizes_attribute: sizes_attribute, show_cta: true, reveal: settings.stagger_products_apparition -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                  {%- endif -%}
+             </div>
+          {% endif %}
+        </product-list>
+      </div>
+    </div>
+  {%- endif -%}
+</product-recommendations>
+
+{% schema %}
+{
+  "name": "Product recommendations",
+  "class": "shopify-section--product-recommendations",
+  "templates": ["product"],
+  "max_blocks": 10,
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Dynamic recommendations are not shown if products are explicitly selected."
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Dynamic recommendations change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products). You can manually select products by adding content."
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "You may also like"
+    },
+    {
+      "type": "range",
+      "id": "recommendations_count",
+      "min": 4,
+      "max": 10,
+      "label": "Recommendations count",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "rgba(0,0,0,0)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product recommendations"
+    }
+  ]
+}
+{% endschema %}

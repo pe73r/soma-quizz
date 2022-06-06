@@ -1,0 +1,99 @@
+
+<style>
+  #shopify-section-{{ section.id }} {
+    {%- if section.settings.background == 'rgba(0,0,0,0)' -%}
+      {%- assign section_background = settings.background -%}
+    {%- else -%}
+      {%- assign section_background = section.settings.background -%}
+    {%- endif -%}
+
+    {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
+      {%- assign heading_color = settings.heading_color -%}
+      {%- assign text_color = settings.text_color -%}
+    {%- else -%}
+      {%- assign heading_color = section.settings.text_color -%}
+      {%- assign text_color = section.settings.text_color -%}
+    {%- endif -%}
+
+    {%- if section.settings.button_background == 'rgba(0,0,0,0)' -%}
+      {%- assign button_background = settings.primary_button_background -%}
+    {%- else -%}
+      {%- assign button_background = section.settings.button_background -%}
+    {%- endif -%}
+
+    --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
+    --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
+    --section-background: {{ section_background.red }}, {{ section_background.green }}, {{ section_background.blue }};
+  }
+</style>
+<section>
+  <div class="section__color-wrapper">
+    <div class="section">
+      <div class="container container--small">
+        {%- if section.settings.title != blank or section.settings.subheading != blank -%}
+          <header class="section__header section__header--instagram">
+            <div class="text-container">
+              {%- if section.settings.title != blank -%}
+                <h3 class="heading h5">{{ section.settings.title }}</h3>
+              {%- endif -%}
+
+              {%- if section.settings.subheading != blank -%}
+                <p class="heading instagram__subheading">{{ section.settings.subheading }}</p>
+              {%- endif -%}
+            </div>
+          </header>
+        {%- endif -%}
+        <div class="">
+          {{ section.settings.content }}
+        </div>
+      </div>
+    </div>
+ </div>
+</section>
+{% schema %}
+{
+  "name": "Instagram",
+  "settings": [
+       {
+         "type": "text",
+         "id": "title",
+         "label": "Title",
+         "default": "REJOIGNEZ-NOUS"
+       },
+       {
+         "type": "text",
+         "id": "subheading",
+         "label": "Subtitle",
+         "default": "#somatolinecosmetics"
+       },
+       {
+         "type": "textarea",
+         "id": "content",
+         "label": "Content",
+         "info": "Paste here the yotpo code"
+       },
+       {
+         "type": "header",
+         "content": "Colors"
+       },
+       {
+         "type": "color",
+         "id": "background",
+         "label": "Background",
+         "default": "rgba(0,0,0,0)"
+       },
+       {
+         "type": "color",
+         "id": "text_color",
+         "label": "Text color",
+         "default": "rgba(0,0,0,0)"
+       }
+  ],
+  "presets": [
+    {
+      "name": "Instagram",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

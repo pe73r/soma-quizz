@@ -1,0 +1,207 @@
+{
+  "sections": {
+    "1648647770fd5918e4": {
+      "type": "image-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/somatoline--banner.png",
+        "mobile_image": "shopify:\/\/shop_images\/somatoline--banner-mobile.png",
+        "title": "Les coffrets de votre <br>routine beauté",
+        "title_mobile": "Les coffrets de votre routine beauté",
+        "subtitle": "Efficace dès la première semaine",
+        "button_text": "JE DÉCOUVRE",
+        "button_link": "shopify:\/\/collections\/toutes-les-routines"
+      }
+    },
+    "16488083792b634123": {
+      "type": "heading-picto",
+      "settings": {
+        "section_border": true,
+        "svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0634\/5434\/7503\/files\/picto-check.svg?v=1648807292",
+        "image_width": 150,
+        "heading": "DES FORMULES TESTÉES ET APPROUVÉES PAR UN LABORATOIRE INDÉPENDANT",
+        "heading_mobile": "DES FORMULES TESTÉES ET APPROUVÉES PAR UN LABORATOIRE INDÉPENDANT"
+      }
+    },
+    "16490920309f39f2e5": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "emblematiques",
+        "subheading": "",
+        "title": "Nos produits emblématiques",
+        "content": "<p>Nos incontournables sont conçus pour faciliter l’absorption des principes actifs grâce à un effet thermique chaud ou froid. <\/p>",
+        "products_count": 4,
+        "products_per_row": 4,
+        "show_cta": true,
+        "show_labels": false,
+        "button_text": "",
+        "button_url": "",
+        "background": "#f3f3f3",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1649247073da1967e2": {
+      "type": "banner",
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify:\/\/shop_images\/ball.png",
+        "subheading": "POURQUOI ÇA FONCTIONNE ?",
+        "content": "<p>Basés sur le concept de la microcirculation, ces produits séduisent tant par leur efficacité et que leur effet sur la peau ! <\/p>",
+        "text_position": "center",
+        "text_alignment": "center",
+        "button_text": "EN SAVOIR PLUS",
+        "button_url": "shopify:\/\/pages\/pourquoi-nos-produits-fonctionnent",
+        "text_color": "#ffffff",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "overlay_color": "#000000",
+        "overlay_opacity": 60
+      }
+    },
+    "1649277436699111cf": {
+      "type": "objectives-grid",
+      "blocks": {
+        "919aa684-5361-4348-a398-1cb0674826e2": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_467.png",
+            "title": "DRAINER MES JAMBES",
+            "url": "https:\/\/somatoline-cosmetic.myshopify.com\/collections?ose=false#section-DRAINER"
+          }
+        },
+        "31156bb6-bc5d-41e6-90e2-09f1bb51a786": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_467_1.png",
+            "title": "AFFINER MA SILHOUETTE",
+            "url": "https:\/\/somatoline-cosmetic.myshopify.com\/collections?ose=false#section-MINCIR"
+          }
+        },
+        "914bdffb-704d-45db-bfab-b02201925836": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_467_2.png",
+            "title": "UNE PEAU DOUCE",
+            "url": "https:\/\/somatoline-cosmetic.myshopify.com\/collections?ose=false#section-EXFOLIER"
+          }
+        },
+        "a9347776-f4fc-4801-ad3d-f03931f57d1f": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_467_3.png",
+            "title": "BYE BYE MA CELLULITE",
+            "url": "https:\/\/somatoline-cosmetic.myshopify.com\/collections?ose=false#section-CELLULITE"
+          }
+        },
+        "cfae60bb-704e-4844-bcfa-064b294b630f": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_467_4.png",
+            "title": "SCULPTER MES ABDOS",
+            "url": "https:\/\/somatoline-cosmetic.myshopify.com\/collections?ose=false#section-SCULPTER"
+          }
+        },
+        "edb3764c-c7be-4060-8c69-1c438e37dd45": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_467_5_cad3bb2b-b658-4d4c-a81f-63455841cda6.png",
+            "title": "STOP VERGETURES",
+            "url": "https:\/\/somatoline-cosmetic.myshopify.com\/collections?ose=false#section-VERGETURES"
+          }
+        }
+      },
+      "block_order": [
+        "919aa684-5361-4348-a398-1cb0674826e2",
+        "31156bb6-bc5d-41e6-90e2-09f1bb51a786",
+        "914bdffb-704d-45db-bfab-b02201925836",
+        "a9347776-f4fc-4801-ad3d-f03931f57d1f",
+        "cfae60bb-704e-4844-bcfa-064b294b630f",
+        "edb3764c-c7be-4060-8c69-1c438e37dd45"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "Quel est votre objectif ?",
+        "content": "<p>Basés sur le concept de la microcirculation, ces produits vous séduiront tant par leur efficacité que par leur application agréable sur la peau ! <\/p>",
+        "button_text": "",
+        "button_url": "",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16492818245a056ee5": {
+      "type": "routines-carousel",
+      "settings": {
+        "collection": "routines",
+        "subheading": "",
+        "title": "FAITES DES ÉCONOMIES AVEC NOS ROUTINES",
+        "content": "",
+        "products_count": 8,
+        "background": "#ebf8ff",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1649079931d5788a26": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "À PROPOS DE SOMATOLINE",
+        "title": "",
+        "content": "De l'expérience de Somatoline, une efficacité cliniquement prouvée au service de la beauté, pour des résultats ressentis sur la peau grâce à un mécanisme fondamental qui optimise les processus métaboliques : la réactivation de la microcirculation cutanée.<br><br>La microcirculation cutanée joue un rôle fondamental dans le bien-être et l'entretien des tissus cutanés, car c'est le système qui oxygène, nourrit et purifie la peau.\n--split--\n<br><br>Physiologiquement, le passage du temps et une hygiène de vie inadaptée contribuent à un ralentissement des fonctions de la microcirculation, qui perd ainsi son efficacité entraînant un dysfonctionnement des processus physiologiques qui impactent les tissus cutanés dont le pannicule adipeux.",
+        "show_more": true,
+        "button_text": "",
+        "button_link": "",
+        "text_alignment": "left",
+        "background": "#f3f3f3",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1649110066c4a3b551": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": false,
+        "image": "shopify:\/\/shop_images\/FBC5032.jpg",
+        "subheading": "10% offert en vous abonnant !",
+        "content": "<p>Soyez au courant des nouveautés et de nos astuces beauté. Abonnez-vous à notre newsletter !<\/p>",
+        "text_position": "center",
+        "text_alignment": "center",
+        "text_background": "#ffffff",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16530542254b45b35f": {
+      "type": "newsletter-klaviyo",
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify:\/\/shop_images\/FBC5032_1600x_1132408b-d7b0-44b1-86e4-a56a5526098c.webp",
+        "subheading": "10% offert en vous abonnant !",
+        "success_message": "Félicitations ! Vous êtes abonné(e) à notre newsletter",
+        "error_message": "Entrer un mail valide",
+        "content": "<p>Soyez au courant des nouveautés et de nos astuces beauté. Abonnez-vous à notre newsletter !<\/p>",
+        "text_position": "center",
+        "text_alignment": "center",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "1648647770fd5918e4",
+    "16488083792b634123",
+    "16490920309f39f2e5",
+    "1649247073da1967e2",
+    "1649277436699111cf",
+    "16492818245a056ee5",
+    "1649079931d5788a26",
+    "1649110066c4a3b551",
+    "16530542254b45b35f"
+  ]
+}

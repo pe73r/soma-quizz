@@ -1,0 +1,158 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": false,
+        "show_divider": false,
+        "page_width": "medium"
+      }
+    },
+    "16522630752b56a7c9": {
+      "type": "image-text-blocks",
+      "blocks": {
+        "ba431615-32d5-4f2b-96ee-bc12b395439a": {
+          "type": "block",
+          "settings": {
+            "heading": "",
+            "image_position": "left",
+            "image_position_mobile": "above",
+            "image": "shopify:\/\/shop_images\/Rectangle_436_7ee40e9d-adea-4779-970a-f99bfe28da45.png",
+            "title": "LA ROUTINE MINCEUR DE JULIE",
+            "subtitle": "DURÉE : 2 MOIS",
+            "show_divider": true,
+            "title_color": "#282828",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "ba431615-32d5-4f2b-96ee-bc12b395439a"
+      ],
+      "settings": {
+        "title": "Heading"
+      }
+    },
+    "1652263151a791d37f": {
+      "type": "video",
+      "settings": {
+        "subheading": "",
+        "title": "Sa routine en vidéo",
+        "show_divider": true,
+        "content": "<p>Découvrez les conseils de Julie pour une application optimale. <\/p>",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "image": "shopify:\/\/shop_images\/Rectangle_484.png",
+        "background_type": "boxed",
+        "video_size": "auto",
+        "autoplay": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1652263176cd8141df": {
+      "type": "routine-steps",
+      "blocks": {
+        "16522631768f425d93-0": {
+          "type": "card",
+          "settings": {
+            "title": "TOUTES LES NUITS",
+            "subtitle": "Gel 7 nuits",
+            "content": "<p>J’applique ce gel avant d’aller me coucher. Sa texture n’est pas grasse, donc on peut se glisser dans ses draps juste après sans soucis :) <\/p>",
+            "image": "shopify:\/\/shop_images\/Rectangle_443.png"
+          }
+        },
+        "16522631768f425d93-1": {
+          "type": "card",
+          "settings": {
+            "title": "J’EXFOLIE MA PEAU",
+            "subtitle": "Gommage Sel Marin",
+            "content": "<p>Ma peau est plus hydratante<br\/>après l’avoir appliqué. Avec sa formule à base de sel marin et huile de jojoba, son odeur est super agréable.<\/p>",
+            "image": "shopify:\/\/shop_images\/Rectangle_443_4.png"
+          }
+        },
+        "16522631768f425d93-2": {
+          "type": "card",
+          "settings": {
+            "title": "BOOSTER MA ROUTINE",
+            "subtitle": "Bandages remodelant",
+            "content": "<p>La pose de bandages est un moment agréable et pour soi. Je fais une pose tous les dimanches, en regardant ma série préférée.<br\/><\/p>",
+            "image": "shopify:\/\/shop_images\/Rectangle_443_3.png"
+          }
+        },
+        "16522631768f425d93-3": {
+          "type": "card",
+          "settings": {
+            "title": "LE MASSAGE",
+            "subtitle": "Brosse de massage",
+            "content": "<p>J’adore utiliser cette brosse. Je remonte des mollets aux cuisses. Ma peau est si douce après. Et en plus, cette brosse est vegan !<br\/><\/p>",
+            "image": "shopify:\/\/shop_images\/Rectangle_443_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "16522631768f425d93-0",
+        "16522631768f425d93-1",
+        "16522631768f425d93-2",
+        "16522631768f425d93-3"
+      ],
+      "settings": {
+        "product": "routine-anti-cellulite-complete-effet-froid",
+        "subheading": "",
+        "title": "Étape par étape",
+        "content": "<p>Les étapes et produits utilisés par Julie pour réussir à atteindre ses objectifs minceur. <\/p>",
+        "show_button": true,
+        "button_text": "ACHETER LA ROUTINE",
+        "background": "#f5f5f5",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1652263180186650c4": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": false,
+        "section_height": "auto",
+        "image": "shopify:\/\/shop_images\/197448992_523744911987469_1761091038940320339_n_2.png",
+        "image_mobile": "shopify:\/\/shop_images\/197448992_523744911987469_1761091038940320339_n_1.png",
+        "subheading": "",
+        "title": "Les résultats",
+        "show_divider": true,
+        "show_quote": true,
+        "content": "<p><em><strong>“J’ai vu la différence sur mon corps au bout de 15 jours seulement “<\/strong><\/em><\/p><p>Julie<\/p>",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "text_mobile": "outside_image",
+        "text_width": "medium",
+        "text_position": "middle_center",
+        "text_color": "#ffffff",
+        "box_background": "#000000",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "1652952002682b4758": {
+      "type": "routines-carousel",
+      "settings": {
+        "collection": "routines",
+        "subheading": "",
+        "title": "DECOUVREZ LES AUTRES ROUTINES",
+        "content": "",
+        "products_count": 8,
+        "background": "#ebf8ff",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16522630752b56a7c9",
+    "1652263151a791d37f",
+    "1652263176cd8141df",
+    "1652263180186650c4",
+    "1652952002682b4758"
+  ]
+}

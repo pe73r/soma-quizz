@@ -1,0 +1,160 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": false,
+        "show_divider": false,
+        "page_width": "medium"
+      }
+    },
+    "1651660933ef650e31": {
+      "type": "routine-cards",
+      "blocks": {
+        "165166093331c2131a-0": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_436_6.png",
+            "title": "LA ROUTINE MINCEUR  DE JULIE",
+            "content": "<p>En 1 mois seulement, le pari semble fou ? Découvrez les conseils de Julie, qui a réussi à atteindre ses objectifs avec sa routine Somatoline. <\/p>",
+            "button_text": "JE DÉCOUVRE",
+            "button_url": "shopify:\/\/pages\/la-routine-de-julie"
+          }
+        },
+        "165166093331c2131a-1": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_436_7.png",
+            "title": "LA ROUTINE PEAU DOUCE D’EMILY",
+            "content": "<p>Une peau plus douce en quelques jours, ça vous tente ? Emily vous partage ses produits fétiches et quelques secrets<\/p>",
+            "button_text": "JE DÉCOUVRE",
+            "button_url": ""
+          }
+        },
+        "165166093331c2131a-2": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_436_4a767c8e-9db3-4868-8fb9-476ac1571972.png",
+            "title": "LA ROUTINE ANTI-VERGETURES D’INES",
+            "content": "<p>Complexée par ses vergetures, Ines vous explique sa méthode pour hydrater sa peau et se sentir mieux dans sa peau !<\/p>",
+            "button_text": "JE DÉCOUVRE",
+            "button_url": ""
+          }
+        },
+        "5b6ed153-db4e-4032-a42c-d204fac64570": {
+          "type": "card",
+          "settings": {
+            "title": "Card",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p>",
+            "button_text": "JE DÉCOUVRE",
+            "button_url": ""
+          }
+        },
+        "d70e0e25-7937-41ce-821f-42bf50537dcb": {
+          "type": "card",
+          "settings": {
+            "title": "Card",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p>",
+            "button_text": "JE DÉCOUVRE",
+            "button_url": ""
+          }
+        },
+        "98e8faf4-9bd6-437b-add8-fccd29488c54": {
+          "type": "card",
+          "settings": {
+            "title": "Card",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p>",
+            "button_text": "JE DÉCOUVRE",
+            "button_url": ""
+          }
+        },
+        "f7ad656a-3ce7-49c6-8699-126af006261d": {
+          "type": "card",
+          "settings": {
+            "title": "Card",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p>",
+            "button_text": "JE DÉCOUVRE",
+            "button_url": ""
+          }
+        },
+        "3a6cc58c-5bc0-4cc8-9854-fa5ae67ea4ec": {
+          "type": "card",
+          "settings": {
+            "title": "Card",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p>",
+            "button_text": "JE DÉCOUVRE",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "165166093331c2131a-0",
+        "165166093331c2131a-1",
+        "165166093331c2131a-2",
+        "5b6ed153-db4e-4032-a42c-d204fac64570",
+        "d70e0e25-7937-41ce-821f-42bf50537dcb",
+        "98e8faf4-9bd6-437b-add8-fccd29488c54",
+        "f7ad656a-3ce7-49c6-8699-126af006261d",
+        "3a6cc58c-5bc0-4cc8-9854-fa5ae67ea4ec"
+      ],
+      "settings": {
+        "title": "Toutes les routines",
+        "show_divider": false,
+        "content": "Afin de mieux vous accompagner et vous aider à atteindre vos objectifs, nous avons demandé à nos clients de vous partager leurs routines. \n<!--split-->\n<br><br>Lorem Ipsumis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+        "show_more": true,
+        "section_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16516623733b15ae35": {
+      "type": "collection-carousel",
+      "settings": {
+        "collection": "emblematiques",
+        "subheading": "",
+        "title": "VOUS AIMEREZ AUSSI",
+        "content": "",
+        "products_count": 8,
+        "background": "#ebf8ff",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "165334556047cc17d1": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "A propos de Somatoline",
+        "title": "",
+        "content": "De l'expérience de Somatoline, une efficacité cliniquement prouvée au service de la beauté, pour des résultats ressentis sur la peau grâce à un mécanisme fondamental qui optimise les processus métaboliques : la réactivation de la microcirculation cutanée.<br><br>La microcirculation cutanée joue un rôle fondamental dans le bien-être et l'entretien des tissus cutanés, car c'est le système qui oxygène, nourrit et purifie la peau.\n<br><br>Physiologiquement, le passage du temps et une hygiène de vie inadaptée contribuent à un ralentissement des fonctions de la microcirculation, qui perd ainsi son efficacité entraînant un dysfonctionnement des processus physiologiques qui impactent les tissus cutanés dont le pannicule adipeux.",
+        "show_more": true,
+        "button_text": "",
+        "button_link": "",
+        "text_alignment": "center",
+        "background": "#f3f3f3",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16516623783fc67c82": {
+      "type": "newsletter",
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify:\/\/shop_images\/FBC5032.jpg",
+        "subheading": "10% offert en vous abonnant !",
+        "content": "<p>Soyez au courant des nouveautés et de nos astuces beautés ! Abonnez-vous à notre newsletter<\/p>",
+        "text_position": "center",
+        "text_alignment": "center",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1651660933ef650e31",
+    "16516623733b15ae35",
+    "165334556047cc17d1",
+    "16516623783fc67c82"
+  ]
+}

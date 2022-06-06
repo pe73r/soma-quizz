@@ -1,0 +1,145 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "show_divider": true,
+        "page_width": "medium"
+      }
+    },
+    "165113455568866f66": {
+      "type": "image-text-blocks",
+      "blocks": {
+        "722d05f8-f87d-4351-af6f-c7b44aaf516f": {
+          "type": "block",
+          "settings": {
+            "heading": "",
+            "image_position": "left",
+            "image_position_mobile": "above",
+            "image": "shopify:\/\/shop_images\/visuel_vergetures.png",
+            "title": "Votre partenaire bien-être",
+            "text": "<p>Parce que nous croyons que chaque femme a droit à se sentir bien dans sa peau, nous vous accompagnons au quotidien avec des soins qui vous permettent de vous sentir en harmonie avec votre corps.<\/p><p>Aussi petites soient-elles, nous avons toutes des imperfections qui nous font tant culpabiliser. <\/p><p>Somatoline Cosmetic s'engage à les combattre depuis deux décennies.<\/p>",
+            "button_text": "",
+            "button_url": "",
+            "title_color": "#009760"
+          }
+        },
+        "3092cc83-c100-4bb5-824b-d13d15d2e106": {
+          "type": "block",
+          "settings": {
+            "heading": "",
+            "image_position": "right",
+            "image_position_mobile": "above",
+            "image": "shopify:\/\/shop_images\/page_marque.png",
+            "title": "A vos côtés depuis 20 ans",
+            "text": "<p>Depuis près de 20 ans, Somatoline Cosmetic vous accompagne dans la quête de l'acceptation de soi.<\/p><p>Développé pour combattre les rondeurs qui font tant culpabiliser, Somatoline Cosmetic met la science au service de la beauté de chacune avec son premier traitement vendu en pharmacie en 2003.<\/p><p>Exfoliant, drainant, amincissant, anti cellulite et vergetures...depuis, nous n'avons cessé de développer des soins de peau pour vous sentir mieux, jour après jour.<\/p>",
+            "button_text": "",
+            "button_url": "",
+            "title_color": "#009760"
+          }
+        }
+      },
+      "block_order": [
+        "722d05f8-f87d-4351-af6f-c7b44aaf516f",
+        "3092cc83-c100-4bb5-824b-d13d15d2e106"
+      ],
+      "settings": {
+        "title": "Heading"
+      }
+    },
+    "16511457767a97a7e9": {
+      "type": "blocks-scroller",
+      "blocks": {
+        "1651145776ff1400f3-0": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_500_4.png",
+            "title": "Recherche Scientifique",
+            "content": "<p>Elaborer les formules qui vous aideront à vous sentir mieux \ndans votre quotidien ne s'improvise pas. C'est pourquoi nous avons fait de l'innovation scientifique l'un des piliers de notre développement.<!--split-->test suite message<\/p>",
+            "show_more": true,
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "1651145776ff1400f3-1": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_501_587a50f9-4e36-40a0-89f2-b52cbfc28636.png",
+            "title": "Actifs d’Origine Naturelle",
+            "content": "<p>La nature est si bien faite. Nos formules sont étudiées spécifiquement pour profiter de la quintessence de principes actifs naturels.<\/p>\n<!--split--><p>message 2<\/p>",
+            "show_more": true,
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "1651145776ff1400f3-2": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_501_1.png",
+            "title": "Résultats Prouvés",
+            "content": "<p>L'efficacité de nos formules se mesure par différents tests instrumentaux, cliniques, contre placébos...effectués en laboratoire indépendant à Padoue en Italie.<\/p><!--split--><p>test suite message<\/p>",
+            "show_more": true,
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "1651145776ff1400f3-3": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/focus_gel_2.png",
+            "title": "Agréables à Utiliser",
+            "content": "<p>Parce que nos soins sont avant l'occasion de passer un moment de bien-être, nos formules sont étudiées pour être agréable à utiliser.<\/p><!--split--><p>test suite message<\/p>",
+            "show_more": true,
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "1651145776ff1400f3-0",
+        "1651145776ff1400f3-1",
+        "1651145776ff1400f3-2",
+        "1651145776ff1400f3-3"
+      ],
+      "settings": {
+        "title": "Nos valeurs"
+      }
+    },
+    "1651134714f63fe669": {
+      "type": "routines-carousel",
+      "settings": {
+        "collection": "routines",
+        "subheading": "",
+        "title": "FAÎTES DES ÉCONOMIES AVEC NOS ROUTINES",
+        "content": "",
+        "products_count": 8,
+        "background": "#ebf8ff",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1652277786e476a717": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "A propos de Somatoline",
+        "title": "",
+        "content": "De l'expérience de Somatoline, une efficacité cliniquement prouvée au service de la beauté, pour des résultats ressentis sur la peau grâce à un mécanisme fondamental qui optimise les processus métaboliques : la réactivation de la microcirculation cutanée.<br><br>La microcirculation cutanée joue un rôle fondamental dans le bien-être et l'entretien des tissus cutanés, car c'est le système qui oxygène, nourrit et purifie la peau.\n--split--\n<br><br>Physiologiquement, le passage du temps et une hygiène de vie inadaptée contribuent à un ralentissement des fonctions de la microcirculation, qui perd ainsi son efficacité entraînant un dysfonctionnement des processus physiologiques qui impactent les tissus cutanés dont le pannicule adipeux.",
+        "show_more": true,
+        "button_text": "",
+        "button_link": "",
+        "text_alignment": "center",
+        "background": "#f3f3f3",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165113455568866f66",
+    "16511457767a97a7e9",
+    "1651134714f63fe669",
+    "1652277786e476a717"
+  ]
+}

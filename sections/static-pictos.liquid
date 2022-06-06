@@ -1,0 +1,74 @@
+{%- if section.settings.display -%}
+  <section class="section-static-pictos">
+    <div class="container">
+      <div class="static-pictos__wrapper">
+         {%- for block in section.blocks -%}
+           <div class="picto">
+             <div class="picto__image">
+               {%- if block.settings.svg != blank -%}
+                  <img src="{{ block.settings.svg }}" alt="{{ block.settings.svg}}">
+               {%- else -%}
+                 {%- if block.settings.image != blank -%}
+                   <img style="width: {{ block.settings.image_width }}px" loading="lazy" sizes="{{ block.settings.image_width }}px" {% render 'image-attributes', image: block.settings.image, sizes: '100, 200, 300, 400, 500, 600' %}>
+                 {%- else  -%}
+                    {{ 'image' | placeholder_svg_tag }}
+                 {%- endif -%}
+               {%- endif -%}
+             </div>
+             <div class="picto__content">
+               <h5 class="picto__title heading h6">{{ block.settings.title }}</h5>
+               <div class="picto__text">
+                   {{ block.settings.text }}
+               </div>
+             </div>
+
+           </div>
+         {%- endfor -%}
+      </div>
+    </div>
+</section>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Pictos",
+  "max_blocks": 4,
+  "settings": [
+     {
+       "type": "checkbox",
+       "id": "display",
+       "label": "Show section ?",
+       "default": true
+     }
+  ],
+  "blocks": [
+    {
+      "type": "picto",
+      "name": "Picto",
+      "settings": [
+           {
+             "type": "image_picker",
+             "id": "image",
+             "label": "image"
+           },
+           {
+             "type": "text",
+             "id": "svg",
+             "label": "Image svg"
+           },
+           {
+             "type": "text",
+             "id": "title",
+             "label": "Title",
+             "default": "TITLE"
+           },
+            {
+              "type": "richtext",
+              "id": "text",
+              "label": "Text",
+              "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+            }
+      ]
+    }
+  ]
+}
+{% endschema %}

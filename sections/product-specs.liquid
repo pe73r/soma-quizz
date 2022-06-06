@@ -1,0 +1,476 @@
+<section class="section product-specs">
+  <div class="container">
+    <div class="specs__wrapper hidden-phone">
+        <div class="specs__bar">
+          {%- for block in section.blocks -%}
+            <div class="specs__button {% if forloop.index == 2 %} is-active {% endif %}" data-target="#block--{{ forloop.index }}">
+              <span>{{ block.settings.tab_title }}</span>
+            </div>
+          {%- endfor -%}
+        </div>
+        <div class="specs__content">
+          {%- for block in section.blocks -%}
+
+          {%- capture video_content -%}
+            <div class="video-section video-section--{% if block.settings.background_type == 'boxed' %}boxed{% else %}full{% endif %} video-section--{{ block.settings.video_size }}">
+              <external-video {% if block.settings.autoplay %}autoplay{% endif %} provider="{{ block.settings.video_url.type | escape }}" class="video-wrapper {% if block.settings.autoplay %}video-wrapper--inert{% endif %} {% if block.settings.background_type == 'full_width' and block.settings.video_size != 'auto' %}video-wrapper--cover{% endif %}">
+                <div class="video-wrapper__poster">
+                  {%- if block.settings.image != blank -%}
+                    <img class="video-wrapper__poster-image" loading="lazy" sizes="(max-width: 740px) calc(100vw - 24px * 2), var(--container-max-width)" {% render 'image-attributes', image: block.settings.image, sizes: '400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800' %}>
+                  {%- else -%}
+                    {{- 'lifestyle-1' | placeholder_svg_tag: 'video-wrapper__poster-image placeholder-background' -}}
+                  {%- endif -%}
+
+                  <div class="video-wrapper__poster-content {% if block.settings.background_type != 'boxed' %}content-box content-box--large content-box--text-center{% endif %}">
+                    {%- unless block.settings.autoplay -%}
+                      <button type="button" class="video-wrapper__play-button video-wrapper__play-button--large {% if block.settings.button_animattion %} video-wrapper__play-button--ripple {% endif %}" title="{{ 'general.accessibility.play_video' | t | escape }}">
+                        {%- render 'icon' with 'play', width: 72, height: 72 -%}
+                      </button>
+                    {%- endunless -%}
+
+                    {%- if block.settings.background_type != 'boxed' -%}
+                      {{- section_header -}}
+                    {%- endif -%}
+                  </div>
+                </div>
+
+                <template>
+                  {%- if block.settings.video_url.type == 'youtube' -%}
+                    <iframe title="{{ block.settings.title | escape }}" src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?playsinline=1&autoplay=1{% if block.settings.autoplay %}&controls=0&mute=1&loop=1{% endif %}&playlist={{ block.settings.video_url.id }}&enablejsapi=1&rel=0&modestbranding=1&origin={{ 'https://' | append: request.host | url_encode }}" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+                    {%- elsif block.settings.video_url.type == 'vimeo' -%}
+                    <iframe title="{{ block.settings.title | escape }}" src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}?autoplay=1&autopause=1{% if block.settings.autoplay %}&background=1&loop=1&muted=1{% endif %}&transparent=0&responsive=1&portrait=0&title=0&byline=0&color={{ settings.text_color | remove_first: '#' }}" allow="autoplay; encrypted-media;" allowfullscreen="allowfullscreen"></iframe>
+                  {%- endif -%}
+                </template>
+              </external-video>
+            </div>
+          {%- endcapture -%}
+           {%- if block.type == "how_to_use" -%}
+               <div class="specs__block specs__block--small is-active {% if block.settings.image_position == 'right' %} specs__reverse {% endif %}" data-content id="block--{{ forloop.index }}">
+
+                  {%- if product.metafields.product.use-image.value != blank  -%}
+                     <div class="specs__image">
+                       <img src="{{ product.metafields.product.use-image.value }}" alt="">
+                     </div>
+                  {% elsif  block.settings.video_url != blank %}
+                     <div class="specs__image">
+                       {{- video_content -}}
+                     </div>
+                 {% else %}
+                     <div class="specs__image">
+                       <img class="" loading="lazy" sizes="{% if block.settings.content != blank %}50vw{% else %}100vw{% endif %}" {% render 'image-attributes', image: block.settings.image_2, sizes: '400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' %}>
+                    </div>
+                 {%- endif -%}
+
+                 <div class="specs__text">
+                     {%- if product.metafields.product.use-title.value  != blank -%}
+                         <h3 class="heading h4">{{ product.metafields.product.use-title.value }}</h3>
+                     {% else %}
+                        <h3 class="heading h4">{{ block.settings.title }}</h3>
+                     {%- endif -%}
+
+                    {%- if product.metafields.product.use-text.value != blank  -%}
+                        {{ product.metafields.product.use-text.value }}
+                    {% else %}
+                         {{ block.settings.text }}
+                    {%- endif -%}
+
+                     {%- if block.settings.button_text != blank -%}
+                         <a class="specs__text-button" href="{% if product.metafields.product.why-link.value != blank %} {{ product.metafields.product.why-link.value }} {% else %} {{ block.settings.button_url }} {% endif %}">{{ block.settings.button_text }}</a>
+                     {%- endif -%}
+                 </div>
+               </div>
+           {%- elsif block.type == "ingredients" -%}
+               <div class="specs__block--small specs__block-ingredients {% if block.settings.image_position == 'right' %} specs__reverse {% endif %}" data-content id="block--{{ forloop.index }}">
+                 <div class="align-center">
+                     <h3 class="heading h4">{{ block.settings.title }}</h3>
+                     {%- if product.metafields.product.ingredient-text.value != blank -%}
+                        {{ product.metafields.product.ingredient-text.value }}
+                      {% else %}
+                        {{ block.settings.text }}
+                     {%- endif -%}
+
+                     {%- if block.settings.button_text != blank -%}
+                         <a class="specs__text-button" href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
+                     {%- endif -%}
+                 </div>
+               </div>
+           {% else %}
+               <div class="specs__block specs__block--small {% if block.settings.image_position == 'right' %} specs__reverse {% endif %}" data-content id="block--{{ forloop.index }}">
+
+                  {%- if product.metafields.product.why-image.value  != blank -%}
+                     <div class="specs__image">
+                      <img src="{{ product.metafields.product.why-image.value }}" alt="">
+                     </div>
+                  {% elsif block.settings.video_url != blank %}
+                      <div class="specs__image">
+                         {{- video_content -}}
+                      </div>
+                  {% else %}
+                     <div class="specs__image">
+                        <img class="" loading="lazy" sizes="{% if block.settings.content != blank %}50vw{% else %}100vw{% endif %}" {% render 'image-attributes', image: block.settings.image_2, sizes: '400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' %}>
+                     </div>
+                 {%- endif -%}
+
+                 <div class="specs__text">
+                     {%- if product.metafields.product.why-title.value != blank -%}
+                        <h3 class="heading h4">{{ product.metafields.product.why-title.value }}</h3>
+                     {% else %}
+                        <h3 class="heading h4">{{ block.settings.title }}</h3>
+                     {%- endif -%}
+
+                    {%- if  product.metafields.product.why-text.value != blank  -%}
+                      {{ product.metafields.product.why-text.value }}
+                    {% else %}
+                        {{ block.settings.text }}
+                    {%- endif -%}
+
+                     {%- if block.settings.button_text != blank -%}
+                         <a class="specs__text-button" href="{% if product.metafields.product.why-link.value != blank %} {{ product.metafields.product.why-link.value }} {% else %} {{ block.settings.button_url }} {% endif %}">{{ block.settings.button_text }}</a>
+                     {%- endif -%}
+                 </div>
+               </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+     </div>
+  </div>
+  <div class="specs__wrapper hidden-tablet hidden-lap-and-up">
+       {%- for block in section.blocks -%}
+       {%- capture video_content -%}
+         <div class="video-section video-section--{% if block.settings.background_type == 'boxed' %}boxed{% else %}full{% endif %} video-section--{{ block.settings.video_size }}">
+           <external-video {% if block.settings.autoplay %}autoplay{% endif %} provider="{{ block.settings.video_url.type | escape }}" class="video-wrapper {% if block.settings.autoplay %}video-wrapper--inert{% endif %} {% if block.settings.background_type == 'full_width' and block.settings.video_size != 'auto' %}video-wrapper--cover{% endif %}">
+             <div class="video-wrapper__poster">
+               {%- if block.settings.image != blank -%}
+                 <img class="video-wrapper__poster-image" loading="lazy" sizes="(max-width: 740px) calc(100vw - 24px * 2), var(--container-max-width)" {% render 'image-attributes', image: block.settings.image, sizes: '400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800' %}>
+               {%- else -%}
+                 {{- 'lifestyle-1' | placeholder_svg_tag: 'video-wrapper__poster-image placeholder-background' -}}
+               {%- endif -%}
+
+               <div class="video-wrapper__poster-content {% if block.settings.background_type != 'boxed' %}content-box content-box--large content-box--text-center{% endif %}">
+                 {%- unless block.settings.autoplay -%}
+                   <button type="button" class="video-wrapper__play-button video-wrapper__play-button--large {% if block.settings.button_animattion %} video-wrapper__play-button--ripple {% endif %}" title="{{ 'general.accessibility.play_video' | t | escape }}">
+                     {%- render 'icon' with 'play', width: 72, height: 72 -%}
+                   </button>
+                 {%- endunless -%}
+
+                 {%- if block.settings.background_type != 'boxed' -%}
+                   {{- section_header -}}
+                 {%- endif -%}
+               </div>
+             </div>
+
+             <template>
+               {%- if block.settings.video_url.type == 'youtube' -%}
+                 <iframe title="{{ block.settings.title | escape }}" src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?playsinline=1&autoplay=1{% if block.settings.autoplay %}&controls=0&mute=1&loop=1{% endif %}&playlist={{ block.settings.video_url.id }}&enablejsapi=1&rel=0&modestbranding=1&origin={{ 'https://' | append: request.host | url_encode }}" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+                 {%- elsif block.settings.video_url.type == 'vimeo' -%}
+                 <iframe title="{{ block.settings.title | escape }}" src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}?autoplay=1&autopause=1{% if block.settings.autoplay %}&background=1&loop=1&muted=1{% endif %}&transparent=0&responsive=1&portrait=0&title=0&byline=0&color={{ settings.text_color | remove_first: '#' }}" allow="autoplay; encrypted-media;" allowfullscreen="allowfullscreen"></iframe>
+               {%- endif -%}
+             </template>
+           </external-video>
+         </div>
+       {%- endcapture -%}
+
+         {%- if block.type == "how_to_use" -%}
+           <div class="faq__item {% if forloop.first == true %} spec_first {% endif %}" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+             <button is="toggle-button" class="collapsible-toggle text--strong" aria-controls="block-{{ section.id }}-{{ block.id }}" aria-expanded="true" itemprop="name">
+               {{- block.settings.tab_title -}}
+               <span class="animated-plus"></span>
+             </button>
+
+             <collapsible-content id="block-{{ section.id }}-{{ block.id }}" class="collapsible anchor" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" {{ block.shopify_attributes }} open>
+               <div class="collapsible__content specs-collapsible__content text-container" itemprop="text">
+                 {%- if product.metafields.product.use-image.value != blank  -%}
+                    <div class="specs__image">
+                      <img src="{{ product.metafields.product.use-image.value }}" alt="">
+                    </div>
+                 {% elsif  block.settings.video_url != blank %}
+                    <div class="specs__image">
+                      {{- video_content -}}
+                    </div>
+                {% else %}
+                    <div class="specs__image">
+                      <img class="" loading="lazy" sizes="{% if block.settings.content != blank %}50vw{% else %}100vw{% endif %}" {% render 'image-attributes', image: block.settings.image_2, sizes: '400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' %}>
+                   </div>
+                {%- endif -%}
+
+                 <div class="specs__text">
+                   {%- if product.metafields.product.use-title.value  != blank -%}
+                       <h3 class="heading h4">{{ product.metafields.product.use-title.value }}</h3>
+                   {% else %}
+                      <h3 class="heading h4">{{ block.settings.title }}</h3>
+                   {%- endif -%}
+
+                   {%- if product.metafields.product.use-text.value != blank  -%}
+                       {{ product.metafields.product.use-text.value }}
+                   {% else %}
+                        {{ block.settings.text }}
+                   {%- endif -%}
+
+                   {%- if block.settings.button_text != blank -%}
+                     <a class="specs__text-button" href="{% if product.metafields.product.why-link.value != blank %} {{ product.metafields.product.why-link.value }} {% else %} {{ block.settings.button_url }} {% endif %}">{{ block.settings.button_text }}</a>
+                    {%- endif -%}
+                 </div>
+               </div>
+             </collapsible-content>
+           </div>
+
+        {% elsif block.type == "ingredients" %}
+            <div class="faq__item {% if forloop.first == true %} spec_first {% endif %}" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button is="toggle-button" class="collapsible-toggle text--strong" aria-controls="block-{{ section.id }}-{{ block.id }}" aria-expanded="false" itemprop="name">
+                {{- block.settings.tab_title -}}
+                <span class="animated-plus"></span>
+              </button>
+
+              <collapsible-content id="block-{{ section.id }}-{{ block.id }}" class="collapsible anchor" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" {{ block.shopify_attributes }}>
+                <div class="collapsible__content specs-collapsible__content text-container" itemprop="text">
+                    <div class="specs__text">
+                        <h3 class="heading h4">{{ block.settings.title }}</h3>
+
+                        {%- if product.metafields.product.ingredient-text.value != blank -%}
+                           {{ product.metafields.product.ingredient-text.value }}
+                         {% else %}
+                           {{ block.settings.text }}
+                        {%- endif -%}
+
+                        {%- if block.settings.button_text != blank -%}
+                            <a class="specs__text-button" href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
+                        {%- endif -%}
+                    </div>
+                </div>
+              </collapsible-content>
+            </div>
+
+         {% else %}
+           <div class="faq__item {% if forloop.first == true %} spec_first {% endif %}" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+             <button is="toggle-button" class="collapsible-toggle text--strong" aria-controls="block-{{ section.id }}-{{ block.id }}" aria-expanded="false" itemprop="name">
+               {{- block.settings.tab_title -}}
+               <span class="animated-plus"></span>
+             </button>
+
+             <collapsible-content id="block-{{ section.id }}-{{ block.id }}" class="collapsible anchor" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" {{ block.shopify_attributes }}>
+               <div class="collapsible__content specs-collapsible__content text-container" itemprop="text">
+                 <div class="specs__image">
+                   {%- if product.metafields.product.why-image.value  != blank -%}
+                       <img src="{{ product.metafields.product.why-image.value }}" alt="">
+                   {% elsif block.settings.video_url != blank %}
+                       {{- video_content -}}
+                   {% else %}
+                        <img class="" loading="lazy" sizes="{% if block.settings.content != blank %}50vw{% else %}100vw{% endif %}" {% render 'image-attributes', image: block.settings.image_2, sizes: '400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' %}>
+                  {%- endif -%}
+                 </div>
+                 <div class="specs__text">
+                   {%- if product.metafields.product.why-title.value != blank -%}
+                      <h3 class="heading h4">{{ product.metafields.product.why-title.value }}</h3>
+                   {% else %}
+                      <h3 class="heading h4">{{ block.settings.title }}</h3>
+                   {%- endif -%}
+
+                  {%- if  product.metafields.product.why-text.value != blank  -%}
+                    {{ product.metafields.product.why-text.value }}
+                  {% else %}
+                      {{ block.settings.text }}
+                  {%- endif -%}
+
+                   {%- if block.settings.button_text != blank -%}
+                     <a class="specs__text-button" href="{% if product.metafields.product.why-link.value != blank %} {{ product.metafields.product.why-link.value }} {% else %} {{ block.settings.button_url }} {% endif %}">{{ block.settings.button_text }}</a>
+                    {%- endif -%}
+                 </div>
+               </div>
+             </collapsible-content>
+           </div>
+         {% endif %}
+       {%- endfor -%}
+    </div>
+</section>
+{% schema %}
+{
+  "name": "Product specs",
+  "max_blocks": 3,
+  "settings": [
+
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "How it works",
+      "settings": [
+          {
+            "type": "select",
+            "id": "image_position",
+            "label": "Image position",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ],
+            "default": "left"
+          },
+           {
+             "type": "text",
+             "id": "tab_title",
+             "label": "Tab title",
+             "default": "tab"
+           },
+           {
+             "type": "video_url",
+             "id": "video_url",
+             "accept": ["vimeo", "youtube"],
+             "label": "Video",
+             "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+           },
+           {
+             "type": "image_picker",
+             "id": "image",
+             "label": "Cover image",
+             "info": "2000 x 1125px .jpg recommended. Required if you turn off autoplay."
+           },
+           {
+             "type": "image_picker",
+             "id": "image_2",
+             "label": "Image"
+           },
+           {
+             "type": "text",
+             "id": "title",
+             "label": "Title",
+             "default": "Title"
+           },
+           {
+             "type": "textarea",
+             "id": "text",
+             "label": "Text",
+             "default": "<p>Nos produits reposent sur le principe de la microcirculation et sur la structure du terme, grâce aux effets thermiques procurés par les actifs.</p>"
+           },
+           {
+             "type": "text",
+             "id": "button_text",
+             "label": "Button text",
+             "default": "Tout savoir sur la microcirculation"
+           },
+           {
+             "type": "url",
+             "id": "button_url",
+             "label": "Button link"
+           }
+      ]
+    },
+    {
+      "type": "how_to_use",
+      "name": "How to use it",
+      "settings": [
+      {
+        "type": "select",
+        "id": "image_position",
+        "label": "Image position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+       {
+         "type": "text",
+         "id": "tab_title",
+         "label": "Tab title",
+         "default": "tab"
+       },
+       {
+         "type": "video_url",
+         "id": "video_url",
+         "accept": ["vimeo", "youtube"],
+         "label": "Video",
+         "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+       },
+       {
+         "type": "image_picker",
+         "id": "image",
+         "label": "Cover image",
+         "info": "2000 x 1125px .jpg recommended. Required if you turn off autoplay."
+       },
+       {
+         "type": "image_picker",
+         "id": "image_2",
+         "label": "Image"
+       },
+       {
+         "type": "text",
+         "id": "title",
+         "label": "Title",
+         "default": "Title"
+       },
+       {
+         "type": "textarea",
+         "id": "text",
+         "label": "Text",
+         "default": "<p>Nos produits reposent sur le principe de la microcirculation et sur la structure du terme, grâce aux effets thermiques procurés par les actifs.</p>"
+       },
+       {
+         "type": "text",
+         "id": "button_text",
+         "label": "Button text",
+         "default": "Tout savoir sur la microcirculation"
+       },
+       {
+         "type": "url",
+         "id": "button_url",
+         "label": "Button link"
+       }
+
+      ]
+    },
+    {
+      "type": "ingredients",
+      "name": "Ingredients",
+      "settings": [
+          {
+            "type": "text",
+            "id": "tab_title",
+            "label": "Tab title",
+            "default": "tab"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Nos produits reposent sur le principe de la microcirculation et sur la structure du terme, grâce aux effets thermiques procurés par les actifs.</p>"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button text",
+            "default": "Tout savoir sur la microcirculation"
+          },
+          {
+            "type": "url",
+            "id": "button_url",
+            "label": "Button link"
+          }
+
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product specs",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}
